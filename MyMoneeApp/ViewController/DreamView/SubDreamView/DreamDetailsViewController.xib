@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-Medium.ttf">
+            <string>Poppins-Medium</string>
+        </array>
+        <array key="Poppins-Regular.ttf">
+            <string>Poppins-Regular</string>
+        </array>
+        <array key="Poppins-SemiBold.ttf">
+            <string>Poppins-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DreamDetailsViewController" customModule="MyMoneeApp" customModuleProvider="target">
+            <connections>
+                <outlet property="backButton" destination="RWm-1X-J3e" id="Vqr-c9-DBt"/>
+                <outlet property="confirmButton" destination="APJ-zI-26u" id="bqZ-xx-s0j"/>
+                <outlet property="detailsView" destination="B59-2Q-HtZ" id="7UD-AX-1Ei"/>
+                <outlet property="editButton" destination="0rE-Cn-Nfy" id="H3f-FU-yXz"/>
+                <outlet property="labelProgress" destination="MsI-Xj-gOc" id="Zi3-df-fAp"/>
+                <outlet property="parentView" destination="ESm-vg-h7i" id="t3C-Cn-Pqf"/>
+                <outlet property="progressAmount" destination="eCW-r0-Isb" id="jO5-oW-CCI"/>
+                <outlet property="progressTrack" destination="bs2-JV-ylK" id="68Q-9l-Fcc"/>
+                <outlet property="progressView" destination="jh3-Yz-UwG" id="xBa-Hj-0U6"/>
+                <outlet property="roundView" destination="uML-nl-zOc" id="CW9-xN-TPe"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ESm-vg-h7i" userLabel="Parent View">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B59-2Q-HtZ" customClass="DetailsView" customModule="MyMoneeApp" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="230"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0rE-Cn-Nfy" userLabel="Edit Button">
+                                    <rect key="frame" x="362" y="16" width="36" height="36"/>
+                                    <state key="normal" image="ic_edit"/>
+                                    <connections>
+                                        <action selector="doEdit:" destination="-1" eventType="touchUpInside" id="JE0-od-NJP"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="230" id="7Te-nA-pDY"/>
+                                <constraint firstAttribute="trailing" secondItem="0rE-Cn-Nfy" secondAttribute="trailing" constant="16" id="PhR-6f-5Aq"/>
+                                <constraint firstItem="0rE-Cn-Nfy" firstAttribute="top" secondItem="B59-2Q-HtZ" secondAttribute="top" constant="16" id="pp9-am-dab"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uML-nl-zOc" userLabel="Round View">
+                            <rect key="frame" x="0.0" y="75" width="414" height="743"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Progress Capaian" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2BU-P2-gJK">
+                                    <rect key="frame" x="17" y="213" width="111.5" height="16.5"/>
+                                    <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="14"/>
+                                    <color key="textColor" red="0.30980392159999998" green="0.30980392159999998" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label Progress" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MsI-Xj-gOc">
+                                    <rect key="frame" x="303" y="213" width="94" height="16.5"/>
+                                    <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="14"/>
+                                    <color key="textColor" red="0.30980392159999998" green="0.30980392159999998" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RWm-1X-J3e">
+                                    <rect key="frame" x="18" y="628.5" width="378" height="43"/>
+                                    <color key="backgroundColor" systemColor="systemTealColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="43" id="VsD-Ee-aaW"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="14"/>
+                                    <state key="normal" title="Kembali">
+                                        <color key="titleColor" red="0.31372549020000001" green="0.41176470590000003" blue="0.72156862749999995" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                            <integer key="value" value="20"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="doBackButton:" destination="-1" eventType="touchUpInside" id="gu1-sA-Mhl"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="APJ-zI-26u">
+                                    <rect key="frame" x="18" y="569.5" width="378" height="43"/>
+                                    <color key="backgroundColor" red="0.31372549020000001" green="0.41176470590000003" blue="0.72156862749999995" alpha="1" colorSpace="calibratedRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="43" id="UyX-gC-UvR"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="14"/>
+                                    <state key="normal" title="Konfirmasi Tercapai">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                            <integer key="value" value="20"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="doBackButton:" destination="-1" eventType="touchUpInside" id="eGj-Q5-32h"/>
+                                        <action selector="doConfirm:" destination="-1" eventType="touchUpInside" id="DVS-8Y-07G"/>
+                                    </connections>
+                                </button>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jh3-Yz-UwG" userLabel="Progress View">
+                                    <rect key="frame" x="17" y="246.5" width="380" height="63"/>
+                                    <subviews>
+                                        <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="bs2-JV-ylK" userLabel="ProgressTrack">
+                                            <rect key="frame" x="14" y="22" width="352" height="4"/>
+                                            <color key="progressTintColor" red="0.31372549020000001" green="0.41176470590000003" blue="0.72156862749999995" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="trackTintColor" red="0.31372549019607843" green="0.41176470588235292" blue="0.72156862745098038" alpha="0.33000000000000002" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        </progressView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eCW-r0-Isb" userLabel="ProgressAmount">
+                                            <rect key="frame" x="13" y="37" width="27" height="13"/>
+                                            <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="11"/>
+                                            <color key="textColor" red="0.74117647058823533" green="0.74117647058823533" blue="0.74117647058823533" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstItem="bs2-JV-ylK" firstAttribute="leading" secondItem="jh3-Yz-UwG" secondAttribute="leading" constant="14" id="5s5-F3-KUK"/>
+                                        <constraint firstItem="bs2-JV-ylK" firstAttribute="top" secondItem="jh3-Yz-UwG" secondAttribute="top" constant="22" id="IdL-Pb-UKH"/>
+                                        <constraint firstItem="eCW-r0-Isb" firstAttribute="top" secondItem="bs2-JV-ylK" secondAttribute="bottom" constant="11" id="OJl-cu-LaQ"/>
+                                        <constraint firstItem="eCW-r0-Isb" firstAttribute="leading" secondItem="jh3-Yz-UwG" secondAttribute="leading" constant="13" id="QVe-B7-5Gl"/>
+                                        <constraint firstAttribute="height" constant="63" id="Za5-d2-B88"/>
+                                        <constraint firstAttribute="trailing" secondItem="bs2-JV-ylK" secondAttribute="trailing" constant="14" id="y8r-uu-XTj"/>
+                                    </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                            <integer key="value" value="8"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="jh3-Yz-UwG" secondAttribute="trailing" constant="17" id="2bb-zs-4be"/>
+                                <constraint firstItem="APJ-zI-26u" firstAttribute="top" secondItem="jh3-Yz-UwG" secondAttribute="bottom" constant="260" id="7Qi-xg-atX"/>
+                                <constraint firstItem="RWm-1X-J3e" firstAttribute="leading" secondItem="uML-nl-zOc" secondAttribute="leading" constant="18" id="8ZX-dK-hn2"/>
+                                <constraint firstAttribute="trailing" secondItem="MsI-Xj-gOc" secondAttribute="trailing" constant="17" id="94p-14-gfs"/>
+                                <constraint firstAttribute="trailing" secondItem="APJ-zI-26u" secondAttribute="trailing" constant="18" id="9qd-Lr-ng2"/>
+                                <constraint firstItem="RWm-1X-J3e" firstAttribute="top" secondItem="APJ-zI-26u" secondAttribute="bottom" constant="16" id="NiE-eq-CXT"/>
+                                <constraint firstItem="jh3-Yz-UwG" firstAttribute="leading" secondItem="uML-nl-zOc" secondAttribute="leading" constant="17" id="Oek-s9-TGa"/>
+                                <constraint firstItem="2BU-P2-gJK" firstAttribute="top" secondItem="uML-nl-zOc" secondAttribute="top" constant="213" id="Pc7-Bz-Bls"/>
+                                <constraint firstItem="MsI-Xj-gOc" firstAttribute="centerY" secondItem="2BU-P2-gJK" secondAttribute="centerY" id="QRd-pz-4gb"/>
+                                <constraint firstAttribute="trailing" secondItem="RWm-1X-J3e" secondAttribute="trailing" constant="18" id="SMS-MD-yfy"/>
+                                <constraint firstItem="2BU-P2-gJK" firstAttribute="leading" secondItem="uML-nl-zOc" secondAttribute="leading" constant="17" id="cIq-r3-iXT"/>
+                                <constraint firstItem="MsI-Xj-gOc" firstAttribute="top" secondItem="uML-nl-zOc" secondAttribute="top" constant="213" id="cnb-3p-VMi"/>
+                                <constraint firstItem="APJ-zI-26u" firstAttribute="leading" secondItem="uML-nl-zOc" secondAttribute="leading" constant="18" id="fEO-0K-kOI"/>
+                                <constraint firstItem="jh3-Yz-UwG" firstAttribute="top" secondItem="2BU-P2-gJK" secondAttribute="bottom" constant="17" id="vAZ-Qh-WuA"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" red="0.94117647058823528" green="0.94901960784313721" blue="0.97254901960784312" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="B59-2Q-HtZ" firstAttribute="leading" secondItem="ESm-vg-h7i" secondAttribute="leading" id="MgV-Mz-afN"/>
+                        <constraint firstAttribute="trailing" secondItem="B59-2Q-HtZ" secondAttribute="trailing" id="RId-mY-vfc"/>
+                        <constraint firstItem="B59-2Q-HtZ" firstAttribute="top" secondItem="ESm-vg-h7i" secondAttribute="top" id="Vr7-It-Rkg"/>
+                        <constraint firstItem="uML-nl-zOc" firstAttribute="top" secondItem="ESm-vg-h7i" secondAttribute="top" constant="75" id="ega-3q-5Dy"/>
+                        <constraint firstItem="uML-nl-zOc" firstAttribute="leading" secondItem="ESm-vg-h7i" secondAttribute="leading" id="h8H-YA-MSI"/>
+                        <constraint firstAttribute="bottom" secondItem="uML-nl-zOc" secondAttribute="bottom" id="obm-a5-wnh"/>
+                        <constraint firstAttribute="trailing" secondItem="uML-nl-zOc" secondAttribute="trailing" id="uZs-rP-lew"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" red="0.94117647058823528" green="0.94901960784313721" blue="0.97254901960784312" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="ESm-vg-h7i" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="CWb-VU-ZWH"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ESm-vg-h7i" secondAttribute="trailing" id="Kho-hh-pBI"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="ESm-vg-h7i" secondAttribute="bottom" id="g4h-Kc-U3S"/>
+                <constraint firstItem="ESm-vg-h7i" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="hcp-71-L6R"/>
+            </constraints>
+            <point key="canvasLocation" x="-49" y="104"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ic_edit" width="36" height="36"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

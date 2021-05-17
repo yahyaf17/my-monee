@@ -1,0 +1,996 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FA69F687264F821E00BBB1A9 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA69F685264F821E00BBB1A9 /* DetailsViewController.swift */; };
+		FA69F688264F821E00BBB1A9 /* DetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA69F686264F821E00BBB1A9 /* DetailsViewController.xib */; };
+		FA69F68D264FCD0800BBB1A9 /* DetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA69F68C264FCD0800BBB1A9 /* DetailsView.swift */; };
+		FA69F692264FCD1300BBB1A9 /* DetailsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA69F691264FCD1300BBB1A9 /* DetailsView.xib */; };
+		FA69F69C265026AF00BBB1A9 /* DreamDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA69F69A265026AF00BBB1A9 /* DreamDetailsViewController.swift */; };
+		FA69F69D265026AF00BBB1A9 /* DreamDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA69F69B265026AF00BBB1A9 /* DreamDetailsViewController.xib */; };
+		FA7077DC264CFD3600140847 /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7077DB264CFD3600140847 /* TitleView.swift */; };
+		FA7077E4264CFD4100140847 /* TitleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA7077E3264CFD4100140847 /* TitleView.xib */; };
+		FA7077EB264D00DD00140847 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7077E9264D00DD00140847 /* HomeViewController.swift */; };
+		FA7077EC264D00DD00140847 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA7077EA264D00DD00140847 /* HomeViewController.xib */; };
+		FA7077FA264D028800140847 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7077F9264D028800140847 /* MainTabBarController.swift */; };
+		FA707829264D24C900140847 /* roundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA707828264D24C900140847 /* roundedView.swift */; };
+		FA70782F264D281400140847 /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA70782E264D281400140847 /* History.swift */; };
+		FA70783D264D49FF00140847 /* DreamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA70783B264D49FF00140847 /* DreamViewController.swift */; };
+		FA70783E264D49FF00140847 /* DreamViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA70783C264D49FF00140847 /* DreamViewController.xib */; };
+		FA707846264D517C00140847 /* Dream.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA707845264D517C00140847 /* Dream.swift */; };
+		FA7728C12650D94800AB8449 /* AddDreamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7728BF2650D94800AB8449 /* AddDreamViewController.swift */; };
+		FA7728C22650D94800AB8449 /* AddDreamViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA7728C02650D94800AB8449 /* AddDreamViewController.xib */; };
+		FA7728C82650DD3700AB8449 /* BackButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7728C72650DD3700AB8449 /* BackButtonView.swift */; };
+		FA7728D02650DD4300AB8449 /* BackButtonView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA7728CF2650DD4300AB8449 /* BackButtonView.xib */; };
+		FA7728DE265103F600AB8449 /* EditDreamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7728DC265103F600AB8449 /* EditDreamViewController.swift */; };
+		FA7728DF265103F600AB8449 /* EditDreamViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA7728DD265103F600AB8449 /* EditDreamViewController.xib */; };
+		FA7728E42651357100AB8449 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7728E32651357100AB8449 /* Profile.swift */; };
+		FA7728EB26514BFB00AB8449 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7728E926514BFB00AB8449 /* EditProfileViewController.swift */; };
+		FA7728EC26514BFB00AB8449 /* EditProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA7728EA26514BFB00AB8449 /* EditProfileViewController.xib */; };
+		FA772903265156E100AB8449 /* PopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA772901265156E100AB8449 /* PopUpViewController.swift */; };
+		FA772904265156E100AB8449 /* PopUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA772902265156E100AB8449 /* PopUpViewController.xib */; };
+		FA7729092651590600AB8449 /* editViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7729082651590600AB8449 /* editViewProtocol.swift */; };
+		FA77290E265173A800AB8449 /* NumberFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA77290D265173A800AB8449 /* NumberFormatter.swift */; };
+		FAA90BAC264E6658005E244D /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA90BAB264E6658005E244D /* ProfileView.swift */; };
+		FAA90BB1264E6665005E244D /* ProfileView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAA90BB0264E6665005E244D /* ProfileView.xib */; };
+		FAA90BBA264E810F005E244D /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA90BB8264E810F005E244D /* ProfileViewController.swift */; };
+		FAA90BBB264E810F005E244D /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAA90BB9264E810F005E244D /* ProfileViewController.xib */; };
+		FAA90BC2264EAD87005E244D /* UsageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA90BC0264EAD87005E244D /* UsageViewController.swift */; };
+		FAA90BC3264EAD87005E244D /* UsageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAA90BC1264EAD87005E244D /* UsageViewController.xib */; };
+		FAA90BE4264EC086005E244D /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA90BE3264EC086005E244D /* Category.swift */; };
+		FAEDD85D264BE389003817A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEDD85C264BE389003817A4 /* AppDelegate.swift */; };
+		FAEDD85F264BE389003817A4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEDD85E264BE389003817A4 /* SceneDelegate.swift */; };
+		FAEDD866264BE38A003817A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAEDD865264BE38A003817A4 /* Assets.xcassets */; };
+		FAEDD869264BE38A003817A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAEDD867264BE38A003817A4 /* LaunchScreen.storyboard */; };
+		FAEDD874264BE38A003817A4 /* MyMoneeAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEDD873264BE38A003817A4 /* MyMoneeAppTests.swift */; };
+		FAEDD87F264BE38A003817A4 /* MyMoneeAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEDD87E264BE38A003817A4 /* MyMoneeAppUITests.swift */; };
+		FAEDD8A7264BF04B003817A4 /* RecentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEDD8A6264BF04B003817A4 /* RecentView.swift */; };
+		FAEDD8AF264BF057003817A4 /* RecentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAEDD8AE264BF057003817A4 /* RecentView.xib */; };
+		FAEDD8CD264BF3C7003817A4 /* HistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEDD8CB264BF3C7003817A4 /* HistoryTableViewCell.swift */; };
+		FAEDD8CE264BF3C7003817A4 /* HistoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAEDD8CC264BF3C7003817A4 /* HistoryTableViewCell.xib */; };
+		FAEDD8E7264BF5ED003817A4 /* Poppins-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FAEDD8D4264BF5ED003817A4 /* Poppins-ExtraLight.ttf */; };
+		FAEDD8E8264BF5ED003817A4 /* Poppins-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FAEDD8D5264BF5ED003817A4 /* Poppins-ThinItalic.ttf */; };
+		FAEDD8E9264BF5ED003817A4 /* Poppins-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FAEDD8D6264BF5ED003817A4 /* Poppins-ExtraLightItalic.ttf */; };
+		FAEDD8EA264BF5ED003817A4 /* Poppins-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FAEDD8D7264BF5ED003817A4 /* Poppins-BoldItalic.ttf */; };
+		FAEDD8EB264BF5ED003817A4 /* Poppins-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FAEDD8D8264BF5ED003817A4 /* Poppins-Light.ttf */; };
+		FAEDD8EC264BF5ED003817A4 /* Poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FAEDD8D9264BF5ED003817A4 /* Poppins-Medium.ttf */; };
+		FAEDD8ED264BF5ED003817A4 /* Poppins-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FAEDD8DA264BF5ED003817A4 /* Poppins-SemiBoldItalic.ttf */; };
+		FAEDD8EE264BF5ED003817A4 /* Poppins-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FAEDD8DB264BF5ED003817A4 /* Poppins-ExtraBoldItalic.ttf */; };
+		FAEDD8EF264BF5ED003817A4 /* Poppins-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FAEDD8DC264BF5ED003817A4 /* Poppins-ExtraBold.ttf */; };
+		FAEDD8F0264BF5ED003817A4 /* Poppins-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FAEDD8DD264BF5ED003817A4 /* Poppins-BlackItalic.ttf */; };
+		FAEDD8F1264BF5ED003817A4 /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = FAEDD8DE264BF5ED003817A4 /* OFL.txt */; };
+		FAEDD8F2264BF5ED003817A4 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FAEDD8DF264BF5ED003817A4 /* Poppins-Regular.ttf */; };
+		FAEDD8F3264BF5ED003817A4 /* Poppins-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FAEDD8E0264BF5ED003817A4 /* Poppins-LightItalic.ttf */; };
+		FAEDD8F4264BF5ED003817A4 /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FAEDD8E1264BF5ED003817A4 /* Poppins-Bold.ttf */; };
+		FAEDD8F5264BF5ED003817A4 /* Poppins-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FAEDD8E2264BF5ED003817A4 /* Poppins-Black.ttf */; };
+		FAEDD8F6264BF5ED003817A4 /* Poppins-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FAEDD8E3264BF5ED003817A4 /* Poppins-Thin.ttf */; };
+		FAEDD8F7264BF5ED003817A4 /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FAEDD8E4264BF5ED003817A4 /* Poppins-SemiBold.ttf */; };
+		FAEDD8F8264BF5ED003817A4 /* Poppins-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FAEDD8E5264BF5ED003817A4 /* Poppins-Italic.ttf */; };
+		FAEDD8F9264BF5ED003817A4 /* Poppins-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FAEDD8E6264BF5ED003817A4 /* Poppins-MediumItalic.ttf */; };
+		FAEDD8FF264C1DBD003817A4 /* DreamTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEDD8FD264C1DBD003817A4 /* DreamTableViewCell.swift */; };
+		FAEDD900264C1DBD003817A4 /* DreamTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAEDD8FE264C1DBD003817A4 /* DreamTableViewCell.xib */; };
+		FAEDD906264C2316003817A4 /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEDD904264C2316003817A4 /* CategoryCollectionViewCell.swift */; };
+		FAEDD907264C2316003817A4 /* CategoryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAEDD905264C2316003817A4 /* CategoryCollectionViewCell.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FAEDD870264BE38A003817A4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FAEDD851264BE389003817A4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FAEDD858264BE389003817A4;
+			remoteInfo = MyMoneeApp;
+		};
+		FAEDD87B264BE38A003817A4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FAEDD851264BE389003817A4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FAEDD858264BE389003817A4;
+			remoteInfo = MyMoneeApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		FA69F685264F821E00BBB1A9 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		FA69F686264F821E00BBB1A9 /* DetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailsViewController.xib; sourceTree = "<group>"; };
+		FA69F68C264FCD0800BBB1A9 /* DetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsView.swift; sourceTree = "<group>"; };
+		FA69F691264FCD1300BBB1A9 /* DetailsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailsView.xib; sourceTree = "<group>"; };
+		FA69F69A265026AF00BBB1A9 /* DreamDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DreamDetailsViewController.swift; sourceTree = "<group>"; };
+		FA69F69B265026AF00BBB1A9 /* DreamDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DreamDetailsViewController.xib; sourceTree = "<group>"; };
+		FA7077DB264CFD3600140847 /* TitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
+		FA7077E3264CFD4100140847 /* TitleView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TitleView.xib; sourceTree = "<group>"; };
+		FA7077E9264D00DD00140847 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		FA7077EA264D00DD00140847 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		FA7077F9264D028800140847 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		FA707828264D24C900140847 /* roundedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = roundedView.swift; sourceTree = "<group>"; };
+		FA70782E264D281400140847 /* History.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
+		FA70783B264D49FF00140847 /* DreamViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DreamViewController.swift; sourceTree = "<group>"; };
+		FA70783C264D49FF00140847 /* DreamViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DreamViewController.xib; sourceTree = "<group>"; };
+		FA707845264D517C00140847 /* Dream.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dream.swift; sourceTree = "<group>"; };
+		FA7728BF2650D94800AB8449 /* AddDreamViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDreamViewController.swift; sourceTree = "<group>"; };
+		FA7728C02650D94800AB8449 /* AddDreamViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddDreamViewController.xib; sourceTree = "<group>"; };
+		FA7728C72650DD3700AB8449 /* BackButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackButtonView.swift; sourceTree = "<group>"; };
+		FA7728CF2650DD4300AB8449 /* BackButtonView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BackButtonView.xib; sourceTree = "<group>"; };
+		FA7728DC265103F600AB8449 /* EditDreamViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditDreamViewController.swift; sourceTree = "<group>"; };
+		FA7728DD265103F600AB8449 /* EditDreamViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditDreamViewController.xib; sourceTree = "<group>"; };
+		FA7728E32651357100AB8449 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		FA7728E926514BFB00AB8449 /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
+		FA7728EA26514BFB00AB8449 /* EditProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditProfileViewController.xib; sourceTree = "<group>"; };
+		FA772901265156E100AB8449 /* PopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpViewController.swift; sourceTree = "<group>"; };
+		FA772902265156E100AB8449 /* PopUpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopUpViewController.xib; sourceTree = "<group>"; };
+		FA7729082651590600AB8449 /* editViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = editViewProtocol.swift; sourceTree = "<group>"; };
+		FA77290D265173A800AB8449 /* NumberFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberFormatter.swift; sourceTree = "<group>"; };
+		FAA90BAB264E6658005E244D /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		FAA90BB0264E6665005E244D /* ProfileView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileView.xib; sourceTree = "<group>"; };
+		FAA90BB8264E810F005E244D /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		FAA90BB9264E810F005E244D /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
+		FAA90BC0264EAD87005E244D /* UsageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsageViewController.swift; sourceTree = "<group>"; };
+		FAA90BC1264EAD87005E244D /* UsageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UsageViewController.xib; sourceTree = "<group>"; };
+		FAA90BE3264EC086005E244D /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		FAEDD859264BE389003817A4 /* MyMoneeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyMoneeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAEDD85C264BE389003817A4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FAEDD85E264BE389003817A4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		FAEDD865264BE38A003817A4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FAEDD868264BE38A003817A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FAEDD86A264BE38A003817A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAEDD86F264BE38A003817A4 /* MyMoneeAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyMoneeAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAEDD873264BE38A003817A4 /* MyMoneeAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyMoneeAppTests.swift; sourceTree = "<group>"; };
+		FAEDD875264BE38A003817A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAEDD87A264BE38A003817A4 /* MyMoneeAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyMoneeAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAEDD87E264BE38A003817A4 /* MyMoneeAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyMoneeAppUITests.swift; sourceTree = "<group>"; };
+		FAEDD880264BE38A003817A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAEDD8A6264BF04B003817A4 /* RecentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentView.swift; sourceTree = "<group>"; };
+		FAEDD8AE264BF057003817A4 /* RecentView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecentView.xib; sourceTree = "<group>"; };
+		FAEDD8CB264BF3C7003817A4 /* HistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewCell.swift; sourceTree = "<group>"; };
+		FAEDD8CC264BF3C7003817A4 /* HistoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryTableViewCell.xib; sourceTree = "<group>"; };
+		FAEDD8D4264BF5ED003817A4 /* Poppins-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-ExtraLight.ttf"; sourceTree = "<group>"; };
+		FAEDD8D5264BF5ED003817A4 /* Poppins-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-ThinItalic.ttf"; sourceTree = "<group>"; };
+		FAEDD8D6264BF5ED003817A4 /* Poppins-ExtraLightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
+		FAEDD8D7264BF5ED003817A4 /* Poppins-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-BoldItalic.ttf"; sourceTree = "<group>"; };
+		FAEDD8D8264BF5ED003817A4 /* Poppins-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Light.ttf"; sourceTree = "<group>"; };
+		FAEDD8D9264BF5ED003817A4 /* Poppins-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Medium.ttf"; sourceTree = "<group>"; };
+		FAEDD8DA264BF5ED003817A4 /* Poppins-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		FAEDD8DB264BF5ED003817A4 /* Poppins-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		FAEDD8DC264BF5ED003817A4 /* Poppins-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-ExtraBold.ttf"; sourceTree = "<group>"; };
+		FAEDD8DD264BF5ED003817A4 /* Poppins-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-BlackItalic.ttf"; sourceTree = "<group>"; };
+		FAEDD8DE264BF5ED003817A4 /* OFL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OFL.txt; sourceTree = "<group>"; };
+		FAEDD8DF264BF5ED003817A4 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
+		FAEDD8E0264BF5ED003817A4 /* Poppins-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-LightItalic.ttf"; sourceTree = "<group>"; };
+		FAEDD8E1264BF5ED003817A4 /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
+		FAEDD8E2264BF5ED003817A4 /* Poppins-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Black.ttf"; sourceTree = "<group>"; };
+		FAEDD8E3264BF5ED003817A4 /* Poppins-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Thin.ttf"; sourceTree = "<group>"; };
+		FAEDD8E4264BF5ED003817A4 /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
+		FAEDD8E5264BF5ED003817A4 /* Poppins-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Italic.ttf"; sourceTree = "<group>"; };
+		FAEDD8E6264BF5ED003817A4 /* Poppins-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-MediumItalic.ttf"; sourceTree = "<group>"; };
+		FAEDD8FD264C1DBD003817A4 /* DreamTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DreamTableViewCell.swift; sourceTree = "<group>"; };
+		FAEDD8FE264C1DBD003817A4 /* DreamTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DreamTableViewCell.xib; sourceTree = "<group>"; };
+		FAEDD904264C2316003817A4 /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
+		FAEDD905264C2316003817A4 /* CategoryCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryCollectionViewCell.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FAEDD856264BE389003817A4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAEDD86C264BE38A003817A4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAEDD877264BE38A003817A4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FA69F6992650263300BBB1A9 /* SubDreamView */ = {
+			isa = PBXGroup;
+			children = (
+				FA69F69A265026AF00BBB1A9 /* DreamDetailsViewController.swift */,
+				FA69F69B265026AF00BBB1A9 /* DreamDetailsViewController.xib */,
+				FA7728BF2650D94800AB8449 /* AddDreamViewController.swift */,
+				FA7728C02650D94800AB8449 /* AddDreamViewController.xib */,
+				FA7728DC265103F600AB8449 /* EditDreamViewController.swift */,
+				FA7728DD265103F600AB8449 /* EditDreamViewController.xib */,
+			);
+			path = SubDreamView;
+			sourceTree = "<group>";
+		};
+		FA7077DA264CFD1400140847 /* TitleComponent */ = {
+			isa = PBXGroup;
+			children = (
+				FA7077DB264CFD3600140847 /* TitleView.swift */,
+				FA7077E3264CFD4100140847 /* TitleView.xib */,
+			);
+			path = TitleComponent;
+			sourceTree = "<group>";
+		};
+		FA7077E8264D00C600140847 /* HomeView */ = {
+			isa = PBXGroup;
+			children = (
+				FAA90BBF264EAD4C005E244D /* SubHomeView */,
+				FA7077E9264D00DD00140847 /* HomeViewController.swift */,
+				FA7077EA264D00DD00140847 /* HomeViewController.xib */,
+			);
+			path = HomeView;
+			sourceTree = "<group>";
+		};
+		FA7077F8264D027300140847 /* MainTab */ = {
+			isa = PBXGroup;
+			children = (
+				FA7077F9264D028800140847 /* MainTabBarController.swift */,
+			);
+			path = MainTab;
+			sourceTree = "<group>";
+		};
+		FA70782D264D280800140847 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FA70782E264D281400140847 /* History.swift */,
+				FA707845264D517C00140847 /* Dream.swift */,
+				FAA90BE3264EC086005E244D /* Category.swift */,
+				FA7728E32651357100AB8449 /* Profile.swift */,
+				FA77290D265173A800AB8449 /* NumberFormatter.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FA707836264D474300140847 /* DreamView */ = {
+			isa = PBXGroup;
+			children = (
+				FA69F6992650263300BBB1A9 /* SubDreamView */,
+				FA70783B264D49FF00140847 /* DreamViewController.swift */,
+				FA70783C264D49FF00140847 /* DreamViewController.xib */,
+			);
+			path = DreamView;
+			sourceTree = "<group>";
+		};
+		FA70784A264D67F500140847 /* ProfileCmponent */ = {
+			isa = PBXGroup;
+			children = (
+				FAA90BAB264E6658005E244D /* ProfileView.swift */,
+				FAA90BB0264E6665005E244D /* ProfileView.xib */,
+			);
+			path = ProfileCmponent;
+			sourceTree = "<group>";
+		};
+		FA707858264E5BC000140847 /* ProfileView */ = {
+			isa = PBXGroup;
+			children = (
+				FA7728E826514BE800AB8449 /* SubProfileView */,
+				FAA90BB8264E810F005E244D /* ProfileViewController.swift */,
+				FAA90BB9264E810F005E244D /* ProfileViewController.xib */,
+			);
+			path = ProfileView;
+			sourceTree = "<group>";
+		};
+		FA7728C62650DCFC00AB8449 /* BackButtonComponent */ = {
+			isa = PBXGroup;
+			children = (
+				FA7728C72650DD3700AB8449 /* BackButtonView.swift */,
+				FA7728CF2650DD4300AB8449 /* BackButtonView.xib */,
+			);
+			path = BackButtonComponent;
+			sourceTree = "<group>";
+		};
+		FA7728E826514BE800AB8449 /* SubProfileView */ = {
+			isa = PBXGroup;
+			children = (
+				FA7728E926514BFB00AB8449 /* EditProfileViewController.swift */,
+				FA7728EA26514BFB00AB8449 /* EditProfileViewController.xib */,
+				FA772901265156E100AB8449 /* PopUpViewController.swift */,
+				FA772902265156E100AB8449 /* PopUpViewController.xib */,
+				FA7729082651590600AB8449 /* editViewProtocol.swift */,
+			);
+			path = SubProfileView;
+			sourceTree = "<group>";
+		};
+		FAA90BBF264EAD4C005E244D /* SubHomeView */ = {
+			isa = PBXGroup;
+			children = (
+				FAA90BC0264EAD87005E244D /* UsageViewController.swift */,
+				FAA90BC1264EAD87005E244D /* UsageViewController.xib */,
+				FA69F685264F821E00BBB1A9 /* DetailsViewController.swift */,
+				FA69F686264F821E00BBB1A9 /* DetailsViewController.xib */,
+			);
+			path = SubHomeView;
+			sourceTree = "<group>";
+		};
+		FAA90BE8264ED748005E244D /* DetailComponent */ = {
+			isa = PBXGroup;
+			children = (
+				FA69F68C264FCD0800BBB1A9 /* DetailsView.swift */,
+				FA69F691264FCD1300BBB1A9 /* DetailsView.xib */,
+			);
+			path = DetailComponent;
+			sourceTree = "<group>";
+		};
+		FAEDD850264BE389003817A4 = {
+			isa = PBXGroup;
+			children = (
+				FAEDD85B264BE389003817A4 /* MyMoneeApp */,
+				FAEDD872264BE38A003817A4 /* MyMoneeAppTests */,
+				FAEDD87D264BE38A003817A4 /* MyMoneeAppUITests */,
+				FAEDD85A264BE389003817A4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FAEDD85A264BE389003817A4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FAEDD859264BE389003817A4 /* MyMoneeApp.app */,
+				FAEDD86F264BE38A003817A4 /* MyMoneeAppTests.xctest */,
+				FAEDD87A264BE38A003817A4 /* MyMoneeAppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FAEDD85B264BE389003817A4 /* MyMoneeApp */ = {
+			isa = PBXGroup;
+			children = (
+				FA70782D264D280800140847 /* Model */,
+				FAEDD8D2264BF5D1003817A4 /* fonts */,
+				FAEDD894264BE56A003817A4 /* Component */,
+				FAEDD893264BE54A003817A4 /* ViewController */,
+				FAEDD85C264BE389003817A4 /* AppDelegate.swift */,
+				FAEDD85E264BE389003817A4 /* SceneDelegate.swift */,
+				FAEDD865264BE38A003817A4 /* Assets.xcassets */,
+				FAEDD867264BE38A003817A4 /* LaunchScreen.storyboard */,
+				FAEDD86A264BE38A003817A4 /* Info.plist */,
+			);
+			path = MyMoneeApp;
+			sourceTree = "<group>";
+		};
+		FAEDD872264BE38A003817A4 /* MyMoneeAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				FAEDD873264BE38A003817A4 /* MyMoneeAppTests.swift */,
+				FAEDD875264BE38A003817A4 /* Info.plist */,
+			);
+			path = MyMoneeAppTests;
+			sourceTree = "<group>";
+		};
+		FAEDD87D264BE38A003817A4 /* MyMoneeAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				FAEDD87E264BE38A003817A4 /* MyMoneeAppUITests.swift */,
+				FAEDD880264BE38A003817A4 /* Info.plist */,
+			);
+			path = MyMoneeAppUITests;
+			sourceTree = "<group>";
+		};
+		FAEDD893264BE54A003817A4 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				FA7077F8264D027300140847 /* MainTab */,
+				FA707858264E5BC000140847 /* ProfileView */,
+				FA707836264D474300140847 /* DreamView */,
+				FA7077E8264D00C600140847 /* HomeView */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		FAEDD894264BE56A003817A4 /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				FA7728C62650DCFC00AB8449 /* BackButtonComponent */,
+				FAA90BE8264ED748005E244D /* DetailComponent */,
+				FA70784A264D67F500140847 /* ProfileCmponent */,
+				FA7077DA264CFD1400140847 /* TitleComponent */,
+				FAEDD8CA264BF315003817A4 /* Cells */,
+				FAEDD895264BE5B7003817A4 /* RecentComponent */,
+				FA707828264D24C900140847 /* roundedView.swift */,
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
+		FAEDD895264BE5B7003817A4 /* RecentComponent */ = {
+			isa = PBXGroup;
+			children = (
+				FAEDD8A6264BF04B003817A4 /* RecentView.swift */,
+				FAEDD8AE264BF057003817A4 /* RecentView.xib */,
+			);
+			path = RecentComponent;
+			sourceTree = "<group>";
+		};
+		FAEDD8CA264BF315003817A4 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				FAEDD8CB264BF3C7003817A4 /* HistoryTableViewCell.swift */,
+				FAEDD8CC264BF3C7003817A4 /* HistoryTableViewCell.xib */,
+				FAEDD8FD264C1DBD003817A4 /* DreamTableViewCell.swift */,
+				FAEDD8FE264C1DBD003817A4 /* DreamTableViewCell.xib */,
+				FAEDD904264C2316003817A4 /* CategoryCollectionViewCell.swift */,
+				FAEDD905264C2316003817A4 /* CategoryCollectionViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		FAEDD8D2264BF5D1003817A4 /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				FAEDD8D3264BF5EC003817A4 /* Poppins */,
+			);
+			path = fonts;
+			sourceTree = "<group>";
+		};
+		FAEDD8D3264BF5EC003817A4 /* Poppins */ = {
+			isa = PBXGroup;
+			children = (
+				FAEDD8D4264BF5ED003817A4 /* Poppins-ExtraLight.ttf */,
+				FAEDD8D5264BF5ED003817A4 /* Poppins-ThinItalic.ttf */,
+				FAEDD8D6264BF5ED003817A4 /* Poppins-ExtraLightItalic.ttf */,
+				FAEDD8D7264BF5ED003817A4 /* Poppins-BoldItalic.ttf */,
+				FAEDD8D8264BF5ED003817A4 /* Poppins-Light.ttf */,
+				FAEDD8D9264BF5ED003817A4 /* Poppins-Medium.ttf */,
+				FAEDD8DA264BF5ED003817A4 /* Poppins-SemiBoldItalic.ttf */,
+				FAEDD8DB264BF5ED003817A4 /* Poppins-ExtraBoldItalic.ttf */,
+				FAEDD8DC264BF5ED003817A4 /* Poppins-ExtraBold.ttf */,
+				FAEDD8DD264BF5ED003817A4 /* Poppins-BlackItalic.ttf */,
+				FAEDD8DE264BF5ED003817A4 /* OFL.txt */,
+				FAEDD8DF264BF5ED003817A4 /* Poppins-Regular.ttf */,
+				FAEDD8E0264BF5ED003817A4 /* Poppins-LightItalic.ttf */,
+				FAEDD8E1264BF5ED003817A4 /* Poppins-Bold.ttf */,
+				FAEDD8E2264BF5ED003817A4 /* Poppins-Black.ttf */,
+				FAEDD8E3264BF5ED003817A4 /* Poppins-Thin.ttf */,
+				FAEDD8E4264BF5ED003817A4 /* Poppins-SemiBold.ttf */,
+				FAEDD8E5264BF5ED003817A4 /* Poppins-Italic.ttf */,
+				FAEDD8E6264BF5ED003817A4 /* Poppins-MediumItalic.ttf */,
+			);
+			path = Poppins;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FAEDD858264BE389003817A4 /* MyMoneeApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FAEDD883264BE38A003817A4 /* Build configuration list for PBXNativeTarget "MyMoneeApp" */;
+			buildPhases = (
+				FAEDD855264BE389003817A4 /* Sources */,
+				FAEDD856264BE389003817A4 /* Frameworks */,
+				FAEDD857264BE389003817A4 /* Resources */,
+				FAEDD88F264BE464003817A4 /* Swift Lint */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MyMoneeApp;
+			productName = MyMoneeApp;
+			productReference = FAEDD859264BE389003817A4 /* MyMoneeApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FAEDD86E264BE38A003817A4 /* MyMoneeAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FAEDD886264BE38A003817A4 /* Build configuration list for PBXNativeTarget "MyMoneeAppTests" */;
+			buildPhases = (
+				FAEDD86B264BE38A003817A4 /* Sources */,
+				FAEDD86C264BE38A003817A4 /* Frameworks */,
+				FAEDD86D264BE38A003817A4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FAEDD871264BE38A003817A4 /* PBXTargetDependency */,
+			);
+			name = MyMoneeAppTests;
+			productName = MyMoneeAppTests;
+			productReference = FAEDD86F264BE38A003817A4 /* MyMoneeAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		FAEDD879264BE38A003817A4 /* MyMoneeAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FAEDD889264BE38A003817A4 /* Build configuration list for PBXNativeTarget "MyMoneeAppUITests" */;
+			buildPhases = (
+				FAEDD876264BE38A003817A4 /* Sources */,
+				FAEDD877264BE38A003817A4 /* Frameworks */,
+				FAEDD878264BE38A003817A4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FAEDD87C264BE38A003817A4 /* PBXTargetDependency */,
+			);
+			name = MyMoneeAppUITests;
+			productName = MyMoneeAppUITests;
+			productReference = FAEDD87A264BE38A003817A4 /* MyMoneeAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FAEDD851264BE389003817A4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					FAEDD858264BE389003817A4 = {
+						CreatedOnToolsVersion = 12.4;
+					};
+					FAEDD86E264BE38A003817A4 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = FAEDD858264BE389003817A4;
+					};
+					FAEDD879264BE38A003817A4 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = FAEDD858264BE389003817A4;
+					};
+				};
+			};
+			buildConfigurationList = FAEDD854264BE389003817A4 /* Build configuration list for PBXProject "MyMoneeApp" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FAEDD850264BE389003817A4;
+			productRefGroup = FAEDD85A264BE389003817A4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FAEDD858264BE389003817A4 /* MyMoneeApp */,
+				FAEDD86E264BE38A003817A4 /* MyMoneeAppTests */,
+				FAEDD879264BE38A003817A4 /* MyMoneeAppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FAEDD857264BE389003817A4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAEDD8F3264BF5ED003817A4 /* Poppins-LightItalic.ttf in Resources */,
+				FAEDD8F4264BF5ED003817A4 /* Poppins-Bold.ttf in Resources */,
+				FAEDD8F1264BF5ED003817A4 /* OFL.txt in Resources */,
+				FA7728D02650DD4300AB8449 /* BackButtonView.xib in Resources */,
+				FAEDD8EE264BF5ED003817A4 /* Poppins-ExtraBoldItalic.ttf in Resources */,
+				FA7728C22650D94800AB8449 /* AddDreamViewController.xib in Resources */,
+				FA7728EC26514BFB00AB8449 /* EditProfileViewController.xib in Resources */,
+				FAEDD8ED264BF5ED003817A4 /* Poppins-SemiBoldItalic.ttf in Resources */,
+				FA69F688264F821E00BBB1A9 /* DetailsViewController.xib in Resources */,
+				FAA90BC3264EAD87005E244D /* UsageViewController.xib in Resources */,
+				FAEDD8F5264BF5ED003817A4 /* Poppins-Black.ttf in Resources */,
+				FA772904265156E100AB8449 /* PopUpViewController.xib in Resources */,
+				FAEDD907264C2316003817A4 /* CategoryCollectionViewCell.xib in Resources */,
+				FAEDD8E7264BF5ED003817A4 /* Poppins-ExtraLight.ttf in Resources */,
+				FAEDD8EB264BF5ED003817A4 /* Poppins-Light.ttf in Resources */,
+				FA69F69D265026AF00BBB1A9 /* DreamDetailsViewController.xib in Resources */,
+				FAEDD8E9264BF5ED003817A4 /* Poppins-ExtraLightItalic.ttf in Resources */,
+				FAEDD8F6264BF5ED003817A4 /* Poppins-Thin.ttf in Resources */,
+				FAEDD869264BE38A003817A4 /* LaunchScreen.storyboard in Resources */,
+				FA69F692264FCD1300BBB1A9 /* DetailsView.xib in Resources */,
+				FAEDD900264C1DBD003817A4 /* DreamTableViewCell.xib in Resources */,
+				FAEDD8F2264BF5ED003817A4 /* Poppins-Regular.ttf in Resources */,
+				FAEDD866264BE38A003817A4 /* Assets.xcassets in Resources */,
+				FAEDD8E8264BF5ED003817A4 /* Poppins-ThinItalic.ttf in Resources */,
+				FAEDD8F0264BF5ED003817A4 /* Poppins-BlackItalic.ttf in Resources */,
+				FA7077EC264D00DD00140847 /* HomeViewController.xib in Resources */,
+				FAA90BBB264E810F005E244D /* ProfileViewController.xib in Resources */,
+				FAEDD8F7264BF5ED003817A4 /* Poppins-SemiBold.ttf in Resources */,
+				FAEDD8CE264BF3C7003817A4 /* HistoryTableViewCell.xib in Resources */,
+				FAEDD8AF264BF057003817A4 /* RecentView.xib in Resources */,
+				FAEDD8F8264BF5ED003817A4 /* Poppins-Italic.ttf in Resources */,
+				FA7077E4264CFD4100140847 /* TitleView.xib in Resources */,
+				FA7728DF265103F600AB8449 /* EditDreamViewController.xib in Resources */,
+				FAEDD8EA264BF5ED003817A4 /* Poppins-BoldItalic.ttf in Resources */,
+				FA70783E264D49FF00140847 /* DreamViewController.xib in Resources */,
+				FAA90BB1264E6665005E244D /* ProfileView.xib in Resources */,
+				FAEDD8EC264BF5ED003817A4 /* Poppins-Medium.ttf in Resources */,
+				FAEDD8F9264BF5ED003817A4 /* Poppins-MediumItalic.ttf in Resources */,
+				FAEDD8EF264BF5ED003817A4 /* Poppins-ExtraBold.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAEDD86D264BE38A003817A4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAEDD878264BE38A003817A4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		FAEDD88F264BE464003817A4 /* Swift Lint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Swift Lint";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#if which swiftlint >/dev/null; then\n # swiftlint\n#else\n # echo \"warning: SwiftLint not installed, download from #https://github.com/realm/SwiftLint\"\n#fi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FAEDD855264BE389003817A4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAEDD85D264BE389003817A4 /* AppDelegate.swift in Sources */,
+				FA69F68D264FCD0800BBB1A9 /* DetailsView.swift in Sources */,
+				FA7077FA264D028800140847 /* MainTabBarController.swift in Sources */,
+				FA707829264D24C900140847 /* roundedView.swift in Sources */,
+				FAEDD8A7264BF04B003817A4 /* RecentView.swift in Sources */,
+				FAEDD8FF264C1DBD003817A4 /* DreamTableViewCell.swift in Sources */,
+				FA69F69C265026AF00BBB1A9 /* DreamDetailsViewController.swift in Sources */,
+				FA70782F264D281400140847 /* History.swift in Sources */,
+				FAEDD85F264BE389003817A4 /* SceneDelegate.swift in Sources */,
+				FAA90BAC264E6658005E244D /* ProfileView.swift in Sources */,
+				FAA90BC2264EAD87005E244D /* UsageViewController.swift in Sources */,
+				FA70783D264D49FF00140847 /* DreamViewController.swift in Sources */,
+				FA7077EB264D00DD00140847 /* HomeViewController.swift in Sources */,
+				FA7728E42651357100AB8449 /* Profile.swift in Sources */,
+				FAA90BE4264EC086005E244D /* Category.swift in Sources */,
+				FA69F687264F821E00BBB1A9 /* DetailsViewController.swift in Sources */,
+				FA7729092651590600AB8449 /* editViewProtocol.swift in Sources */,
+				FA772903265156E100AB8449 /* PopUpViewController.swift in Sources */,
+				FAEDD906264C2316003817A4 /* CategoryCollectionViewCell.swift in Sources */,
+				FA707846264D517C00140847 /* Dream.swift in Sources */,
+				FA7728C12650D94800AB8449 /* AddDreamViewController.swift in Sources */,
+				FA77290E265173A800AB8449 /* NumberFormatter.swift in Sources */,
+				FA7728DE265103F600AB8449 /* EditDreamViewController.swift in Sources */,
+				FAA90BBA264E810F005E244D /* ProfileViewController.swift in Sources */,
+				FA7728C82650DD3700AB8449 /* BackButtonView.swift in Sources */,
+				FAEDD8CD264BF3C7003817A4 /* HistoryTableViewCell.swift in Sources */,
+				FA7728EB26514BFB00AB8449 /* EditProfileViewController.swift in Sources */,
+				FA7077DC264CFD3600140847 /* TitleView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAEDD86B264BE38A003817A4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAEDD874264BE38A003817A4 /* MyMoneeAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAEDD876264BE38A003817A4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAEDD87F264BE38A003817A4 /* MyMoneeAppUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FAEDD871264BE38A003817A4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FAEDD858264BE389003817A4 /* MyMoneeApp */;
+			targetProxy = FAEDD870264BE38A003817A4 /* PBXContainerItemProxy */;
+		};
+		FAEDD87C264BE38A003817A4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FAEDD858264BE389003817A4 /* MyMoneeApp */;
+			targetProxy = FAEDD87B264BE38A003817A4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FAEDD867264BE38A003817A4 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FAEDD868264BE38A003817A4 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FAEDD881264BE38A003817A4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FAEDD882264BE38A003817A4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FAEDD884264BE38A003817A4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MyMoneeApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.myapp.MyMoneeApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FAEDD885264BE38A003817A4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MyMoneeApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.myapp.MyMoneeApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		FAEDD887264BE38A003817A4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MyMoneeAppTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.myapp.MyMoneeAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MyMoneeApp.app/MyMoneeApp";
+			};
+			name = Debug;
+		};
+		FAEDD888264BE38A003817A4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MyMoneeAppTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.myapp.MyMoneeAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MyMoneeApp.app/MyMoneeApp";
+			};
+			name = Release;
+		};
+		FAEDD88A264BE38A003817A4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MyMoneeAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.myapp.MyMoneeAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MyMoneeApp;
+			};
+			name = Debug;
+		};
+		FAEDD88B264BE38A003817A4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MyMoneeAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.myapp.MyMoneeAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MyMoneeApp;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FAEDD854264BE389003817A4 /* Build configuration list for PBXProject "MyMoneeApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FAEDD881264BE38A003817A4 /* Debug */,
+				FAEDD882264BE38A003817A4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FAEDD883264BE38A003817A4 /* Build configuration list for PBXNativeTarget "MyMoneeApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FAEDD884264BE38A003817A4 /* Debug */,
+				FAEDD885264BE38A003817A4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FAEDD886264BE38A003817A4 /* Build configuration list for PBXNativeTarget "MyMoneeAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FAEDD887264BE38A003817A4 /* Debug */,
+				FAEDD888264BE38A003817A4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FAEDD889264BE38A003817A4 /* Build configuration list for PBXNativeTarget "MyMoneeAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FAEDD88A264BE38A003817A4 /* Debug */,
+				FAEDD88B264BE38A003817A4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FAEDD851264BE389003817A4 /* Project object */;
+}

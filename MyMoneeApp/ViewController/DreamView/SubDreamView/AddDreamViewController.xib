@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-Regular.ttf">
+            <string>Poppins-Regular</string>
+        </array>
+        <array key="Poppins-SemiBold.ttf">
+            <string>Poppins-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddDreamViewController" customModule="MyMoneeApp" customModuleProvider="target">
+            <connections>
+                <outlet property="amountView" destination="fgn-Dg-7w6" id="GcO-Uv-LJt"/>
+                <outlet property="titleView" destination="KNk-zh-DJh" id="tm1-FS-vSC"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rdh-lG-dBW">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pal-6i-lwh">
+                            <rect key="frame" x="12" y="19" width="24" height="24"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="24" id="9iu-ah-D4P"/>
+                                <constraint firstAttribute="width" constant="24" id="ymw-WB-j6C"/>
+                            </constraints>
+                            <state key="normal" title="Tambah Penggunaan" image="ic_back"/>
+                            <connections>
+                                <action selector="doBack:" destination="-1" eventType="touchUpInside" id="fLf-Ag-SPz"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tambah Impian" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dpe-zn-2q8">
+                            <rect key="frame" x="44" y="21" width="112.5" height="20"/>
+                            <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="14"/>
+                            <color key="textColor" red="0.30980392159999998" green="0.30980392159999998" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KNk-zh-DJh" userLabel="TitleView" customClass="TitleView" customModule="MyMoneeApp" customModuleProvider="target">
+                            <rect key="frame" x="16" y="70" width="382" height="57"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="57" id="nyj-CG-Rx3"/>
+                            </constraints>
+                        </view>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y54-fa-pjL">
+                            <rect key="frame" x="18" y="745" width="378" height="43"/>
+                            <color key="backgroundColor" red="0.31372549020000001" green="0.41176470590000003" blue="0.72156862749999995" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="43" id="Arl-dy-iuf"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="14"/>
+                            <state key="normal" title="Simpan">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="20"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="doSave:" destination="-1" eventType="touchUpInside" id="DRY-Ul-E4R"/>
+                            </connections>
+                        </button>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fgn-Dg-7w6" userLabel="AmountView" customClass="TitleView" customModule="MyMoneeApp" customModuleProvider="target">
+                            <rect key="frame" x="16" y="141" width="382" height="57"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="57" id="cVG-dx-IZF"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="Y54-fa-pjL" firstAttribute="leading" secondItem="rdh-lG-dBW" secondAttribute="leading" constant="18" id="0q4-AN-hm2"/>
+                        <constraint firstItem="fgn-Dg-7w6" firstAttribute="top" secondItem="KNk-zh-DJh" secondAttribute="bottom" constant="14" id="2WG-xH-k67"/>
+                        <constraint firstAttribute="trailing" secondItem="Y54-fa-pjL" secondAttribute="trailing" constant="18" id="7hC-TB-ibM"/>
+                        <constraint firstItem="pal-6i-lwh" firstAttribute="leading" secondItem="rdh-lG-dBW" secondAttribute="leading" constant="12" id="9BK-Ab-scv"/>
+                        <constraint firstAttribute="trailing" secondItem="KNk-zh-DJh" secondAttribute="trailing" constant="16" id="Boz-P4-UDW"/>
+                        <constraint firstItem="fgn-Dg-7w6" firstAttribute="leading" secondItem="rdh-lG-dBW" secondAttribute="leading" constant="16" id="LId-YF-1Ev"/>
+                        <constraint firstItem="dpe-zn-2q8" firstAttribute="leading" secondItem="pal-6i-lwh" secondAttribute="trailing" constant="8" id="Lc8-2C-bU7"/>
+                        <constraint firstItem="KNk-zh-DJh" firstAttribute="leading" secondItem="rdh-lG-dBW" secondAttribute="leading" constant="16" id="LwA-uP-BHH"/>
+                        <constraint firstItem="KNk-zh-DJh" firstAttribute="top" secondItem="pal-6i-lwh" secondAttribute="bottom" constant="27" id="SrP-2H-hcn"/>
+                        <constraint firstAttribute="bottom" secondItem="Y54-fa-pjL" secondAttribute="bottom" constant="30" id="aIs-DE-J6g"/>
+                        <constraint firstItem="pal-6i-lwh" firstAttribute="top" secondItem="rdh-lG-dBW" secondAttribute="top" constant="19" id="jhD-zF-T5R"/>
+                        <constraint firstItem="dpe-zn-2q8" firstAttribute="centerY" secondItem="pal-6i-lwh" secondAttribute="centerY" id="z0i-40-0nV"/>
+                        <constraint firstAttribute="trailing" secondItem="fgn-Dg-7w6" secondAttribute="trailing" constant="16" id="zVk-tp-9za"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="rdh-lG-dBW" secondAttribute="bottom" id="3lW-zk-cIi"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="rdh-lG-dBW" secondAttribute="trailing" id="Jcy-kT-WQH"/>
+                <constraint firstItem="rdh-lG-dBW" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="NEd-ac-eRF"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="rdh-lG-dBW" secondAttribute="trailing" id="NTM-7p-u9b"/>
+                <constraint firstItem="rdh-lG-dBW" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="Z5g-oi-8qT"/>
+                <constraint firstItem="rdh-lG-dBW" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="v09-vU-MsS"/>
+            </constraints>
+            <point key="canvasLocation" x="137.68115942028987" y="86.383928571428569"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ic_back" width="24" height="24"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

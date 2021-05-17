@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-Regular.ttf">
+            <string>Poppins-Regular</string>
+        </array>
+        <array key="Poppins-SemiBold.ttf">
+            <string>Poppins-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProfileView" customModule="MyMoneeApp" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="iN0-l3-epB" id="0Dr-qd-GiD"/>
+                <outlet property="editPhotoButton" destination="6Ks-AC-FNy" id="MBT-b7-7il"/>
+                <outlet property="imageProfile" destination="zjs-Vk-4oO" id="SfD-Ha-Q0J"/>
+                <outlet property="labelMessage" destination="ho2-Cj-CCd" id="g7H-KK-ZZo"/>
+                <outlet property="labelName" destination="YH9-xB-5Ht" id="8WL-jE-McR"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="400" height="355"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SpB-r3-LGk">
+                    <rect key="frame" x="0.0" y="44" width="400" height="311"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile-picture-example" translatesAutoresizingMaskIntoConstraints="NO" id="zjs-Vk-4oO">
+                            <rect key="frame" x="149.5" y="32" width="101" height="101"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="101" id="2WQ-yz-cOc"/>
+                                <constraint firstAttribute="height" constant="101" id="tJB-iO-ba9"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YH9-xB-5Ht">
+                            <rect key="frame" x="149" y="163" width="102" height="25.5"/>
+                            <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="18"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bagus! Pengeluaranmu lebih sedikit dari Pemasukan" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ho2-Cj-CCd">
+                            <rect key="frame" x="87" y="192.5" width="226" height="34"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="226" id="Ipd-TT-L9y"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="12"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Ks-AC-FNy" userLabel="EditPhotoButton">
+                            <rect key="frame" x="219.5" y="109" width="24" height="24"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="24" id="3Bx-nC-JGM"/>
+                                <constraint firstAttribute="width" constant="24" id="DTO-Qg-Z6t"/>
+                            </constraints>
+                            <state key="normal" image="ic_edit_photo"/>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.31372549019607843" green="0.41176470588235292" blue="0.72156862745098038" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="YH9-xB-5Ht" firstAttribute="top" secondItem="zjs-Vk-4oO" secondAttribute="bottom" constant="30" id="30K-Rp-PQQ"/>
+                        <constraint firstItem="6Ks-AC-FNy" firstAttribute="trailing" secondItem="zjs-Vk-4oO" secondAttribute="trailing" constant="-7" id="Lkg-tg-lfX"/>
+                        <constraint firstAttribute="height" constant="311" id="UKd-a6-aMj"/>
+                        <constraint firstItem="ho2-Cj-CCd" firstAttribute="top" secondItem="YH9-xB-5Ht" secondAttribute="bottom" constant="4" id="kbu-xt-9UY"/>
+                        <constraint firstItem="6Ks-AC-FNy" firstAttribute="bottom" secondItem="zjs-Vk-4oO" secondAttribute="bottom" id="lPk-ce-YD1"/>
+                        <constraint firstItem="zjs-Vk-4oO" firstAttribute="top" secondItem="SpB-r3-LGk" secondAttribute="top" constant="32" id="oyd-3h-Edi"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="YH9-xB-5Ht" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="4Hf-cx-fBG"/>
+                <constraint firstItem="ho2-Cj-CCd" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="FP0-uL-bDE"/>
+                <constraint firstItem="SpB-r3-LGk" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="MMU-YE-nYh"/>
+                <constraint firstItem="zjs-Vk-4oO" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="N5j-Fs-cMv"/>
+                <constraint firstItem="SpB-r3-LGk" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="S4G-fM-KhO"/>
+                <constraint firstItem="SpB-r3-LGk" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="caz-YC-1ZD"/>
+                <constraint firstItem="SpB-r3-LGk" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="ksT-9b-amy"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-152.17391304347828" y="276.5625"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ic_edit_photo" width="24" height="24"/>
+        <image name="profile-picture-example" width="101" height="101"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

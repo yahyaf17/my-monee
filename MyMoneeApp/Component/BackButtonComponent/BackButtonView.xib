@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-Regular.ttf">
+            <string>Poppins-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BackButtonView" customModule="MyMoneeApp" customModuleProvider="target">
+            <connections>
+                <outlet property="backButton" destination="MBn-nU-WfR" id="efM-Xh-NbD"/>
+                <outlet property="contentVIew" destination="iN0-l3-epB" id="5YQ-6U-W6b"/>
+                <outlet property="labelBack" destination="Kr7-GN-o5k" id="Xkh-90-x2t"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="232" height="63"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MBn-nU-WfR">
+                    <rect key="frame" x="12" y="19" width="24" height="24"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="24" id="cyX-hs-sVd"/>
+                        <constraint firstAttribute="height" constant="24" id="qLe-O4-9bK"/>
+                    </constraints>
+                    <state key="normal" title="Tambah Penggunaan" image="ic_back"/>
+                    <connections>
+                        <action selector="doBack:" destination="-1" eventType="touchUpInside" id="dW9-UW-Xga"/>
+                        <action selector="doBackWithButton:" destination="-1" eventType="touchUpInside" id="ipq-Tc-kG5"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label Back" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kr7-GN-o5k">
+                    <rect key="frame" x="44" y="21" width="75" height="20"/>
+                    <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="14"/>
+                    <color key="textColor" red="0.30980392159999998" green="0.30980392159999998" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="MBn-nU-WfR" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="12" id="hMp-b0-c7D"/>
+                <constraint firstItem="MBn-nU-WfR" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="19" id="iCw-wA-fM5"/>
+                <constraint firstItem="Kr7-GN-o5k" firstAttribute="centerY" secondItem="MBn-nU-WfR" secondAttribute="centerY" id="qNp-qR-SVQ"/>
+                <constraint firstItem="Kr7-GN-o5k" firstAttribute="leading" secondItem="MBn-nU-WfR" secondAttribute="trailing" constant="8" id="qWe-jA-6h8"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-10.144927536231885" y="234.04017857142856"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ic_back" width="24" height="24"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

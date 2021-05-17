@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-Regular.ttf">
+            <string>Poppins-Regular</string>
+        </array>
+        <array key="Poppins-SemiBold.ttf">
+            <string>Poppins-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EditDreamViewController" customModule="MyMoneeApp" customModuleProvider="target">
+            <connections>
+                <outlet property="deleteButton" destination="L95-ia-rLq" id="k1X-eQ-Axm"/>
+                <outlet property="targetView" destination="blq-2E-fAq" id="LaO-qY-12M"/>
+                <outlet property="titleView" destination="UND-r1-rSE" id="q5m-6w-eIE"/>
+                <outlet property="updateButton" destination="6dM-gc-ptf" id="fim-hF-0h6"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EcS-Ls-lyX" userLabel="MainView">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i0n-w6-Oco">
+                            <rect key="frame" x="12" y="19" width="24" height="24"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="24" id="ByB-UJ-FIg"/>
+                                <constraint firstAttribute="width" constant="24" id="lmA-SA-BSr"/>
+                            </constraints>
+                            <state key="normal" title="Tambah Penggunaan" image="ic_back"/>
+                            <connections>
+                                <action selector="doBack:" destination="-1" eventType="touchUpInside" id="1Y6-4D-I2a"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ubah Impian" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8QM-rI-LNL">
+                            <rect key="frame" x="44" y="21" width="90.5" height="20"/>
+                            <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="14"/>
+                            <color key="textColor" red="0.30980392159999998" green="0.30980392159999998" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UND-r1-rSE" userLabel="TitleView" customClass="TitleView" customModule="MyMoneeApp" customModuleProvider="target">
+                            <rect key="frame" x="16" y="67" width="382" height="57"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="57" id="ajq-N0-l6d"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="blq-2E-fAq" userLabel="AmountView" customClass="TitleView" customModule="MyMoneeApp" customModuleProvider="target">
+                            <rect key="frame" x="16" y="138" width="382" height="57"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="57" id="kp0-zp-U4F"/>
+                            </constraints>
+                        </view>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L95-ia-rLq">
+                            <rect key="frame" x="18" y="745" width="378" height="43"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="43" id="qrz-7u-jWo"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="14"/>
+                            <state key="normal" title="Hapus">
+                                <color key="titleColor" red="0.92156862745098034" green="0.3411764705882353" blue="0.3411764705882353" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="20"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="doDelete:" destination="-1" eventType="touchUpInside" id="R2o-mV-re4"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6dM-gc-ptf">
+                            <rect key="frame" x="18" y="686" width="378" height="43"/>
+                            <color key="backgroundColor" red="0.31372549020000001" green="0.41176470590000003" blue="0.72156862749999995" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="43" id="gcp-4P-K52"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="14"/>
+                            <state key="normal" title="Perbarui">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="20"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="doUpdate:" destination="-1" eventType="touchUpInside" id="hxH-zV-2eW"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="blq-2E-fAq" firstAttribute="leading" secondItem="EcS-Ls-lyX" secondAttribute="leading" constant="16" id="Dkb-1B-glR"/>
+                        <constraint firstItem="6dM-gc-ptf" firstAttribute="leading" secondItem="EcS-Ls-lyX" secondAttribute="leading" constant="18" id="FZY-th-2of"/>
+                        <constraint firstItem="i0n-w6-Oco" firstAttribute="leading" secondItem="EcS-Ls-lyX" secondAttribute="leading" constant="12" id="POr-hZ-oGP"/>
+                        <constraint firstItem="UND-r1-rSE" firstAttribute="top" secondItem="i0n-w6-Oco" secondAttribute="bottom" constant="24" id="PcI-Nn-Gf2"/>
+                        <constraint firstItem="8QM-rI-LNL" firstAttribute="centerY" secondItem="i0n-w6-Oco" secondAttribute="centerY" id="Ptp-JL-Oiu"/>
+                        <constraint firstItem="blq-2E-fAq" firstAttribute="top" secondItem="UND-r1-rSE" secondAttribute="bottom" constant="14" id="SHj-Dg-Kdm"/>
+                        <constraint firstItem="UND-r1-rSE" firstAttribute="leading" secondItem="EcS-Ls-lyX" secondAttribute="leading" constant="16" id="VAS-Bj-hEr"/>
+                        <constraint firstAttribute="trailing" secondItem="L95-ia-rLq" secondAttribute="trailing" constant="18" id="YNg-y6-Ajj"/>
+                        <constraint firstAttribute="trailing" secondItem="blq-2E-fAq" secondAttribute="trailing" constant="16" id="bjj-P0-X2c"/>
+                        <constraint firstItem="L95-ia-rLq" firstAttribute="leading" secondItem="EcS-Ls-lyX" secondAttribute="leading" constant="18" id="bnm-dA-1vb"/>
+                        <constraint firstAttribute="bottom" secondItem="L95-ia-rLq" secondAttribute="bottom" constant="30" id="cZq-hA-Jus"/>
+                        <constraint firstItem="i0n-w6-Oco" firstAttribute="top" secondItem="EcS-Ls-lyX" secondAttribute="top" constant="19" id="n9f-Tv-6fX"/>
+                        <constraint firstItem="8QM-rI-LNL" firstAttribute="leading" secondItem="i0n-w6-Oco" secondAttribute="trailing" constant="8" id="pL7-VA-He3"/>
+                        <constraint firstAttribute="trailing" secondItem="UND-r1-rSE" secondAttribute="trailing" constant="16" id="xFG-7V-p3O"/>
+                        <constraint firstAttribute="trailing" secondItem="6dM-gc-ptf" secondAttribute="trailing" constant="18" id="xap-jA-ENs"/>
+                        <constraint firstItem="L95-ia-rLq" firstAttribute="top" secondItem="6dM-gc-ptf" secondAttribute="bottom" constant="16" id="yh1-1H-FIA"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="EcS-Ls-lyX" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="JMP-PD-Bty"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="EcS-Ls-lyX" secondAttribute="trailing" id="Njd-Rt-A8E"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="EcS-Ls-lyX" secondAttribute="bottom" id="gXf-il-83T"/>
+                <constraint firstItem="EcS-Ls-lyX" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="hqR-19-FXB"/>
+            </constraints>
+            <point key="canvasLocation" x="122" y="87"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ic_back" width="24" height="24"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
