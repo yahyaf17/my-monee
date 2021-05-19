@@ -7,7 +7,7 @@
 
 import UIKit
 
-class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, NotFoundDelegate {
     
     @IBOutlet weak var recentIncome: RecentView!
     @IBOutlet weak var recentOutcome: RecentView!
@@ -16,6 +16,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBOutlet weak var labelName: UILabel!
     @IBOutlet weak var labelBalance: UILabel!
     @IBOutlet weak var greetingLabel: UILabel!
+    @IBOutlet weak var notFoundView: NotFoundView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,13 +33,15 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
 
         // RecentIncome
         recentIncome.imageStatus.image = UIImage(named: "arrow_upward")
-        recentIncome.labelStatus.text = "Uang Keluar"
-        recentIncome.labelAmount.text = "Rp 1.250.000"
+        recentIncome.labelStatus.text = "Uang Masuk"
+        
         
         // RecentOutcome
         recentOutcome.imageStatus.image = UIImage(named: "arrow_downward")
         recentOutcome.labelStatus.text = "Uang Keluar"
-        recentOutcome.labelAmount.text = "Rp 256.000"
+        
+        // Empty data handling
+        empyDataHandling()
         
         // TableView
         tableView.delegate = self
@@ -46,6 +49,13 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         let uiNib = UINib(nibName: String(describing: HistoryTableViewCell.self), bundle: nil)
         tableView.register(uiNib, forCellReuseIdentifier: String(describing: HistoryTableViewCell.self))
+        
+        notFoundView.delegate = self
+        tableView.reloadData()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        tableView.reloadData()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -87,22 +97,42 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         dvc.amount = histories[indexPath.row].price
         dvc.date = histories[indexPath.row].date
         dvc.type = histories[indexPath.row].type
-        let dvcNavigation = UINavigationController(rootViewController: dvc)
-        dvcNavigation.setNavigationBarHidden(true, animated: true)
-        dvcNavigation.modalPresentationStyle = .fullScreen
-        self.present(dvcNavigation, animated: true, completion: nil)
+        dvc.selectedRow = indexPath.row
+        dvc.type = histories[indexPath.row].type
+        self.navigationController?.pushViewController(dvc, animated: true)
     }
     
     func greeting() {
         var currentTimeOfDay = ""
         let hour = NSCalendar.current.component(.hour, from: NSDate() as Date)
-        if hour >= 0 && hour < 12 {
+        if hour >= 3 && hour < 12 {
             currentTimeOfDay = "Pagi"
-        } else if hour >= 12 && hour < 17 {
+        } else if hour >= 12 && hour < 15 {
             currentTimeOfDay = "Siang"
-        } else if hour >= 18 {
+        } else if hour >= 15 && hour < 18 {
+            currentTimeOfDay = "Sore"
+        }else {
             currentTimeOfDay = "Malam"
         }
         greetingLabel.text = "Selamat \(currentTimeOfDay),"
         }
+    
+    func addData() {
+        toAddView((Any).self)
+    }
+    
+    func empyDataHandling() {
+        if histories.isEmpty {
+            notFoundView.isHidden = false
+            recentOutcome.labelAmount.text = "Rp 0"
+            recentIncome.labelAmount.text = "Rp 0"
+            notFoundView.addButton.setTitle("Tambah Penggunaan", for: .normal)
+            profile.balance = 0
+        } else {
+            notFoundView.isHidden = true
+            recentOutcome.labelAmount.text = "Rp  \(currencyFormat(value: searchRecentOutcome()))"
+            recentIncome.labelAmount.text = "Rp  \(currencyFormat(value: searchRecentIncome()))"
+        }
+    }
+    
 }

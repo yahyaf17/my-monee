@@ -23,8 +23,10 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UsageViewController" customModule="MyMoneeApp" customModuleProvider="target">
             <connections>
                 <outlet property="amountView" destination="qSW-PC-pRd" id="btd-f3-Cjk"/>
+                <outlet property="incomeView" destination="fSf-Zo-Cmg" id="2Oz-ng-eGu"/>
+                <outlet property="outcomeView" destination="Txe-9x-jHn" id="Aca-W4-1UW"/>
+                <outlet property="saveButton" destination="hCn-WX-HGp" id="3Hj-Zz-HwY"/>
                 <outlet property="titleView" destination="jem-2P-aQn" id="uey-k7-dzf"/>
-                <outlet property="usageCollection" destination="ahI-H5-UTi" id="Gqk-Vn-bpX"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -48,27 +50,27 @@
                             </connections>
                         </button>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jem-2P-aQn" userLabel="TitleView" customClass="TitleView" customModule="MyMoneeApp" customModuleProvider="target">
-                            <rect key="frame" x="16" y="65" width="382" height="57"/>
+                            <rect key="frame" x="0.0" y="65" width="414" height="57"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="57" id="asb-7w-y4W"/>
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qSW-PC-pRd" userLabel="AmountView" customClass="TitleView" customModule="MyMoneeApp" customModuleProvider="target">
-                            <rect key="frame" x="16" y="136" width="382" height="57"/>
+                            <rect key="frame" x="0.0" y="136" width="414" height="57"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="57" id="JAF-hV-wkS"/>
                             </constraints>
                         </view>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tambah Penggunaan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Fi-dY-IoY">
-                            <rect key="frame" x="44" y="23" width="132.5" height="16.5"/>
+                            <rect key="frame" x="44" y="21" width="154" height="20"/>
                             <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="14"/>
                             <color key="textColor" red="0.30980392156862746" green="0.30980392156862746" blue="0.30980392156862746" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kategori Penggunaan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iqe-hy-zBE">
-                            <rect key="frame" x="16" y="207" width="135.5" height="16.5"/>
+                            <rect key="frame" x="16" y="207" width="155" height="20"/>
                             <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="14"/>
                             <color key="textColor" red="0.30980392159999998" green="0.30980392159999998" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
@@ -92,51 +94,104 @@
                                 <action selector="saveButton:" destination="-1" eventType="touchUpInside" id="HQ6-E4-8Ad"/>
                             </connections>
                         </button>
-                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="ahI-H5-UTi">
-                            <rect key="frame" x="16" y="239.5" width="382" height="489.5"/>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D3R-hz-Nud">
+                            <rect key="frame" x="16" y="243" width="382" height="75"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v7G-tO-62B">
+                                    <rect key="frame" x="184.5" y="0.0" width="13" height="75"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="13" id="TBn-rE-EZB"/>
+                                        <constraint firstAttribute="height" constant="75" id="Ttz-EM-Wne"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Txe-9x-jHn" userLabel="Outcome View" customClass="CategoryView" customModule="MyMoneeApp" customModuleProvider="target">
+                                    <rect key="frame" x="197.5" y="0.0" width="184.5" height="75"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <gestureRecognizers/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                            <integer key="value" value="4"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <outletCollection property="gestureRecognizers" destination="BrO-84-lQ0" appends="YES" id="7me-hE-nde"/>
+                                    </connections>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fSf-Zo-Cmg" userLabel="Income View" customClass="CategoryView" customModule="MyMoneeApp" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="184.5" height="75"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <gestureRecognizers/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                            <integer key="value" value="4"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <outletCollection property="gestureRecognizers" destination="jgK-DK-4UT" appends="YES" id="De5-x6-GzT"/>
+                                    </connections>
+                                </view>
+                            </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="W0I-Ym-jFd">
-                                <size key="itemSize" width="128" height="128"/>
-                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                            </collectionViewFlowLayout>
-                        </collectionView>
+                            <constraints>
+                                <constraint firstItem="v7G-tO-62B" firstAttribute="centerX" secondItem="D3R-hz-Nud" secondAttribute="centerX" id="8v1-1N-5Ut"/>
+                                <constraint firstAttribute="bottom" secondItem="fSf-Zo-Cmg" secondAttribute="bottom" id="Fqn-sI-DG7"/>
+                                <constraint firstItem="fSf-Zo-Cmg" firstAttribute="leading" secondItem="D3R-hz-Nud" secondAttribute="leading" id="Gra-L8-rrD"/>
+                                <constraint firstItem="v7G-tO-62B" firstAttribute="centerY" secondItem="D3R-hz-Nud" secondAttribute="centerY" id="Qhn-zv-2Nt"/>
+                                <constraint firstAttribute="trailing" secondItem="Txe-9x-jHn" secondAttribute="trailing" id="UU7-Mw-B65"/>
+                                <constraint firstItem="Txe-9x-jHn" firstAttribute="leading" secondItem="v7G-tO-62B" secondAttribute="trailing" id="WAS-tv-6FN"/>
+                                <constraint firstAttribute="bottom" secondItem="Txe-9x-jHn" secondAttribute="bottom" id="fxX-oI-JeU"/>
+                                <constraint firstItem="Txe-9x-jHn" firstAttribute="top" secondItem="D3R-hz-Nud" secondAttribute="top" id="joA-oM-65I"/>
+                                <constraint firstItem="fSf-Zo-Cmg" firstAttribute="top" secondItem="D3R-hz-Nud" secondAttribute="top" id="mHY-AT-7HS"/>
+                                <constraint firstAttribute="height" constant="75" id="yzn-SI-spi"/>
+                                <constraint firstItem="v7G-tO-62B" firstAttribute="leading" secondItem="fSf-Zo-Cmg" secondAttribute="trailing" id="zqK-T7-4X5"/>
+                            </constraints>
+                        </view>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
                         <constraint firstAttribute="bottom" secondItem="hCn-WX-HGp" secondAttribute="bottom" constant="30" id="4Xt-6h-Gyy"/>
-                        <constraint firstItem="ahI-H5-UTi" firstAttribute="top" secondItem="Iqe-hy-zBE" secondAttribute="bottom" constant="16" id="8Ol-IK-Uge"/>
                         <constraint firstItem="9iH-il-vIB" firstAttribute="leading" secondItem="syx-17-h2y" secondAttribute="leading" constant="12" id="8R8-Nz-pnT"/>
-                        <constraint firstAttribute="trailing" secondItem="ahI-H5-UTi" secondAttribute="trailing" constant="16" id="Avf-Le-BUa"/>
-                        <constraint firstItem="ahI-H5-UTi" firstAttribute="leading" secondItem="syx-17-h2y" secondAttribute="leading" constant="16" id="FUg-XU-9XJ"/>
-                        <constraint firstItem="hCn-WX-HGp" firstAttribute="top" secondItem="ahI-H5-UTi" secondAttribute="bottom" constant="16" id="JKf-rZ-2Bc"/>
                         <constraint firstItem="4Fi-dY-IoY" firstAttribute="leading" secondItem="9iH-il-vIB" secondAttribute="trailing" constant="8" id="Omi-XK-Gww"/>
                         <constraint firstItem="jem-2P-aQn" firstAttribute="top" secondItem="9iH-il-vIB" secondAttribute="bottom" constant="22" id="ReO-Hj-JB9"/>
                         <constraint firstItem="Iqe-hy-zBE" firstAttribute="leading" secondItem="syx-17-h2y" secondAttribute="leading" constant="16" id="XzM-6H-Jll"/>
                         <constraint firstItem="9iH-il-vIB" firstAttribute="top" secondItem="syx-17-h2y" secondAttribute="top" constant="19" id="bvk-vW-sff"/>
-                        <constraint firstAttribute="trailing" secondItem="jem-2P-aQn" secondAttribute="trailing" constant="16" id="ePy-1S-gIQ"/>
+                        <constraint firstAttribute="trailing" secondItem="jem-2P-aQn" secondAttribute="trailing" id="ePy-1S-gIQ"/>
                         <constraint firstItem="qSW-PC-pRd" firstAttribute="top" secondItem="jem-2P-aQn" secondAttribute="bottom" constant="14" id="g3I-tc-NoF"/>
+                        <constraint firstAttribute="trailing" secondItem="D3R-hz-Nud" secondAttribute="trailing" constant="16" id="gEt-cj-Kz1"/>
+                        <constraint firstItem="D3R-hz-Nud" firstAttribute="top" secondItem="Iqe-hy-zBE" secondAttribute="bottom" constant="16" id="gpk-MX-Pj6"/>
                         <constraint firstItem="Iqe-hy-zBE" firstAttribute="top" secondItem="qSW-PC-pRd" secondAttribute="bottom" constant="14" id="ieD-lf-7kU"/>
-                        <constraint firstItem="jem-2P-aQn" firstAttribute="leading" secondItem="syx-17-h2y" secondAttribute="leading" constant="16" id="lb3-Pz-lRw"/>
+                        <constraint firstItem="jem-2P-aQn" firstAttribute="leading" secondItem="syx-17-h2y" secondAttribute="leading" id="lb3-Pz-lRw"/>
                         <constraint firstAttribute="trailing" secondItem="hCn-WX-HGp" secondAttribute="trailing" constant="16" id="mcs-RK-wJ0"/>
                         <constraint firstItem="4Fi-dY-IoY" firstAttribute="centerY" secondItem="9iH-il-vIB" secondAttribute="centerY" id="s9c-cv-JLr"/>
-                        <constraint firstItem="qSW-PC-pRd" firstAttribute="leading" secondItem="syx-17-h2y" secondAttribute="leading" constant="16" id="sh3-Ll-7Gj"/>
-                        <constraint firstAttribute="trailing" secondItem="qSW-PC-pRd" secondAttribute="trailing" constant="16" id="x15-kO-6gM"/>
+                        <constraint firstItem="qSW-PC-pRd" firstAttribute="leading" secondItem="syx-17-h2y" secondAttribute="leading" id="sh3-Ll-7Gj"/>
+                        <constraint firstAttribute="trailing" secondItem="qSW-PC-pRd" secondAttribute="trailing" id="x15-kO-6gM"/>
+                        <constraint firstItem="D3R-hz-Nud" firstAttribute="leading" secondItem="syx-17-h2y" secondAttribute="leading" constant="16" id="xxh-Z1-SOx"/>
                         <constraint firstItem="hCn-WX-HGp" firstAttribute="leading" secondItem="syx-17-h2y" secondAttribute="leading" constant="16" id="z3c-Y3-tSw"/>
                     </constraints>
                 </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <gestureRecognizers/>
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="syx-17-h2y" secondAttribute="bottom" id="8Hw-qY-sXF"/>
                 <constraint firstItem="syx-17-h2y" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="cyt-kJ-NNO"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="syx-17-h2y" secondAttribute="trailing" id="sdg-5L-FFa"/>
                 <constraint firstItem="syx-17-h2y" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="xzl-gi-XUG"/>
             </constraints>
-            <point key="canvasLocation" x="122" y="87"/>
+            <point key="canvasLocation" x="121.73913043478262" y="86.383928571428569"/>
         </view>
+        <tapGestureRecognizer id="jgK-DK-4UT">
+            <connections>
+                <action selector="selectIncome:" destination="-1" id="Xqw-JM-bGa"/>
+            </connections>
+        </tapGestureRecognizer>
+        <tapGestureRecognizer id="BrO-84-lQ0">
+            <connections>
+                <action selector="selectOutcome:" destination="-1" id="Wtx-Ku-SU0"/>
+            </connections>
+        </tapGestureRecognizer>
     </objects>
     <resources>
         <image name="ic_back" width="24" height="24"/>

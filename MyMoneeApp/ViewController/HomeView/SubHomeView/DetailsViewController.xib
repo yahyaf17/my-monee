@@ -23,6 +23,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailsViewController" customModule="MyMoneeApp" customModuleProvider="target">
             <connections>
                 <outlet property="backButton" destination="uxh-zo-fL6" id="wXL-Yq-c4b"/>
+                <outlet property="buttonView" destination="e6P-oi-Fz1" id="rTt-uW-a80"/>
                 <outlet property="dateLabel" destination="sx8-Xl-wYw" id="yK6-YB-9Qz"/>
                 <outlet property="detailsView" destination="Lrn-Qj-Ig2" id="mzY-e2-IAP"/>
                 <outlet property="idLabel" destination="Ev0-x0-t7y" id="1Io-5Q-sA5"/>
@@ -39,6 +40,27 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fnO-fN-1a3" userLabel="Parent View">
                     <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                     <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e6P-oi-Fz1" userLabel="ButtonView">
+                            <rect key="frame" x="361" y="17" width="36" height="36"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" pointerInteraction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="k7R-zb-Auv">
+                                    <rect key="frame" x="0.0" y="0.0" width="36" height="36"/>
+                                    <state key="normal" image="ic_edit"/>
+                                    <connections>
+                                        <action selector="editAction:" destination="-1" eventType="touchUpInside" id="gZL-qj-8xF"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="k7R-zb-Auv" firstAttribute="top" secondItem="e6P-oi-Fz1" secondAttribute="top" id="3AG-XV-Fcj"/>
+                                <constraint firstAttribute="trailing" secondItem="k7R-zb-Auv" secondAttribute="trailing" id="4dT-87-bia"/>
+                                <constraint firstAttribute="bottom" secondItem="k7R-zb-Auv" secondAttribute="bottom" id="HQW-Ln-Kfa"/>
+                                <constraint firstAttribute="width" constant="36" id="W4j-sf-JNK"/>
+                                <constraint firstItem="k7R-zb-Auv" firstAttribute="leading" secondItem="e6P-oi-Fz1" secondAttribute="leading" id="hl1-ia-2sG"/>
+                                <constraint firstAttribute="height" constant="36" id="xu2-1T-Lpp"/>
+                            </constraints>
+                        </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lrn-Qj-Ig2" customClass="DetailsView" customModule="MyMoneeApp" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="0.0" width="414" height="230"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -141,6 +163,8 @@
                         <constraint firstItem="Lrn-Qj-Ig2" firstAttribute="top" secondItem="fnO-fN-1a3" secondAttribute="top" id="bGG-Ic-9mE"/>
                         <constraint firstAttribute="trailing" secondItem="Gfm-Qe-zaQ" secondAttribute="trailing" id="c2X-ns-W1K"/>
                         <constraint firstItem="Gfm-Qe-zaQ" firstAttribute="top" secondItem="fnO-fN-1a3" secondAttribute="top" constant="75" id="lO5-8D-ZNz"/>
+                        <constraint firstItem="e6P-oi-Fz1" firstAttribute="top" secondItem="fnO-fN-1a3" secondAttribute="top" constant="17" id="lRr-eA-AFk"/>
+                        <constraint firstAttribute="trailing" secondItem="e6P-oi-Fz1" secondAttribute="trailing" constant="17" id="pra-pe-S8w"/>
                         <constraint firstItem="Gfm-Qe-zaQ" firstAttribute="leading" secondItem="fnO-fN-1a3" secondAttribute="leading" id="quT-lA-OQo"/>
                     </constraints>
                 </view>
@@ -153,10 +177,11 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="fnO-fN-1a3" secondAttribute="bottom" id="amz-rf-C9k"/>
                 <constraint firstItem="fnO-fN-1a3" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="wzU-f0-KXP"/>
             </constraints>
-            <point key="canvasLocation" x="139" y="87"/>
+            <point key="canvasLocation" x="137.68115942028987" y="86.383928571428569"/>
         </view>
     </objects>
     <resources>
+        <image name="ic_edit" width="36" height="36"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

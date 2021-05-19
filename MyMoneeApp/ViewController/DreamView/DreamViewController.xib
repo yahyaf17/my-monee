@@ -13,8 +13,10 @@
         </array>
     </customFonts>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DreamViewController" customModule="MyMoneeApp" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DreamViewController" customModule="My_Monee___Money_Saver" customModuleProvider="target">
             <connections>
+                <outlet property="mainView" destination="z7k-49-Aa4" id="zgn-ZM-lm2"/>
+                <outlet property="notFoundView" destination="0TC-vc-aao" id="4om-78-T2b"/>
                 <outlet property="tableView" destination="Gxo-sP-Ui6" id="Mh2-qy-dDx"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -69,6 +71,10 @@
                             <color key="textColor" red="0.3098039031" green="0.3098039031" blue="0.30980387329999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <nil key="highlightedColor"/>
                         </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0TC-vc-aao" userLabel="EmpyDataView" customClass="NotFoundView" customModule="My_Monee___Money_Saver" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="50" width="414" height="768"/>
+                            <color key="backgroundColor" red="0.94117647058823528" green="0.94901960784313721" blue="0.97254901960784312" alpha="1" colorSpace="calibratedRGB"/>
+                        </view>
                         <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Gxo-sP-Ui6">
                             <rect key="frame" x="16" y="81" width="382" height="737"/>
                             <color key="backgroundColor" red="0.94117647058823528" green="0.94901960784313721" blue="0.97254901960784312" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -85,6 +91,8 @@
                     <constraints>
                         <constraint firstItem="nP8-7Y-po2" firstAttribute="leading" secondItem="z7k-49-Aa4" secondAttribute="leading" constant="16" id="3eG-gC-FFk"/>
                         <constraint firstAttribute="trailing" secondItem="feb-QF-wXL" secondAttribute="trailing" constant="23" id="4Ra-cl-Hsd"/>
+                        <constraint firstAttribute="trailing" secondItem="0TC-vc-aao" secondAttribute="trailing" id="5sB-vd-CZz"/>
+                        <constraint firstItem="0TC-vc-aao" firstAttribute="top" secondItem="nP8-7Y-po2" secondAttribute="bottom" id="Euu-3Y-QSJ"/>
                         <constraint firstItem="nP8-7Y-po2" firstAttribute="top" secondItem="z7k-49-Aa4" secondAttribute="top" constant="16" id="M9S-OC-Oi5"/>
                         <constraint firstItem="Gxo-sP-Ui6" firstAttribute="top" secondItem="nP8-7Y-po2" secondAttribute="bottom" constant="31" id="Mbj-gg-wMv"/>
                         <constraint firstAttribute="trailing" secondItem="Gxo-sP-Ui6" secondAttribute="trailing" constant="16" id="WZw-yy-Amu"/>
@@ -92,6 +100,8 @@
                         <constraint firstAttribute="bottom" secondItem="Gxo-sP-Ui6" secondAttribute="bottom" id="dj1-ml-LqP"/>
                         <constraint firstAttribute="trailing" secondItem="nP8-7Y-po2" secondAttribute="trailing" constant="56" id="h8T-Ng-zZW"/>
                         <constraint firstItem="Gxo-sP-Ui6" firstAttribute="leading" secondItem="z7k-49-Aa4" secondAttribute="leading" constant="16" id="oAi-IM-AGZ"/>
+                        <constraint firstAttribute="bottom" secondItem="0TC-vc-aao" secondAttribute="bottom" id="qZX-C1-28T"/>
+                        <constraint firstItem="0TC-vc-aao" firstAttribute="leading" secondItem="z7k-49-Aa4" secondAttribute="leading" id="zF3-fc-ajr"/>
                     </constraints>
                 </view>
             </subviews>

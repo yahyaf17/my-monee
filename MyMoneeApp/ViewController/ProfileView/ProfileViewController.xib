@@ -12,15 +12,12 @@
         <array key="Poppins-Medium.ttf">
             <string>Poppins-Medium</string>
         </array>
-        <array key="Poppins-SemiBold.ttf">
-            <string>Poppins-SemiBold</string>
-        </array>
     </customFonts>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProfileViewController" customModule="MyMoneeApp" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProfileViewController" customModule="My_Monee___Money_Saver" customModuleProvider="target">
             <connections>
                 <outlet property="editButton" destination="pcc-cM-d2w" id="COn-AK-oOF"/>
-                <outlet property="profileView" destination="1rV-0E-p64" id="qIb-Of-TKw"/>
+                <outlet property="profileView" destination="1rV-0E-p64" id="k8C-oN-NKh"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -32,22 +29,9 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tf3-il-pkf">
                     <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                     <subviews>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1rV-0E-p64" customClass="ProfileView" customModule="MyMoneeApp" customModuleProvider="target">
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1rV-0E-p64" customClass="ProfileView" customModule="My_Monee___Money_Saver" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="0.0" width="414" height="311"/>
                             <subviews>
-                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile-picture-example" translatesAutoresizingMaskIntoConstraints="NO" id="0el-TN-boK">
-                                    <rect key="frame" x="156.5" y="32" width="101" height="101"/>
-                                    <constraints>
-                                        <constraint firstAttribute="height" constant="101" id="jV8-cJ-xU1"/>
-                                        <constraint firstAttribute="width" constant="101" id="uFp-ym-f1P"/>
-                                    </constraints>
-                                </imageView>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5iI-A5-13K">
-                                    <rect key="frame" x="0.0" y="163" width="414" height="25.5"/>
-                                    <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="18"/>
-                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pcc-cM-d2w">
                                     <rect key="frame" x="369" y="11" width="30" height="32"/>
                                     <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="14"/>
@@ -61,15 +45,10 @@
                             </subviews>
                             <color key="backgroundColor" red="0.31372549019607843" green="0.41176470588235292" blue="0.72156862745098038" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
-                                <constraint firstItem="0el-TN-boK" firstAttribute="centerX" secondItem="1rV-0E-p64" secondAttribute="centerX" id="0gr-kR-Xi4"/>
-                                <constraint firstItem="0el-TN-boK" firstAttribute="top" secondItem="1rV-0E-p64" secondAttribute="top" constant="32" id="1e4-hu-28j"/>
-                                <constraint firstItem="5iI-A5-13K" firstAttribute="leading" secondItem="1rV-0E-p64" secondAttribute="leading" id="6mK-3A-pGe"/>
-                                <constraint firstItem="5iI-A5-13K" firstAttribute="top" secondItem="0el-TN-boK" secondAttribute="bottom" constant="30" id="9n8-iD-ozw"/>
                                 <constraint firstItem="pcc-cM-d2w" firstAttribute="top" secondItem="1rV-0E-p64" secondAttribute="top" constant="11" id="INf-xu-LWd"/>
                                 <constraint firstAttribute="height" constant="311" id="PyG-3O-kOu"/>
                                 <constraint firstAttribute="trailing" secondItem="pcc-cM-d2w" secondAttribute="trailing" constant="15" id="c6q-Cg-0AZ"/>
                                 <constraint firstItem="pcc-cM-d2w" firstAttribute="top" secondItem="1rV-0E-p64" secondAttribute="top" constant="11" id="jWy-YB-swI"/>
-                                <constraint firstAttribute="trailing" secondItem="5iI-A5-13K" secondAttribute="trailing" id="saI-nt-gFh"/>
                                 <constraint firstAttribute="trailing" secondItem="pcc-cM-d2w" secondAttribute="trailing" constant="15" id="wzt-Pg-J8P"/>
                             </constraints>
                         </view>
@@ -94,7 +73,6 @@
         </view>
     </objects>
     <resources>
-        <image name="profile-picture-example" width="101" height="101"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

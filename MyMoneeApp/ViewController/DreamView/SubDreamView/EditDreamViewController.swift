@@ -25,9 +25,9 @@ class EditDreamViewController: UIViewController {
 
         titleView.textFieldDetails.text = dreamTitle
         targetView.labelTitle.text = "Target Capaian (Rp)"
-        targetView.textFieldDetails.placeholder = currencyFormat(value: dreamTarget)
+        targetView.textFieldDetails.text = String(dreamTarget)
         
-        buttonAppearance(button: deleteButton)
+        deleteBtnAppereance(button: deleteButton)
     }
     
     @IBAction func doBack(_ sender: Any) {
@@ -48,7 +48,7 @@ class EditDreamViewController: UIViewController {
         backToDream()
     }
     
-    private func buttonAppearance(button: UIButton) {
+    private func deleteBtnAppereance(button: UIButton) {
         button.backgroundColor = .clear
         button.layer.borderWidth = 3
         button.layer.borderColor = UIColor(red: 235/255, green: 87/255, blue: 87/255, alpha: 1).cgColor
@@ -57,7 +57,7 @@ class EditDreamViewController: UIViewController {
     private func backToDream() {
         let TabViewController = MainTabBarController(nibName: "MainTabBarController", bundle: nil)
          TabViewController.selectedIndex = 1
-         UIApplication.shared.keyWindow?.rootViewController = TabViewController
+        UIApplication.shared.keyWindow?.rootViewController = TabViewController
     }
     
 }

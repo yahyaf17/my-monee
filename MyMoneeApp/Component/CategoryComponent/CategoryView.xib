@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-Regular.ttf">
+            <string>Poppins-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CategoryView" customModule="MyMoneeApp" customModuleProvider="target">
+            <connections>
+                <outlet property="categoryLabel" destination="7Vj-c9-y6U" id="1Xa-6f-bmk"/>
+                <outlet property="contentView" destination="iN0-l3-epB" id="3hF-qK-A0T"/>
+                <outlet property="imageCategory" destination="rCI-Jt-N0a" id="Mqb-zW-YeI"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="204" height="119"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kkb-q4-5Cc">
+                    <rect key="frame" x="0.0" y="44" width="204" height="75"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rCI-Jt-N0a">
+                            <rect key="frame" x="92" y="15" width="20" height="20"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="20" id="L1V-In-iBU"/>
+                                <constraint firstAttribute="height" constant="20" id="wfH-rF-Eo1"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Vj-c9-y6U">
+                            <rect key="frame" x="0.0" y="46" width="204" height="18"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="18" id="lCm-54-jfl"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="12"/>
+                            <color key="textColor" red="0.30980392159999998" green="0.30980392159999998" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="7Vj-c9-y6U" secondAttribute="bottom" constant="11" id="KxK-uL-piy"/>
+                        <constraint firstAttribute="trailing" secondItem="7Vj-c9-y6U" secondAttribute="trailing" id="OBD-S2-yQL"/>
+                        <constraint firstAttribute="height" constant="75" id="T3f-FI-1iK"/>
+                        <constraint firstItem="rCI-Jt-N0a" firstAttribute="centerX" secondItem="Kkb-q4-5Cc" secondAttribute="centerX" id="Tss-Z7-LVA"/>
+                        <constraint firstItem="7Vj-c9-y6U" firstAttribute="leading" secondItem="Kkb-q4-5Cc" secondAttribute="leading" id="Xb5-Q3-moO"/>
+                        <constraint firstItem="rCI-Jt-N0a" firstAttribute="top" secondItem="Kkb-q4-5Cc" secondAttribute="top" constant="15" id="yTG-fe-pQJ"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="8"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Kkb-q4-5Cc" secondAttribute="trailing" id="0gA-Zw-TDB"/>
+                <constraint firstItem="Kkb-q4-5Cc" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="4BC-3w-4DR"/>
+                <constraint firstItem="Kkb-q4-5Cc" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="ShE-fS-bRb"/>
+                <constraint firstItem="Kkb-q4-5Cc" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="oVi-wI-HLg"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                    <integer key="value" value="8"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
+            <point key="canvasLocation" x="-201.44927536231884" y="206.58482142857142"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -20,6 +20,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddDreamViewController" customModule="MyMoneeApp" customModuleProvider="target">
             <connections>
                 <outlet property="amountView" destination="fgn-Dg-7w6" id="GcO-Uv-LJt"/>
+                <outlet property="saveButton" destination="Y54-fa-pjL" id="hqi-2N-N6L"/>
                 <outlet property="titleView" destination="KNk-zh-DJh" id="tm1-FS-vSC"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -50,7 +51,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KNk-zh-DJh" userLabel="TitleView" customClass="TitleView" customModule="MyMoneeApp" customModuleProvider="target">
-                            <rect key="frame" x="16" y="70" width="382" height="57"/>
+                            <rect key="frame" x="0.0" y="70" width="414" height="57"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="57" id="nyj-CG-Rx3"/>
@@ -76,7 +77,7 @@
                             </connections>
                         </button>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fgn-Dg-7w6" userLabel="AmountView" customClass="TitleView" customModule="MyMoneeApp" customModuleProvider="target">
-                            <rect key="frame" x="16" y="141" width="382" height="57"/>
+                            <rect key="frame" x="0.0" y="141" width="414" height="57"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="57" id="cVG-dx-IZF"/>
@@ -89,15 +90,15 @@
                         <constraint firstItem="fgn-Dg-7w6" firstAttribute="top" secondItem="KNk-zh-DJh" secondAttribute="bottom" constant="14" id="2WG-xH-k67"/>
                         <constraint firstAttribute="trailing" secondItem="Y54-fa-pjL" secondAttribute="trailing" constant="18" id="7hC-TB-ibM"/>
                         <constraint firstItem="pal-6i-lwh" firstAttribute="leading" secondItem="rdh-lG-dBW" secondAttribute="leading" constant="12" id="9BK-Ab-scv"/>
-                        <constraint firstAttribute="trailing" secondItem="KNk-zh-DJh" secondAttribute="trailing" constant="16" id="Boz-P4-UDW"/>
-                        <constraint firstItem="fgn-Dg-7w6" firstAttribute="leading" secondItem="rdh-lG-dBW" secondAttribute="leading" constant="16" id="LId-YF-1Ev"/>
+                        <constraint firstAttribute="trailing" secondItem="KNk-zh-DJh" secondAttribute="trailing" id="Boz-P4-UDW"/>
+                        <constraint firstItem="fgn-Dg-7w6" firstAttribute="leading" secondItem="rdh-lG-dBW" secondAttribute="leading" id="LId-YF-1Ev"/>
                         <constraint firstItem="dpe-zn-2q8" firstAttribute="leading" secondItem="pal-6i-lwh" secondAttribute="trailing" constant="8" id="Lc8-2C-bU7"/>
-                        <constraint firstItem="KNk-zh-DJh" firstAttribute="leading" secondItem="rdh-lG-dBW" secondAttribute="leading" constant="16" id="LwA-uP-BHH"/>
+                        <constraint firstItem="KNk-zh-DJh" firstAttribute="leading" secondItem="rdh-lG-dBW" secondAttribute="leading" id="LwA-uP-BHH"/>
                         <constraint firstItem="KNk-zh-DJh" firstAttribute="top" secondItem="pal-6i-lwh" secondAttribute="bottom" constant="27" id="SrP-2H-hcn"/>
                         <constraint firstAttribute="bottom" secondItem="Y54-fa-pjL" secondAttribute="bottom" constant="30" id="aIs-DE-J6g"/>
                         <constraint firstItem="pal-6i-lwh" firstAttribute="top" secondItem="rdh-lG-dBW" secondAttribute="top" constant="19" id="jhD-zF-T5R"/>
                         <constraint firstItem="dpe-zn-2q8" firstAttribute="centerY" secondItem="pal-6i-lwh" secondAttribute="centerY" id="z0i-40-0nV"/>
-                        <constraint firstAttribute="trailing" secondItem="fgn-Dg-7w6" secondAttribute="trailing" constant="16" id="zVk-tp-9za"/>
+                        <constraint firstAttribute="trailing" secondItem="fgn-Dg-7w6" secondAttribute="trailing" id="zVk-tp-9za"/>
                     </constraints>
                 </view>
             </subviews>

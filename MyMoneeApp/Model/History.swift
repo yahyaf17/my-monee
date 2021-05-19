@@ -32,7 +32,7 @@ struct History {
 }
 
 var histories: [History] = [
-    History(id: "MM-128371", title: "Bayar Listrik", price: 256000, date: "1 Mei 2021 - 19.30", image: false, type: .outcome),
-    History(id: "MM-128372", title: "Gaji Februari", price: 1250000, date: "1 Mei 2021 - 19.30", image: true, type: .income),
-    History(id: "MM-128373", title: "Gaji Januari", price: 1550000, date: "1 Februari 2021 - 19.30", image: true, type: .income)
+//    History(id: "MM-128371", title: "Bayar Listrik", price: 256000, date: "1 Mei 2021 - 19.30", image: false, type: .outcome),
+//    History(id: "MM-128372", title: "Gaji Februari", price: 1250000, date: "1 Mei 2021 - 19.30", image: true, type: .income),
+//    History(id: "MM-128373", title: "Gaji Januari", price: 1550000, date: "1 Februari 2021 - 19.30", image: true, type: .income)
 ]

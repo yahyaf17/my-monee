@@ -25,7 +25,7 @@ struct Dream {
 }
 
 var dreams: [Dream] = [
-    Dream(id: "MM-19293", title: "Membeli Mobil", progress: 0.05, totalAmount: 200000000),
-    Dream(id: "MM-19242", title: "Membeli Airpods Baru", progress: 0.6, totalAmount:  1500000),
-    Dream(id: "MM-38184", title: "Membeli Sepatu Adidas", progress: 1, totalAmount: 500000)
+//    Dream(id: "MM-19293", title: "Membeli Mobil", progress: 0.05, totalAmount: 200000000),
+//    Dream(id: "MM-19242", title: "Membeli Airpods Baru", progress: 0.6, totalAmount:  1500000),
+//    Dream(id: "MM-38184", title: "Membeli Sepatu Adidas", progress: 1, totalAmount: 500000)
 ]

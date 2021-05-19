@@ -6,17 +6,18 @@
 //
 
 import Foundation
+import UIKit
 
 struct Profile {
     var name: String
     var balance: Float
-    var image: String
+    var image: UIImage?
     
-    init(name: String, balance: Float, image: String) {
+    init(name: String, balance: Float, image: UIImage?) {
         self.name = name
         self.balance = balance
         self.image = image
     }
 }
 
-var profile = Profile(name: "Yahya Faikar Hanif", balance: 999000, image: "profile-picture-example")
+var profile = Profile(name: "Yahya Faikar Hanif", balance: 0, image: UIImage(named: "not_found.png"))

@@ -7,13 +7,17 @@
 
 import UIKit
 
-class DreamViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class DreamViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, NotFoundDelegate {
 
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var notFoundView: NotFoundView!
+    @IBOutlet weak var mainView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        mainView.sendSubviewToBack(notFoundView)
+        
         tableView.delegate = self
         tableView.dataSource = self
         
@@ -22,6 +26,20 @@ class DreamViewController: UIViewController, UITableViewDelegate, UITableViewDat
         
         let uiNib = UINib(nibName: String(describing: DreamTableViewCell.self), bundle: nil)
         tableView.register(uiNib, forCellReuseIdentifier: String(describing: DreamTableViewCell.self))
+        
+        // Empty data handling
+        if dreams.isEmpty {
+            notFoundView.isHidden = false
+            notFoundView.addButton.setTitle("Buat Impian", for: .normal)
+            notFoundView.notFoundLabel.text = "Data kamu kosong, Yuk mulai buat Impian kamu!"
+            tableView.isHidden = true
+            notFoundView.contentView.backgroundColor = UIColor(red: 240/255, green: 242/255, blue: 248/255, alpha: 1)
+            notFoundView.mainContent.backgroundColor = UIColor(red: 240/255, green: 242/255, blue: 248/255, alpha: 1)
+        } else {
+            notFoundView.isHidden = true
+        }
+        
+        notFoundView.delegate = self
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -31,10 +49,10 @@ class DreamViewController: UIViewController, UITableViewDelegate, UITableViewDat
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: DreamTableViewCell.self), for: indexPath) as! DreamTableViewCell
         cell.labelDreamTitle.text = dreams[indexPath.row].title
-        let stringAmount = currencyFormat(value: dreams[indexPath.row].amount)
-        let stringTotalAmount = currencyFormat(value: dreams[indexPath.row].totalAmount)
+        let stringAmount = currencyFormatISO(value: profile.balance)
+        let stringTotalAmount = currencyFormatISO(value: dreams[indexPath.row].totalAmount)
         cell.labelDreamAmount.text = "\(stringAmount) / \(stringTotalAmount)"
-        let progressBar = dreams[indexPath.row].amount / dreams[indexPath.row].totalAmount
+        let progressBar = profile.balance / dreams[indexPath.row].totalAmount
         cell.progressDream.setProgress(progressBar, animated: false)
         cell.layer.cornerRadius = 10
         return cell
@@ -55,4 +73,7 @@ class DreamViewController: UIViewController, UITableViewDelegate, UITableViewDat
         self.navigationController?.pushViewController(addView, animated: true)
     }
     
+    func addData() {
+        toAddView((Any).self)
+    }
 }

@@ -17,13 +17,15 @@ class PopUpViewController: UIViewController {
     }
     
     @IBAction func doSave(_ sender: Any) {
-        let editProfile = EditProfileViewController(nibName: "EditProfileViewController", bundle: nil)
-        editProfile.tempName = nameTextField.text ?? nil
-        self.navigationController?.pushViewController(editProfile, animated: true)
+        profile.name = nameTextField.text ?? ""
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "refresh"), object:nil, userInfo: nil)
     }
     
     @IBAction func doCancel(_ sender: Any) {
-        let editProfile = EditProfileViewController(nibName: "EditProfileViewController", bundle: nil)
-        self.navigationController?.pushViewController(editProfile, animated: false)
+        self.dismiss(animated: true, completion: nil)
     }
 }

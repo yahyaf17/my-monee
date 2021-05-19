@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA67313E2652264700D650F6 /* RecentTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA67313D2652264700D650F6 /* RecentTransaction.swift */; };
+		FA673147265229A400D650F6 /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA673146265229A400D650F6 /* CategoryView.swift */; };
+		FA67314C265229CC00D650F6 /* CategoryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA67314B265229CC00D650F6 /* CategoryView.xib */; };
+		FA673151265257CD00D650F6 /* CurrentDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA673150265257CD00D650F6 /* CurrentDate.swift */; };
+		FA67315726525CAA00D650F6 /* EditUsageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA67315526525CAA00D650F6 /* EditUsageViewController.swift */; };
+		FA67315826525CAA00D650F6 /* EditUsageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA67315626525CAA00D650F6 /* EditUsageViewController.xib */; };
 		FA69F687264F821E00BBB1A9 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA69F685264F821E00BBB1A9 /* DetailsViewController.swift */; };
 		FA69F688264F821E00BBB1A9 /* DetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA69F686264F821E00BBB1A9 /* DetailsViewController.xib */; };
 		FA69F68D264FCD0800BBB1A9 /* DetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA69F68C264FCD0800BBB1A9 /* DetailsView.swift */; };
@@ -18,11 +24,13 @@
 		FA7077EB264D00DD00140847 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7077E9264D00DD00140847 /* HomeViewController.swift */; };
 		FA7077EC264D00DD00140847 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA7077EA264D00DD00140847 /* HomeViewController.xib */; };
 		FA7077FA264D028800140847 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7077F9264D028800140847 /* MainTabBarController.swift */; };
-		FA707829264D24C900140847 /* roundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA707828264D24C900140847 /* roundedView.swift */; };
 		FA70782F264D281400140847 /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA70782E264D281400140847 /* History.swift */; };
 		FA70783D264D49FF00140847 /* DreamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA70783B264D49FF00140847 /* DreamViewController.swift */; };
 		FA70783E264D49FF00140847 /* DreamViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA70783C264D49FF00140847 /* DreamViewController.xib */; };
 		FA707846264D517C00140847 /* Dream.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA707845264D517C00140847 /* Dream.swift */; };
+		FA746BC026532A1A00F1718B /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA746BBF26532A1A00F1718B /* ImagePicker.swift */; };
+		FA746BC6265350A500F1718B /* NotFoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA746BC5265350A500F1718B /* NotFoundView.swift */; };
+		FA746BCB265350B300F1718B /* NotFoundView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA746BCA265350B300F1718B /* NotFoundView.xib */; };
 		FA7728C12650D94800AB8449 /* AddDreamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7728BF2650D94800AB8449 /* AddDreamViewController.swift */; };
 		FA7728C22650D94800AB8449 /* AddDreamViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA7728C02650D94800AB8449 /* AddDreamViewController.xib */; };
 		FA7728C82650DD3700AB8449 /* BackButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7728C72650DD3700AB8449 /* BackButtonView.swift */; };
@@ -34,7 +42,6 @@
 		FA7728EC26514BFB00AB8449 /* EditProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA7728EA26514BFB00AB8449 /* EditProfileViewController.xib */; };
 		FA772903265156E100AB8449 /* PopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA772901265156E100AB8449 /* PopUpViewController.swift */; };
 		FA772904265156E100AB8449 /* PopUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA772902265156E100AB8449 /* PopUpViewController.xib */; };
-		FA7729092651590600AB8449 /* editViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7729082651590600AB8449 /* editViewProtocol.swift */; };
 		FA77290E265173A800AB8449 /* NumberFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA77290D265173A800AB8449 /* NumberFormatter.swift */; };
 		FAA90BAC264E6658005E244D /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA90BAB264E6658005E244D /* ProfileView.swift */; };
 		FAA90BB1264E6665005E244D /* ProfileView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAA90BB0264E6665005E244D /* ProfileView.xib */; };
@@ -74,8 +81,6 @@
 		FAEDD8F9264BF5ED003817A4 /* Poppins-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FAEDD8E6264BF5ED003817A4 /* Poppins-MediumItalic.ttf */; };
 		FAEDD8FF264C1DBD003817A4 /* DreamTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEDD8FD264C1DBD003817A4 /* DreamTableViewCell.swift */; };
 		FAEDD900264C1DBD003817A4 /* DreamTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAEDD8FE264C1DBD003817A4 /* DreamTableViewCell.xib */; };
-		FAEDD906264C2316003817A4 /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEDD904264C2316003817A4 /* CategoryCollectionViewCell.swift */; };
-		FAEDD907264C2316003817A4 /* CategoryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAEDD905264C2316003817A4 /* CategoryCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,6 +101,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FA67313D2652264700D650F6 /* RecentTransaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentTransaction.swift; sourceTree = "<group>"; };
+		FA673146265229A400D650F6 /* CategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
+		FA67314B265229CC00D650F6 /* CategoryView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryView.xib; sourceTree = "<group>"; };
+		FA673150265257CD00D650F6 /* CurrentDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentDate.swift; sourceTree = "<group>"; };
+		FA67315526525CAA00D650F6 /* EditUsageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditUsageViewController.swift; sourceTree = "<group>"; };
+		FA67315626525CAA00D650F6 /* EditUsageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditUsageViewController.xib; sourceTree = "<group>"; };
 		FA69F685264F821E00BBB1A9 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		FA69F686264F821E00BBB1A9 /* DetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailsViewController.xib; sourceTree = "<group>"; };
 		FA69F68C264FCD0800BBB1A9 /* DetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsView.swift; sourceTree = "<group>"; };
@@ -107,11 +118,13 @@
 		FA7077E9264D00DD00140847 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		FA7077EA264D00DD00140847 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		FA7077F9264D028800140847 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
-		FA707828264D24C900140847 /* roundedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = roundedView.swift; sourceTree = "<group>"; };
 		FA70782E264D281400140847 /* History.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
 		FA70783B264D49FF00140847 /* DreamViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DreamViewController.swift; sourceTree = "<group>"; };
 		FA70783C264D49FF00140847 /* DreamViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DreamViewController.xib; sourceTree = "<group>"; };
 		FA707845264D517C00140847 /* Dream.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dream.swift; sourceTree = "<group>"; };
+		FA746BBF26532A1A00F1718B /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		FA746BC5265350A500F1718B /* NotFoundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotFoundView.swift; sourceTree = "<group>"; };
+		FA746BCA265350B300F1718B /* NotFoundView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotFoundView.xib; sourceTree = "<group>"; };
 		FA7728BF2650D94800AB8449 /* AddDreamViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDreamViewController.swift; sourceTree = "<group>"; };
 		FA7728C02650D94800AB8449 /* AddDreamViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddDreamViewController.xib; sourceTree = "<group>"; };
 		FA7728C72650DD3700AB8449 /* BackButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackButtonView.swift; sourceTree = "<group>"; };
@@ -123,7 +136,6 @@
 		FA7728EA26514BFB00AB8449 /* EditProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditProfileViewController.xib; sourceTree = "<group>"; };
 		FA772901265156E100AB8449 /* PopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpViewController.swift; sourceTree = "<group>"; };
 		FA772902265156E100AB8449 /* PopUpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopUpViewController.xib; sourceTree = "<group>"; };
-		FA7729082651590600AB8449 /* editViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = editViewProtocol.swift; sourceTree = "<group>"; };
 		FA77290D265173A800AB8449 /* NumberFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberFormatter.swift; sourceTree = "<group>"; };
 		FAA90BAB264E6658005E244D /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		FAA90BB0264E6665005E244D /* ProfileView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileView.xib; sourceTree = "<group>"; };
@@ -132,16 +144,16 @@
 		FAA90BC0264EAD87005E244D /* UsageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsageViewController.swift; sourceTree = "<group>"; };
 		FAA90BC1264EAD87005E244D /* UsageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UsageViewController.xib; sourceTree = "<group>"; };
 		FAA90BE3264EC086005E244D /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
-		FAEDD859264BE389003817A4 /* MyMoneeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyMoneeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAEDD859264BE389003817A4 /* My Monee - Money Saver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "My Monee - Money Saver.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAEDD85C264BE389003817A4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAEDD85E264BE389003817A4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		FAEDD865264BE38A003817A4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FAEDD868264BE38A003817A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FAEDD86A264BE38A003817A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FAEDD86F264BE38A003817A4 /* MyMoneeAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyMoneeAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAEDD86F264BE38A003817A4 /* My Monee - Money SaverTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "My Monee - Money SaverTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAEDD873264BE38A003817A4 /* MyMoneeAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyMoneeAppTests.swift; sourceTree = "<group>"; };
 		FAEDD875264BE38A003817A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FAEDD87A264BE38A003817A4 /* MyMoneeAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyMoneeAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAEDD87A264BE38A003817A4 /* My Monee - Money SaverUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "My Monee - Money SaverUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAEDD87E264BE38A003817A4 /* MyMoneeAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyMoneeAppUITests.swift; sourceTree = "<group>"; };
 		FAEDD880264BE38A003817A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FAEDD8A6264BF04B003817A4 /* RecentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentView.swift; sourceTree = "<group>"; };
@@ -169,8 +181,6 @@
 		FAEDD8E6264BF5ED003817A4 /* Poppins-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-MediumItalic.ttf"; sourceTree = "<group>"; };
 		FAEDD8FD264C1DBD003817A4 /* DreamTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DreamTableViewCell.swift; sourceTree = "<group>"; };
 		FAEDD8FE264C1DBD003817A4 /* DreamTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DreamTableViewCell.xib; sourceTree = "<group>"; };
-		FAEDD904264C2316003817A4 /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
-		FAEDD905264C2316003817A4 /* CategoryCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -198,6 +208,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FA6731452652298B00D650F6 /* CategoryComponent */ = {
+			isa = PBXGroup;
+			children = (
+				FA673146265229A400D650F6 /* CategoryView.swift */,
+				FA67314B265229CC00D650F6 /* CategoryView.xib */,
+			);
+			path = CategoryComponent;
+			sourceTree = "<group>";
+		};
 		FA69F6992650263300BBB1A9 /* SubDreamView */ = {
 			isa = PBXGroup;
 			children = (
@@ -245,7 +264,9 @@
 				FA707845264D517C00140847 /* Dream.swift */,
 				FAA90BE3264EC086005E244D /* Category.swift */,
 				FA7728E32651357100AB8449 /* Profile.swift */,
+				FA67313D2652264700D650F6 /* RecentTransaction.swift */,
 				FA77290D265173A800AB8449 /* NumberFormatter.swift */,
+				FA673150265257CD00D650F6 /* CurrentDate.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -279,6 +300,15 @@
 			path = ProfileView;
 			sourceTree = "<group>";
 		};
+		FA746BC42653508B00F1718B /* NotFoundComponent */ = {
+			isa = PBXGroup;
+			children = (
+				FA746BC5265350A500F1718B /* NotFoundView.swift */,
+				FA746BCA265350B300F1718B /* NotFoundView.xib */,
+			);
+			path = NotFoundComponent;
+			sourceTree = "<group>";
+		};
 		FA7728C62650DCFC00AB8449 /* BackButtonComponent */ = {
 			isa = PBXGroup;
 			children = (
@@ -295,7 +325,7 @@
 				FA7728EA26514BFB00AB8449 /* EditProfileViewController.xib */,
 				FA772901265156E100AB8449 /* PopUpViewController.swift */,
 				FA772902265156E100AB8449 /* PopUpViewController.xib */,
-				FA7729082651590600AB8449 /* editViewProtocol.swift */,
+				FA746BBF26532A1A00F1718B /* ImagePicker.swift */,
 			);
 			path = SubProfileView;
 			sourceTree = "<group>";
@@ -307,6 +337,8 @@
 				FAA90BC1264EAD87005E244D /* UsageViewController.xib */,
 				FA69F685264F821E00BBB1A9 /* DetailsViewController.swift */,
 				FA69F686264F821E00BBB1A9 /* DetailsViewController.xib */,
+				FA67315526525CAA00D650F6 /* EditUsageViewController.swift */,
+				FA67315626525CAA00D650F6 /* EditUsageViewController.xib */,
 			);
 			path = SubHomeView;
 			sourceTree = "<group>";
@@ -318,6 +350,13 @@
 				FA69F691264FCD1300BBB1A9 /* DetailsView.xib */,
 			);
 			path = DetailComponent;
+			sourceTree = "<group>";
+		};
+		FACFF62F2653BC4100B5C726 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Config;
 			sourceTree = "<group>";
 		};
 		FAEDD850264BE389003817A4 = {
@@ -333,9 +372,9 @@
 		FAEDD85A264BE389003817A4 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				FAEDD859264BE389003817A4 /* MyMoneeApp.app */,
-				FAEDD86F264BE38A003817A4 /* MyMoneeAppTests.xctest */,
-				FAEDD87A264BE38A003817A4 /* MyMoneeAppUITests.xctest */,
+				FAEDD859264BE389003817A4 /* My Monee - Money Saver.app */,
+				FAEDD86F264BE38A003817A4 /* My Monee - Money SaverTests.xctest */,
+				FAEDD87A264BE38A003817A4 /* My Monee - Money SaverUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -343,6 +382,7 @@
 		FAEDD85B264BE389003817A4 /* MyMoneeApp */ = {
 			isa = PBXGroup;
 			children = (
+				FACFF62F2653BC4100B5C726 /* Config */,
 				FA70782D264D280800140847 /* Model */,
 				FAEDD8D2264BF5D1003817A4 /* fonts */,
 				FAEDD894264BE56A003817A4 /* Component */,
@@ -388,13 +428,14 @@
 		FAEDD894264BE56A003817A4 /* Component */ = {
 			isa = PBXGroup;
 			children = (
+				FA746BC42653508B00F1718B /* NotFoundComponent */,
+				FA6731452652298B00D650F6 /* CategoryComponent */,
 				FA7728C62650DCFC00AB8449 /* BackButtonComponent */,
 				FAA90BE8264ED748005E244D /* DetailComponent */,
 				FA70784A264D67F500140847 /* ProfileCmponent */,
 				FA7077DA264CFD1400140847 /* TitleComponent */,
 				FAEDD8CA264BF315003817A4 /* Cells */,
 				FAEDD895264BE5B7003817A4 /* RecentComponent */,
-				FA707828264D24C900140847 /* roundedView.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -415,8 +456,6 @@
 				FAEDD8CC264BF3C7003817A4 /* HistoryTableViewCell.xib */,
 				FAEDD8FD264C1DBD003817A4 /* DreamTableViewCell.swift */,
 				FAEDD8FE264C1DBD003817A4 /* DreamTableViewCell.xib */,
-				FAEDD904264C2316003817A4 /* CategoryCollectionViewCell.swift */,
-				FAEDD905264C2316003817A4 /* CategoryCollectionViewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -458,9 +497,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		FAEDD858264BE389003817A4 /* MyMoneeApp */ = {
+		FAEDD858264BE389003817A4 /* My Monee - Money Saver */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FAEDD883264BE38A003817A4 /* Build configuration list for PBXNativeTarget "MyMoneeApp" */;
+			buildConfigurationList = FAEDD883264BE38A003817A4 /* Build configuration list for PBXNativeTarget "My Monee - Money Saver" */;
 			buildPhases = (
 				FAEDD855264BE389003817A4 /* Sources */,
 				FAEDD856264BE389003817A4 /* Frameworks */,
@@ -471,14 +510,14 @@
 			);
 			dependencies = (
 			);
-			name = MyMoneeApp;
+			name = "My Monee - Money Saver";
 			productName = MyMoneeApp;
-			productReference = FAEDD859264BE389003817A4 /* MyMoneeApp.app */;
+			productReference = FAEDD859264BE389003817A4 /* My Monee - Money Saver.app */;
 			productType = "com.apple.product-type.application";
 		};
-		FAEDD86E264BE38A003817A4 /* MyMoneeAppTests */ = {
+		FAEDD86E264BE38A003817A4 /* My Monee - Money SaverTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FAEDD886264BE38A003817A4 /* Build configuration list for PBXNativeTarget "MyMoneeAppTests" */;
+			buildConfigurationList = FAEDD886264BE38A003817A4 /* Build configuration list for PBXNativeTarget "My Monee - Money SaverTests" */;
 			buildPhases = (
 				FAEDD86B264BE38A003817A4 /* Sources */,
 				FAEDD86C264BE38A003817A4 /* Frameworks */,
@@ -489,14 +528,14 @@
 			dependencies = (
 				FAEDD871264BE38A003817A4 /* PBXTargetDependency */,
 			);
-			name = MyMoneeAppTests;
+			name = "My Monee - Money SaverTests";
 			productName = MyMoneeAppTests;
-			productReference = FAEDD86F264BE38A003817A4 /* MyMoneeAppTests.xctest */;
+			productReference = FAEDD86F264BE38A003817A4 /* My Monee - Money SaverTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		FAEDD879264BE38A003817A4 /* MyMoneeAppUITests */ = {
+		FAEDD879264BE38A003817A4 /* My Monee - Money SaverUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FAEDD889264BE38A003817A4 /* Build configuration list for PBXNativeTarget "MyMoneeAppUITests" */;
+			buildConfigurationList = FAEDD889264BE38A003817A4 /* Build configuration list for PBXNativeTarget "My Monee - Money SaverUITests" */;
 			buildPhases = (
 				FAEDD876264BE38A003817A4 /* Sources */,
 				FAEDD877264BE38A003817A4 /* Frameworks */,
@@ -507,9 +546,9 @@
 			dependencies = (
 				FAEDD87C264BE38A003817A4 /* PBXTargetDependency */,
 			);
-			name = MyMoneeAppUITests;
+			name = "My Monee - Money SaverUITests";
 			productName = MyMoneeAppUITests;
-			productReference = FAEDD87A264BE38A003817A4 /* MyMoneeAppUITests.xctest */;
+			productReference = FAEDD87A264BE38A003817A4 /* My Monee - Money SaverUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -534,7 +573,7 @@
 					};
 				};
 			};
-			buildConfigurationList = FAEDD854264BE389003817A4 /* Build configuration list for PBXProject "MyMoneeApp" */;
+			buildConfigurationList = FAEDD854264BE389003817A4 /* Build configuration list for PBXProject "My Monee - Money Saver" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -547,9 +586,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				FAEDD858264BE389003817A4 /* MyMoneeApp */,
-				FAEDD86E264BE38A003817A4 /* MyMoneeAppTests */,
-				FAEDD879264BE38A003817A4 /* MyMoneeAppUITests */,
+				FAEDD858264BE389003817A4 /* My Monee - Money Saver */,
+				FAEDD86E264BE38A003817A4 /* My Monee - Money SaverTests */,
+				FAEDD879264BE38A003817A4 /* My Monee - Money SaverUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -561,6 +600,7 @@
 			files = (
 				FAEDD8F3264BF5ED003817A4 /* Poppins-LightItalic.ttf in Resources */,
 				FAEDD8F4264BF5ED003817A4 /* Poppins-Bold.ttf in Resources */,
+				FA67314C265229CC00D650F6 /* CategoryView.xib in Resources */,
 				FAEDD8F1264BF5ED003817A4 /* OFL.txt in Resources */,
 				FA7728D02650DD4300AB8449 /* BackButtonView.xib in Resources */,
 				FAEDD8EE264BF5ED003817A4 /* Poppins-ExtraBoldItalic.ttf in Resources */,
@@ -571,7 +611,6 @@
 				FAA90BC3264EAD87005E244D /* UsageViewController.xib in Resources */,
 				FAEDD8F5264BF5ED003817A4 /* Poppins-Black.ttf in Resources */,
 				FA772904265156E100AB8449 /* PopUpViewController.xib in Resources */,
-				FAEDD907264C2316003817A4 /* CategoryCollectionViewCell.xib in Resources */,
 				FAEDD8E7264BF5ED003817A4 /* Poppins-ExtraLight.ttf in Resources */,
 				FAEDD8EB264BF5ED003817A4 /* Poppins-Light.ttf in Resources */,
 				FA69F69D265026AF00BBB1A9 /* DreamDetailsViewController.xib in Resources */,
@@ -590,6 +629,7 @@
 				FAEDD8CE264BF3C7003817A4 /* HistoryTableViewCell.xib in Resources */,
 				FAEDD8AF264BF057003817A4 /* RecentView.xib in Resources */,
 				FAEDD8F8264BF5ED003817A4 /* Poppins-Italic.ttf in Resources */,
+				FA67315826525CAA00D650F6 /* EditUsageViewController.xib in Resources */,
 				FA7077E4264CFD4100140847 /* TitleView.xib in Resources */,
 				FA7728DF265103F600AB8449 /* EditDreamViewController.xib in Resources */,
 				FAEDD8EA264BF5ED003817A4 /* Poppins-BoldItalic.ttf in Resources */,
@@ -598,6 +638,7 @@
 				FAEDD8EC264BF5ED003817A4 /* Poppins-Medium.ttf in Resources */,
 				FAEDD8F9264BF5ED003817A4 /* Poppins-MediumItalic.ttf in Resources */,
 				FAEDD8EF264BF5ED003817A4 /* Poppins-ExtraBold.ttf in Resources */,
+				FA746BCB265350B300F1718B /* NotFoundView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -646,7 +687,6 @@
 				FAEDD85D264BE389003817A4 /* AppDelegate.swift in Sources */,
 				FA69F68D264FCD0800BBB1A9 /* DetailsView.swift in Sources */,
 				FA7077FA264D028800140847 /* MainTabBarController.swift in Sources */,
-				FA707829264D24C900140847 /* roundedView.swift in Sources */,
 				FAEDD8A7264BF04B003817A4 /* RecentView.swift in Sources */,
 				FAEDD8FF264C1DBD003817A4 /* DreamTableViewCell.swift in Sources */,
 				FA69F69C265026AF00BBB1A9 /* DreamDetailsViewController.swift in Sources */,
@@ -657,13 +697,17 @@
 				FA70783D264D49FF00140847 /* DreamViewController.swift in Sources */,
 				FA7077EB264D00DD00140847 /* HomeViewController.swift in Sources */,
 				FA7728E42651357100AB8449 /* Profile.swift in Sources */,
+				FA673147265229A400D650F6 /* CategoryView.swift in Sources */,
 				FAA90BE4264EC086005E244D /* Category.swift in Sources */,
 				FA69F687264F821E00BBB1A9 /* DetailsViewController.swift in Sources */,
-				FA7729092651590600AB8449 /* editViewProtocol.swift in Sources */,
+				FA67315726525CAA00D650F6 /* EditUsageViewController.swift in Sources */,
 				FA772903265156E100AB8449 /* PopUpViewController.swift in Sources */,
-				FAEDD906264C2316003817A4 /* CategoryCollectionViewCell.swift in Sources */,
+				FA67313E2652264700D650F6 /* RecentTransaction.swift in Sources */,
+				FA673151265257CD00D650F6 /* CurrentDate.swift in Sources */,
+				FA746BC6265350A500F1718B /* NotFoundView.swift in Sources */,
 				FA707846264D517C00140847 /* Dream.swift in Sources */,
 				FA7728C12650D94800AB8449 /* AddDreamViewController.swift in Sources */,
+				FA746BC026532A1A00F1718B /* ImagePicker.swift in Sources */,
 				FA77290E265173A800AB8449 /* NumberFormatter.swift in Sources */,
 				FA7728DE265103F600AB8449 /* EditDreamViewController.swift in Sources */,
 				FAA90BBA264E810F005E244D /* ProfileViewController.swift in Sources */,
@@ -695,12 +739,12 @@
 /* Begin PBXTargetDependency section */
 		FAEDD871264BE38A003817A4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = FAEDD858264BE389003817A4 /* MyMoneeApp */;
+			target = FAEDD858264BE389003817A4 /* My Monee - Money Saver */;
 			targetProxy = FAEDD870264BE38A003817A4 /* PBXContainerItemProxy */;
 		};
 		FAEDD87C264BE38A003817A4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = FAEDD858264BE389003817A4 /* MyMoneeApp */;
+			target = FAEDD858264BE389003817A4 /* My Monee - Money Saver */;
 			targetProxy = FAEDD87B264BE38A003817A4 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -888,7 +932,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MyMoneeApp.app/MyMoneeApp";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/My Monee - Money Saver.app/My Monee - Money Saver";
 			};
 			name = Debug;
 		};
@@ -909,7 +953,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MyMoneeApp.app/MyMoneeApp";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/My Monee - Money Saver.app/My Monee - Money Saver";
 			};
 			name = Release;
 		};
@@ -954,7 +998,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		FAEDD854264BE389003817A4 /* Build configuration list for PBXProject "MyMoneeApp" */ = {
+		FAEDD854264BE389003817A4 /* Build configuration list for PBXProject "My Monee - Money Saver" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FAEDD881264BE38A003817A4 /* Debug */,
@@ -963,7 +1007,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FAEDD883264BE38A003817A4 /* Build configuration list for PBXNativeTarget "MyMoneeApp" */ = {
+		FAEDD883264BE38A003817A4 /* Build configuration list for PBXNativeTarget "My Monee - Money Saver" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FAEDD884264BE38A003817A4 /* Debug */,
@@ -972,7 +1016,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FAEDD886264BE38A003817A4 /* Build configuration list for PBXNativeTarget "MyMoneeAppTests" */ = {
+		FAEDD886264BE38A003817A4 /* Build configuration list for PBXNativeTarget "My Monee - Money SaverTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FAEDD887264BE38A003817A4 /* Debug */,
@@ -981,7 +1025,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FAEDD889264BE38A003817A4 /* Build configuration list for PBXNativeTarget "MyMoneeAppUITests" */ = {
+		FAEDD889264BE38A003817A4 /* Build configuration list for PBXNativeTarget "My Monee - Money SaverUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FAEDD88A264BE38A003817A4 /* Debug */,

@@ -17,9 +17,12 @@
         </array>
     </customFonts>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EditProfileViewController" customModule="MyMoneeApp" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EditProfileViewController" customModule="My_Monee___Money_Saver" customModuleProvider="target">
             <connections>
                 <outlet property="editNameButton" destination="BF6-1l-ea2" id="pef-UT-0A5"/>
+                <outlet property="imagePickerButton" destination="0Pc-XJ-6Yv" id="ldq-x8-0d6"/>
+                <outlet property="imagePickerView" destination="Rfp-DK-wfu" id="SIx-Rm-aPy"/>
+                <outlet property="imageView" destination="IMR-To-mu7" id="IGW-aj-g5i"/>
                 <outlet property="notUsedName" destination="gcc-AP-dKW" id="iz9-Zg-faT"/>
                 <outlet property="profileView" destination="auf-jY-FkU" id="b0N-2j-ZuU"/>
                 <outlet property="saveButton" destination="WHx-YA-8LJ" id="3iF-aG-ngP"/>
@@ -34,7 +37,7 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RdW-Qi-f2v" userLabel="MainView">
                     <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                     <subviews>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="auf-jY-FkU" customClass="ProfileView" customModule="MyMoneeApp" customModuleProvider="target">
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="auf-jY-FkU" customClass="ProfileView" customModule="My_Monee___Money_Saver" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="0.0" width="414" height="311"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WHx-YA-8LJ">
@@ -47,21 +50,42 @@
                                         <action selector="saveEditButton:" destination="-1" eventType="touchUpInside" id="ylN-tg-tt1"/>
                                     </connections>
                                 </button>
-                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile-picture-example" translatesAutoresizingMaskIntoConstraints="NO" id="IMR-To-mu7">
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rfp-DK-wfu" userLabel="ImagePickerView">
+                                    <rect key="frame" x="233.5" y="109" width="24" height="24"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Pc-XJ-6Yv" userLabel="ImagePickerButton">
+                                            <rect key="frame" x="0.0" y="0.0" width="24" height="24"/>
+                                            <state key="normal" image="ic_edit_photo"/>
+                                            <connections>
+                                                <action selector="showImagePicker:" destination="-1" eventType="touchUpInside" id="8GE-6e-zvL"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstItem="0Pc-XJ-6Yv" firstAttribute="top" secondItem="Rfp-DK-wfu" secondAttribute="top" id="1Wr-0a-2tO"/>
+                                        <constraint firstAttribute="bottom" secondItem="0Pc-XJ-6Yv" secondAttribute="bottom" id="B7Q-aV-YQP"/>
+                                        <constraint firstAttribute="width" constant="24" id="BYl-qi-zuu"/>
+                                        <constraint firstItem="0Pc-XJ-6Yv" firstAttribute="leading" secondItem="Rfp-DK-wfu" secondAttribute="leading" id="Gf4-xC-PHJ"/>
+                                        <constraint firstAttribute="trailing" secondItem="0Pc-XJ-6Yv" secondAttribute="trailing" id="cuD-K9-Rs6"/>
+                                        <constraint firstAttribute="height" constant="24" id="s5H-Bg-1m0"/>
+                                    </constraints>
+                                </view>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IMR-To-mu7">
                                     <rect key="frame" x="156.5" y="32" width="101" height="101"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="101" id="Jkh-jG-cZN"/>
                                         <constraint firstAttribute="width" constant="101" id="VaH-Yi-xsc"/>
                                     </constraints>
                                 </imageView>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gcc-AP-dKW">
-                                    <rect key="frame" x="207" y="163" width="0.0" height="0.0"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Haloo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gcc-AP-dKW">
+                                    <rect key="frame" x="180.5" y="163" width="53.5" height="25.5"/>
                                     <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="18"/>
                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BF6-1l-ea2" userLabel="EditNameButton">
-                                    <rect key="frame" x="211" y="155" width="16" height="16"/>
+                                    <rect key="frame" x="238" y="168" width="16" height="16"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="16" id="bmm-bK-KSa"/>
                                         <constraint firstAttribute="width" constant="16" id="e1i-l3-gEc"/>
@@ -78,9 +102,11 @@
                             <constraints>
                                 <constraint firstAttribute="height" constant="311" id="AwW-QV-X0C"/>
                                 <constraint firstAttribute="trailing" secondItem="WHx-YA-8LJ" secondAttribute="trailing" constant="15" id="BQB-Pk-4Lr"/>
+                                <constraint firstItem="Rfp-DK-wfu" firstAttribute="bottom" secondItem="IMR-To-mu7" secondAttribute="bottom" id="TwV-As-r9C"/>
                                 <constraint firstItem="IMR-To-mu7" firstAttribute="centerX" secondItem="auf-jY-FkU" secondAttribute="centerX" id="Wdu-go-RFE"/>
                                 <constraint firstItem="gcc-AP-dKW" firstAttribute="centerX" secondItem="auf-jY-FkU" secondAttribute="centerX" id="XDI-ec-5IT"/>
                                 <constraint firstItem="IMR-To-mu7" firstAttribute="top" secondItem="auf-jY-FkU" secondAttribute="top" constant="32" id="Y7d-HI-v5o"/>
+                                <constraint firstItem="Rfp-DK-wfu" firstAttribute="trailing" secondItem="IMR-To-mu7" secondAttribute="trailing" id="hPY-L6-XY3"/>
                                 <constraint firstItem="WHx-YA-8LJ" firstAttribute="top" secondItem="auf-jY-FkU" secondAttribute="top" constant="11" id="kZN-l4-0dr"/>
                                 <constraint firstItem="BF6-1l-ea2" firstAttribute="centerY" secondItem="gcc-AP-dKW" secondAttribute="centerY" id="oBB-cX-L87"/>
                                 <constraint firstItem="gcc-AP-dKW" firstAttribute="top" secondItem="IMR-To-mu7" secondAttribute="bottom" constant="30" id="vNI-5h-HWJ"/>
@@ -108,8 +134,8 @@
         </view>
     </objects>
     <resources>
+        <image name="ic_edit_photo" width="24" height="24"/>
         <image name="ic_edit_white" width="32" height="32"/>
-        <image name="profile-picture-example" width="101" height="101"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

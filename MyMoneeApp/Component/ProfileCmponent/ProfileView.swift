@@ -13,8 +13,6 @@ class ProfileView: UIView {
     @IBOutlet weak var imageProfile: UIImageView!
     @IBOutlet weak var labelName: UILabel!
     @IBOutlet weak var labelMessage: UILabel!
-    @IBOutlet weak var editNameButton: UIButton!
-    @IBOutlet weak var editPhotoButton: UIButton!
     
     override init(frame: CGRect) {
         super.init(frame: frame)

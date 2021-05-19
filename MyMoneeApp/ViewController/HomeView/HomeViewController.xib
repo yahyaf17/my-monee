@@ -17,11 +17,12 @@
         </array>
     </customFonts>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="MyMoneeApp" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="My_Monee___Money_Saver" customModuleProvider="target">
             <connections>
                 <outlet property="greetingLabel" destination="4K4-uR-3OT" id="kOM-cA-ItY"/>
                 <outlet property="labelBalance" destination="hYJ-kl-K9z" id="dQZ-Lc-Tel"/>
                 <outlet property="labelName" destination="zVf-dB-a0q" id="xXJ-j3-UV8"/>
+                <outlet property="notFoundView" destination="ZVP-hy-llo" id="CyW-mY-a5D"/>
                 <outlet property="recentIncome" destination="gBU-sj-Wai" id="UOQ-m0-O9m"/>
                 <outlet property="recentOutcome" destination="AGJ-k9-qae" id="Bd1-Nr-ewP"/>
                 <outlet property="roundView" destination="2fR-dJ-5qZ" id="6Wv-Km-EEi"/>
@@ -107,11 +108,12 @@
                         <view tag="9" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="kR8-xt-Y2s" userLabel="BalanceView">
                             <rect key="frame" x="16" y="98" width="382" height="108"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hYJ-kl-K9z">
-                                    <rect key="frame" x="14" y="36" width="368" height="55"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hYJ-kl-K9z">
+                                    <rect key="frame" x="14" y="36" width="354" height="55"/>
                                     <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="36"/>
                                     <color key="textColor" red="1" green="1" blue="0.99999994039999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     <nil key="highlightedColor"/>
+                                    <size key="shadowOffset" width="0.0" height="0.0"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sisa Saldo Kamu" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2UK-yt-Uib">
                                     <rect key="frame" x="14" y="14" width="354" height="20"/>
@@ -126,7 +128,7 @@
                                 <constraint firstItem="2UK-yt-Uib" firstAttribute="top" secondItem="kR8-xt-Y2s" secondAttribute="top" constant="14" id="NI6-a5-78g"/>
                                 <constraint firstItem="2UK-yt-Uib" firstAttribute="leading" secondItem="kR8-xt-Y2s" secondAttribute="leading" constant="14" id="PKy-2b-6Qd"/>
                                 <constraint firstAttribute="trailing" secondItem="2UK-yt-Uib" secondAttribute="trailing" constant="14" id="oDZ-1O-z9A"/>
-                                <constraint firstAttribute="trailing" secondItem="hYJ-kl-K9z" secondAttribute="trailing" id="pTG-1G-SB8"/>
+                                <constraint firstAttribute="trailing" secondItem="hYJ-kl-K9z" secondAttribute="trailing" constant="14" id="pTG-1G-SB8"/>
                                 <constraint firstAttribute="bottom" secondItem="2UK-yt-Uib" secondAttribute="bottom" constant="74" id="ran-hd-uW7"/>
                                 <constraint firstItem="hYJ-kl-K9z" firstAttribute="leading" secondItem="kR8-xt-Y2s" secondAttribute="leading" constant="14" id="skb-W6-8h0"/>
                                 <constraint firstAttribute="bottom" secondItem="hYJ-kl-K9z" secondAttribute="bottom" constant="17" id="w0p-FL-0NK"/>
@@ -144,7 +146,7 @@
                                 <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gkU-Ac-KCk">
                                     <rect key="frame" x="0.0" y="0.0" width="382" height="47"/>
                                     <subviews>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gBU-sj-Wai" customClass="RecentView" customModule="MyMoneeApp" customModuleProvider="target">
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gBU-sj-Wai" customClass="RecentView" customModule="My_Monee___Money_Saver" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="185" height="47"/>
                                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                             <userDefinedRuntimeAttributes>
@@ -161,7 +163,7 @@
                                                 <constraint firstAttribute="height" constant="47" id="wmd-E6-esd"/>
                                             </constraints>
                                         </view>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AGJ-k9-qae" customClass="RecentView" customModule="MyMoneeApp" customModuleProvider="target">
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AGJ-k9-qae" customClass="RecentView" customModule="My_Monee___Money_Saver" customModuleProvider="target">
                                             <rect key="frame" x="197" y="0.0" width="185" height="47"/>
                                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                             <userDefinedRuntimeAttributes>
@@ -208,16 +210,24 @@
                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     <gestureRecognizers/>
                                 </tableView>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZVP-hy-llo" customClass="NotFoundView" customModule="My_Monee___Money_Saver" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="45.5" width="414" height="461.5"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                </view>
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <gestureRecognizers/>
                             <constraints>
                                 <constraint firstItem="5nH-Gh-saL" firstAttribute="leading" secondItem="2fR-dJ-5qZ" secondAttribute="leading" id="1xK-0r-XYf"/>
                                 <constraint firstAttribute="bottom" secondItem="5nH-Gh-saL" secondAttribute="bottom" id="5bm-L0-Uv4"/>
+                                <constraint firstItem="ZVP-hy-llo" firstAttribute="top" secondItem="HXk-sT-VSZ" secondAttribute="bottom" id="9gV-8s-IE2"/>
                                 <constraint firstItem="HXk-sT-VSZ" firstAttribute="leading" secondItem="2fR-dJ-5qZ" secondAttribute="leading" constant="17" id="Lsb-az-G1t"/>
+                                <constraint firstAttribute="trailing" secondItem="ZVP-hy-llo" secondAttribute="trailing" id="UxP-Iu-sMq"/>
+                                <constraint firstAttribute="bottom" secondItem="ZVP-hy-llo" secondAttribute="bottom" id="Z0e-3f-SCg"/>
                                 <constraint firstItem="5nH-Gh-saL" firstAttribute="top" secondItem="HXk-sT-VSZ" secondAttribute="bottom" constant="16" id="c56-Sh-Kil"/>
                                 <constraint firstAttribute="trailing" secondItem="HXk-sT-VSZ" secondAttribute="trailing" constant="17" id="elQ-7G-CYM"/>
                                 <constraint firstItem="HXk-sT-VSZ" firstAttribute="top" secondItem="2fR-dJ-5qZ" secondAttribute="top" constant="23" id="kUu-Zs-gHN"/>
+                                <constraint firstItem="ZVP-hy-llo" firstAttribute="leading" secondItem="2fR-dJ-5qZ" secondAttribute="leading" id="kup-Wb-Cto"/>
                                 <constraint firstAttribute="trailing" secondItem="5nH-Gh-saL" secondAttribute="trailing" id="o12-uF-9Ux"/>
                             </constraints>
                         </view>
@@ -258,7 +268,7 @@
                     <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </userDefinedRuntimeAttribute>
             </userDefinedRuntimeAttributes>
-            <point key="canvasLocation" x="-54" y="109"/>
+            <point key="canvasLocation" x="-55.072463768115945" y="108.48214285714285"/>
         </view>
     </objects>
     <resources>

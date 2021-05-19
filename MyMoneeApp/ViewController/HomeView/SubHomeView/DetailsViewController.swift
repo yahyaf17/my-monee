@@ -13,9 +13,10 @@ class DetailsViewController: UIViewController {
     var historyTitle:String = ""
     var iconImage: UIImage!
     var iconView: UIColor = .black
-    var amount: Float!
+    var amount: Float = 0.0
     var date:String = ""
-    var type: HistoryType!
+    var type: HistoryType = .income
+    var selectedRow: Int = 0
     
     @IBOutlet weak var detailsView: DetailsView!
     @IBOutlet weak var roundView: UIView!
@@ -23,6 +24,7 @@ class DetailsViewController: UIViewController {
     @IBOutlet weak var idLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var backButton: UIButton!
+    @IBOutlet weak var buttonView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,6 +43,7 @@ class DetailsViewController: UIViewController {
         dateLabel.text = date
     
         parentView.bringSubviewToFront(detailsView)
+        parentView.bringSubviewToFront(buttonView)
         
         backButtonAppearance(button: backButton)
     }
@@ -51,6 +54,21 @@ class DetailsViewController: UIViewController {
              TabViewController.selectedIndex = 0
              UIApplication.shared.keyWindow?.rootViewController = TabViewController
         }
+    }
+    
+    @IBAction func editAction(_ sender: Any) {
+        let editUsage = EditUsageViewController(nibName: "EditUsageViewController", bundle: nil)
+        editUsage.usageTitle = historyTitle
+        editUsage.amount = amount
+        editUsage.selectedRow = selectedRow
+        if type == .income {
+            editUsage.incomeSelected = true
+            editUsage.outcomeSelected = false
+        } else {
+            editUsage.incomeSelected = false
+            editUsage.outcomeSelected = true
+        }
+        self.navigationController?.pushViewController(editUsage, animated: true)
     }
     
     private func imageColorData(type: HistoryType!) {

@@ -33,18 +33,10 @@ class DreamDetailsViewController: UIViewController {
         
         // Show to Display
         detailsView.iconImage.image = UIImage(named: "dream_details")
-        detailsView.labelTitle.text = selectedDream.title
-        let stringAmount = currencyFormat(value: selectedDream.amount)
-        let stringTotalAmount = currencyFormat(value: selectedDream.totalAmount)
-        detailsView.labelAmount.text = "IDR \(stringTotalAmount)"
-        detailsView.labelTabSection.text = "Impian"
-        labelProgress.text = String(Int(selectedDream.progress*100))+"%"
-        progressTrack.setProgress(selectedDream.progress, animated: true)
-        progressAmount.text = "IDR \(stringAmount) / \(stringTotalAmount)"
         
+        // Appeareance
         parentView.bringSubviewToFront(detailsView)
         detailsView.bringSubviewToFront(editButton)
-        
         backButtonAppearance(button: backButton)
         
         // Shadow Effect for UIView
@@ -53,7 +45,21 @@ class DreamDetailsViewController: UIViewController {
         
         // Show or hidden Confirm Button
         showButton(button: confirmButton)
+        
+        // Data
+        detailsView.labelTitle.text = selectedDream.title
+        let stringTotalAmount = currencyFormatISO(value: selectedDream.totalAmount)
+        detailsView.labelAmount.text =  stringTotalAmount
+        detailsView.labelTabSection.text = "Impian"
+        checkProgress()
+        progressAmount.text = "IDR \(profile.balance) / \(stringTotalAmount)"
+        progressTrack.setProgress((profile.balance / selectedDream.totalAmount), animated: false)
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        
+    }
+    
     @IBAction func doBackButton(_ sender: Any) {
         let TabViewController = MainTabBarController(nibName: "MainTabBarController", bundle: nil)
          TabViewController.selectedIndex = 1
@@ -72,12 +78,13 @@ class DreamDetailsViewController: UIViewController {
     
     
     @IBAction func doConfirm(_ sender: Any) {
-        let newRecord = History(id: String(selectedDream.id), title: selectedDream.title, price: selectedDream.totalAmount, date: "", image: false, type: .outcome)
+        let newRecord = History(id: String(selectedDream.id), title: selectedDream.title, price: selectedDream.totalAmount, date: currentDate, image: false, type: .outcome)
         histories.insert(newRecord, at: 0)
         let amountInt = selectedDream.totalAmount
         let balanceInt = profile.balance
         let updateBalance = balanceInt - amountInt
         profile.balance = updateBalance
+        recentOutcomeTrx = selectedDream.totalAmount
         dreams.remove(at: selectedRow)
     }
     
@@ -97,6 +104,15 @@ class DreamDetailsViewController: UIViewController {
     private func showButton(button: UIButton) {
         if selectedDream.progress != 1 {
             button.isHidden = true
+        }
+    }
+    
+    private func checkProgress() {
+        let progress = (profile.balance / selectedDream.totalAmount)
+        if progress > 1 {
+            labelProgress.text = String(Float(100.00))+"%"
+        } else {
+            return labelProgress.text = String(Float(round(progress * 100)))+"%"
         }
     }
     
