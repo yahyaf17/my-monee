@@ -7,13 +7,22 @@
 
 import UIKit
 
+protocol DreamButtonDelegate {
+//    func deleteDream(cell: DreamTableViewCell)
+    func deleteDream(button: UIButton)
+    func achieveDream(button: UIButton)
+}
+
 class DreamTableViewCell: UITableViewCell {
 
+    var delegate: DreamButtonDelegate?
+    
     @IBOutlet weak var mainDreamView: UIView!
     @IBOutlet weak var labelDreamTitle: UILabel!
     @IBOutlet weak var progressDream: UIProgressView!
     @IBOutlet weak var labelDreamAmount: UILabel!
-    @IBOutlet weak var buttonDreamDetails: UIButton!
+    @IBOutlet weak var confirmDreamButton: UIButton!
+    @IBOutlet weak var deleteDreamButton: UIButton!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -25,10 +34,12 @@ class DreamTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-//    override func layoutSubviews() {
-//        super.layoutSubviews()
-//
-//        contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0))
-//    }
+    @IBAction func confirmDreamButton(_ sender: Any) {
+        self.delegate?.achieveDream(button: self.confirmDreamButton)
+    }
+    
+    @IBAction func deleteDreamButton(_ sender: UIButton) {
+        self.delegate?.deleteDream(button: self.deleteDreamButton)
+    }
     
 }

@@ -33,10 +33,4 @@ class ProfileView: UIView {
         contentView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         
     }
-    
-//    @IBAction func doEditName(_ sender: Any) {
-//        let popUp = PopUpViewController(nibName: "PopUpViewController", bundle: nil)
-//        popUp.modalPresentationStyle = UIModalPresentationStyle.overCurrentContext
-//        self
-//    }
 }

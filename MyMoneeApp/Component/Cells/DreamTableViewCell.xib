@@ -15,7 +15,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="101" id="KGk-i7-Jjw" customClass="DreamTableViewCell" customModule="MyMoneeApp" customModuleProvider="target">
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="101" id="KGk-i7-Jjw" customClass="DreamTableViewCell" customModule="My_Monee___Money_Saver" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="363" height="88"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
@@ -32,7 +32,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Jvs-90-tbJ">
-                                <rect key="frame" x="10" y="41" width="310" height="5"/>
+                                <rect key="frame" x="10" y="41" width="243" height="5"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="5" id="KLC-9W-d4U"/>
                                 </constraints>
@@ -45,13 +45,27 @@
                                 <color key="textColor" red="0.74117647058823533" green="0.74117647058823533" blue="0.74117647058823533" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bfd-vI-OI9">
-                                <rect key="frame" x="338" y="35.5" width="8" height="16"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bfd-vI-OI9" userLabel="DeleteButton">
+                                <rect key="frame" x="314" y="27.5" width="32" height="32"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="16" id="J7O-1k-E01"/>
-                                    <constraint firstAttribute="width" constant="8" id="y7H-EZ-FAS"/>
+                                    <constraint firstAttribute="height" constant="32" id="J7O-1k-E01"/>
+                                    <constraint firstAttribute="width" constant="32" id="y7H-EZ-FAS"/>
                                 </constraints>
-                                <state key="normal" image="ic_dream_details"/>
+                                <state key="normal" image="ic_delete_dream"/>
+                                <connections>
+                                    <action selector="deleteDreamButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="9cf-jG-EsK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G0Q-N5-IR0" userLabel="ConfirmButton">
+                                <rect key="frame" x="270" y="27.5" width="32" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="ZOw-YB-6j1"/>
+                                    <constraint firstAttribute="width" constant="32" id="cf1-Ok-B1Q"/>
+                                </constraints>
+                                <state key="normal" image="ic_check_disable"/>
+                                <connections>
+                                    <action selector="confirmDreamButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="wRa-8u-Gbz"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -64,7 +78,9 @@
                             <constraint firstAttribute="height" constant="80" id="TtQ-Pz-11w"/>
                             <constraint firstAttribute="bottom" secondItem="eix-uC-fTl" secondAttribute="bottom" constant="10.5" id="VqI-1F-q63"/>
                             <constraint firstItem="eix-uC-fTl" firstAttribute="leading" secondItem="RbY-Cn-A4a" secondAttribute="leading" constant="12" id="Zly-iX-Ii9"/>
-                            <constraint firstItem="bfd-vI-OI9" firstAttribute="leading" secondItem="Jvs-90-tbJ" secondAttribute="trailing" constant="18" id="hCn-vi-ctZ"/>
+                            <constraint firstItem="G0Q-N5-IR0" firstAttribute="centerY" secondItem="Jvs-90-tbJ" secondAttribute="centerY" id="dNU-io-4Mg"/>
+                            <constraint firstItem="bfd-vI-OI9" firstAttribute="leading" secondItem="G0Q-N5-IR0" secondAttribute="trailing" constant="12" id="iNN-2v-6sO"/>
+                            <constraint firstItem="G0Q-N5-IR0" firstAttribute="leading" secondItem="Jvs-90-tbJ" secondAttribute="trailing" constant="17" id="nPl-0j-gAO"/>
                             <constraint firstItem="I5W-aT-69i" firstAttribute="leading" secondItem="RbY-Cn-A4a" secondAttribute="leading" constant="10" id="uHB-9J-Okg"/>
                             <constraint firstItem="eix-uC-fTl" firstAttribute="top" secondItem="Jvs-90-tbJ" secondAttribute="bottom" constant="8" id="uwg-dH-BTT"/>
                         </constraints>
@@ -85,16 +101,18 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="buttonDreamDetails" destination="bfd-vI-OI9" id="r1N-VI-c95"/>
+                <outlet property="confirmDreamButton" destination="G0Q-N5-IR0" id="2dU-F7-tCB"/>
+                <outlet property="deleteDreamButton" destination="bfd-vI-OI9" id="9ye-FB-Lz7"/>
                 <outlet property="labelDreamAmount" destination="eix-uC-fTl" id="Pjp-wu-uCA"/>
                 <outlet property="labelDreamTitle" destination="I5W-aT-69i" id="Zgr-Dn-Twr"/>
                 <outlet property="mainDreamView" destination="RbY-Cn-A4a" id="dQg-aO-5Zp"/>
                 <outlet property="progressDream" destination="Jvs-90-tbJ" id="n64-XH-Rde"/>
             </connections>
-            <point key="canvasLocation" x="139.85507246376812" y="89.397321428571431"/>
+            <point key="canvasLocation" x="139.85507246376812" y="89.0625"/>
         </tableViewCell>
     </objects>
     <resources>
-        <image name="ic_dream_details" width="10" height="18"/>
+        <image name="ic_check_disable" width="32" height="32"/>
+        <image name="ic_delete_dream" width="32" height="32"/>
     </resources>
 </document>

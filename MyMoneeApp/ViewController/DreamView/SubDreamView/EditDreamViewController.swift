@@ -25,7 +25,7 @@ class EditDreamViewController: UIViewController {
 
         titleView.textFieldDetails.text = dreamTitle
         targetView.labelTitle.text = "Target Capaian (Rp)"
-        targetView.textFieldDetails.text = String(dreamTarget)
+        targetView.textFieldDetails.text = String(Int(dreamTarget))
         
         deleteBtnAppereance(button: deleteButton)
     }
@@ -42,7 +42,7 @@ class EditDreamViewController: UIViewController {
     
     
     @IBAction func doUpdate(_ sender: Any) {
-        let floatAmount = Float(targetView.textFieldDetails.text ?? "0") ?? 0.0
+        let floatAmount = Float(targetView.textFieldDetails.text?.ignoreDotNumber() ?? "0") ?? 0.0
         let progress = Float(profile.balance / floatAmount)
         dreams[selectedRow] = Dream(id: selectedDream.id, title: titleView.textFieldDetails.text!, progress: progress, totalAmount: floatAmount)
         backToDream()

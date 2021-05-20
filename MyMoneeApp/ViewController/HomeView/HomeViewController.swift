@@ -24,7 +24,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         greeting()
         labelName.text = profile.name
         
-        labelBalance.text = "Rp  \(currencyFormat(value: profile.balance))"
+        labelBalance.text = "Rp \(profile.balance.currencyFormat())"
     
         // Rounded View
         roundView.layer.cornerRadius = 30
@@ -65,7 +65,6 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: HistoryTableViewCell.self), for: indexPath) as! HistoryTableViewCell
         cell.labelName.text = histories[indexPath.row].title
-//        cell.labelAmount.text = histories[indexPath.row].price
         cell.labelDate.text = histories[indexPath.row].date
         imageViewColor(cell: cell, indexPath: indexPath)
         return cell
@@ -76,12 +75,12 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
             cell.iconImage.image = UIImage(named: "arrow_upward")
             cell.iconView.backgroundColor = UIColor(red: 33/255, green: 150/255, blue: 83/255, alpha: 0.2)
             cell.labelAmount.textColor = UIColor(red: 33/255, green: 150/255, blue: 83/255, alpha: 1)
-            cell.labelAmount.text = "+Rp \(currencyFormat(value: histories[indexPath.row].price))"
+            cell.labelAmount.text = "+Rp \(histories[indexPath.row].price.currencyFormat())"
         } else {
             cell.iconImage.image = UIImage(named: "arrow_downward")
             cell.iconView.backgroundColor = UIColor(red: 235/255, green: 87/255, blue: 87/255, alpha: 0.2)
             cell.labelAmount.textColor = UIColor(red: 235/255, green: 87/255, blue: 87/255, alpha: 1)
-            cell.labelAmount.text = "-Rp \(currencyFormat(value: histories[indexPath.row].price))"
+            cell.labelAmount.text = "-Rp \(histories[indexPath.row].price.currencyFormat())"
         }
     }
     
@@ -130,8 +129,8 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
             profile.balance = 0
         } else {
             notFoundView.isHidden = true
-            recentOutcome.labelAmount.text = "Rp  \(currencyFormat(value: searchRecentOutcome()))"
-            recentIncome.labelAmount.text = "Rp  \(currencyFormat(value: searchRecentIncome()))"
+            recentOutcome.labelAmount.text = "Rp  \(searchRecentOutcome().currencyFormat())"
+            recentIncome.labelAmount.text = "Rp  \(searchRecentIncome().currencyFormat())"
         }
     }
     

@@ -81,6 +81,7 @@
 		FAEDD8F9264BF5ED003817A4 /* Poppins-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FAEDD8E6264BF5ED003817A4 /* Poppins-MediumItalic.ttf */; };
 		FAEDD8FF264C1DBD003817A4 /* DreamTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEDD8FD264C1DBD003817A4 /* DreamTableViewCell.swift */; };
 		FAEDD900264C1DBD003817A4 /* DreamTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAEDD8FE264C1DBD003817A4 /* DreamTableViewCell.xib */; };
+		FAEF844926555ED30082170A /* RandomId.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEF844826555ED30082170A /* RandomId.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -181,6 +182,7 @@
 		FAEDD8E6264BF5ED003817A4 /* Poppins-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-MediumItalic.ttf"; sourceTree = "<group>"; };
 		FAEDD8FD264C1DBD003817A4 /* DreamTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DreamTableViewCell.swift; sourceTree = "<group>"; };
 		FAEDD8FE264C1DBD003817A4 /* DreamTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DreamTableViewCell.xib; sourceTree = "<group>"; };
+		FAEF844826555ED30082170A /* RandomId.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomId.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -267,6 +269,7 @@
 				FA67313D2652264700D650F6 /* RecentTransaction.swift */,
 				FA77290D265173A800AB8449 /* NumberFormatter.swift */,
 				FA673150265257CD00D650F6 /* CurrentDate.swift */,
+				FAEF844826555ED30082170A /* RandomId.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -707,6 +710,7 @@
 				FA746BC6265350A500F1718B /* NotFoundView.swift in Sources */,
 				FA707846264D517C00140847 /* Dream.swift in Sources */,
 				FA7728C12650D94800AB8449 /* AddDreamViewController.swift in Sources */,
+				FAEF844926555ED30082170A /* RandomId.swift in Sources */,
 				FA746BC026532A1A00F1718B /* ImagePicker.swift in Sources */,
 				FA77290E265173A800AB8449 /* NumberFormatter.swift in Sources */,
 				FA7728DE265103F600AB8449 /* EditDreamViewController.swift in Sources */,

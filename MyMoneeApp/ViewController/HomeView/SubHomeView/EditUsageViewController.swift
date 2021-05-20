@@ -14,6 +14,7 @@ class EditUsageViewController: UIViewController {
     var incomeSelected: Bool!
     var outcomeSelected: Bool!
     var selectedRow: Int = 0
+    var transactionType: HistoryType!
     
     @IBOutlet weak var titleView: TitleView!
     @IBOutlet weak var amountView: TitleView!
@@ -26,7 +27,7 @@ class EditUsageViewController: UIViewController {
 
         titleView.textFieldDetails.text = usageTitle
         amountView.labelTitle.text = "Jumlah Rp"
-        amountView.textFieldDetails.text = String(amount)
+        amountView.textFieldDetails.text = String(Int(amount))
         
         incomeView.categoryLabel.text = "Pemasukan"
         incomeView.imageCategory.image = UIImage(named: "arrow_upward")
@@ -38,30 +39,46 @@ class EditUsageViewController: UIViewController {
         
         if incomeSelected {
             didSelectView(view: incomeView)
+            incomeSelected = true
+            outcomeSelected = false
         } else {
             didSelectView(view: outcomeView)
+            incomeSelected = false
+            outcomeSelected = true
         }
         
         deleteBtnAppereance(button: deleteButton)
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        if incomeSelected {
+            didSelectView(view: incomeView)
+            incomeSelected = true
+            outcomeSelected = false
+        } else {
+            didSelectView(view: outcomeView)
+            incomeSelected = false
+            outcomeSelected = true
+        }
+    }
 
     @IBAction func doBack(_ sender: Any) {
-        backToHome()
+        self.navigationController?.popViewController(animated: true)
     }
     
     
     @IBAction func doUpdate(_ sender: Any) {
-        let floatAmount = Float(amountView.textFieldDetails.text ?? "0")
-        var transactionType: HistoryType = .outcome
+        let floatAmount = Float(amountView.textFieldDetails.text!)
+//        var transactionType: HistoryType = self.transactionType
         let selectedHistory = histories[selectedRow]
         if incomeSelected {
             transactionType = .income
-            profile.balance -= floatAmount!
+            profile.balance -= amount
             profile.balance += floatAmount!
             recentIncomeTrx = floatAmount!
         } else {
             transactionType = .outcome
-            profile.balance += floatAmount!
+            profile.balance += amount
             profile.balance -= floatAmount!
             recentOutcomeTrx = floatAmount!
         }
@@ -104,11 +121,9 @@ class EditUsageViewController: UIViewController {
     }
     
     private func backToHome() {
-//        let detailVC = DetailsViewController(nibName: "DetailsViewController", bundle: nil)
-        self.navigationController?.popToRootViewController(animated: true)
-//        let TabViewController = MainTabBarController(nibName: "MainTabBarController", bundle: nil)
-//         TabViewController.selectedIndex = 0
-//        UIApplication.shared.keyWindow?.rootViewController = TabViewController
+        let TabViewController = MainTabBarController(nibName: "MainTabBarController", bundle: nil)
+         TabViewController.selectedIndex = 0
+        UIApplication.shared.keyWindow?.rootViewController = TabViewController
     }
     
     private func didSelectView(view: UIView) {

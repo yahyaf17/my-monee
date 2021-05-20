@@ -30,6 +30,8 @@ class EditProfileViewController: UIViewController {
         notUsedName.text = profile.name
         profileView.labelName.text = profile.name
         
+        usageMessage()
+        
         NotificationCenter.default.addObserver(self, selector: #selector(EditProfileViewController.ChangeText), name: NSNotification.Name(rawValue: "refresh"), object: nil)
         
         self.imagePicker = ImagePicker(presentationController: self, delegate: self)
@@ -38,24 +40,6 @@ class EditProfileViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         profileView.imageProfile.image = profile.image
     }
-    
-
-//    func implementTempName(){
-//        if let name = tempName {
-//            profileView.labelName.text = name
-//            notUsedName.text = name
-//        } else {
-//            profileView.labelName.text = profile.name
-//            notUsedName.text = profile.name
-//        }
-//    }
-//
-//    func updateNameToModel() {
-//        if let name = tempName {
-//            profile.name = name
-//            profile.image = updateImage
-//        }
-//    }
 
     @IBAction func saveEditButton(_ sender: Any) {
         let TabViewController = MainTabBarController(nibName: "MainTabBarController", bundle: nil)
@@ -70,6 +54,15 @@ class EditProfileViewController: UIViewController {
         self.present(popUpEditName, animated: true, completion: nil)
     }
 
+    func usageMessage() {
+        if profile.balance > 0 {
+            profileView.labelMessage.text = "Bagus! Pengeluaranmu lebih sedikit dari Pemasukan"
+        } else if profile.balance == 0 {
+            profileView.labelMessage.text = "Oops! Saldo kamu 0 nih! Tingkat lagi pemasukanmu"
+        } else {
+            profileView.labelMessage.text = "Oh tidak! Saldo kamu negatif! Yuk tingkatkan lagi manajemen uangmu!"
+        }
+    }
 
     @IBAction func showImagePicker(_ sender: UIButton) {
         self.imagePicker.present(from: sender)

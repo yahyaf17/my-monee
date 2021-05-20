@@ -36,7 +36,7 @@ class DetailsViewController: UIViewController {
         
         // Passing Value From Table
         imageColorData(type: type)
-        detailsView.labelAmount.text = currencyFormat(value: amount)
+        detailsView.labelAmount.text = amount.currencyFormat()
         detailsView.labelTabSection.text = type.rawValue
         detailsView.labelTitle.text = historyTitle
         idLabel.text = idHistory
@@ -68,6 +68,7 @@ class DetailsViewController: UIViewController {
             editUsage.incomeSelected = false
             editUsage.outcomeSelected = true
         }
+        editUsage.transactionType = type
         self.navigationController?.pushViewController(editUsage, animated: true)
     }
     

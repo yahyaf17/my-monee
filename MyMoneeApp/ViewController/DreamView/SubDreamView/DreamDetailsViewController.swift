@@ -48,11 +48,11 @@ class DreamDetailsViewController: UIViewController {
         
         // Data
         detailsView.labelTitle.text = selectedDream.title
-        let stringTotalAmount = currencyFormatISO(value: selectedDream.totalAmount)
+        let stringTotalAmount = selectedDream.totalAmount.currencyFormatISO()
         detailsView.labelAmount.text =  stringTotalAmount
         detailsView.labelTabSection.text = "Impian"
         checkProgress()
-        progressAmount.text = "IDR \(profile.balance) / \(stringTotalAmount)"
+        progressAmount.text = "\(profile.balance.currencyFormatISO()) / \(stringTotalAmount)"
         progressTrack.setProgress((profile.balance / selectedDream.totalAmount), animated: false)
     }
     
@@ -102,7 +102,7 @@ class DreamDetailsViewController: UIViewController {
     }
     
     private func showButton(button: UIButton) {
-        if selectedDream.progress != 1 {
+        if profile.balance / selectedDream.totalAmount < 1 {
             button.isHidden = true
         }
     }

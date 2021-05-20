@@ -31,12 +31,12 @@ class AddDreamViewController: UIViewController {
     }
     
     @IBAction func doSave(_ sender: UIButton) {
-        let floatAmount = Float(ignoreDotNumber(string: amountView.textFieldDetails.text ?? "0")) ?? 0.0
+        let floatAmount = Float((amountView.textFieldDetails.text?.ignoreDotNumber())!) ?? 0
         var progress = Float(profile.balance / floatAmount)
         if progress > 1 {
             progress = 1
         } 
-        let addDream = Dream(id: "MM-19223", title: titleView.textFieldDetails.text!, progress: progress, totalAmount: floatAmount)
+        let addDream = Dream(id: randonId(), title: titleView.textFieldDetails.text!, progress: progress, totalAmount: floatAmount)
         dreams.append(addDream)
         backToDream()
     }

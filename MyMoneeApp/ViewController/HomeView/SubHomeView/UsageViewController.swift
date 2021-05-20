@@ -62,18 +62,27 @@ class UsageViewController: UIViewController {
     }
     
     @IBAction func saveButton(_ sender: Any) {
-        let floatPrice = Float(ignoreDotNumber(string: amountView.textFieldDetails.text ?? "0"))
+        let floatPrice = Float((amountView.textFieldDetails.text?.ignoreDotNumber())!)
         if incomeSelected {
-            let incomeHistory = History(id: "AA", title: titleView.textFieldDetails.text!, price: floatPrice!, date: currentDate, image: true, type: .income)
+            let incomeHistory = History(id: randonId(),
+                        title: titleView.textFieldDetails.text!,
+                        price: floatPrice!, date: currentDate,
+                        image: true,
+                        type: .income)
             histories.insert(incomeHistory, at: 0)
-            profile.balance += floatPrice!
+            profile.balance += floatPrice ?? 0
             recentIncomeTrx = floatPrice ?? 0
             goBackHome()
         }
         else if outcomeSelected {
-            let outcomeHistory = History(id: "AA", title: titleView.textFieldDetails.text!, price: floatPrice!, date: currentDate, image: false, type: .outcome)
+            let outcomeHistory = History(id: randonId(),
+                        title: titleView.textFieldDetails.text!,
+                        price: floatPrice!,
+                        date: currentDate,
+                        image: false,
+                        type: .outcome)
             histories.insert(outcomeHistory, at: 0)
-            profile.balance -= floatPrice!
+            profile.balance -= floatPrice ?? 0
             recentOutcomeTrx = floatPrice ?? 0
             goBackHome()
         }
@@ -89,7 +98,10 @@ class UsageViewController: UIViewController {
     }
     
     func enabaleSaveButton() {
-        saveButton.backgroundColor = UIColor(red: 80/255, green: 105/255, blue: 184/255, alpha: 1)
+        saveButton.backgroundColor = UIColor(red: 80/255,
+                                             green: 105/255,
+                                             blue: 184/255,
+                                             alpha: 1)
         saveButton.isUserInteractionEnabled = true
         saveButton.isEnabled = true
     }
@@ -105,7 +117,10 @@ class UsageViewController: UIViewController {
         view.backgroundColor = .clear
         view.layer.borderWidth = 3
         view.layer.cornerRadius = 8
-        view.layer.borderColor = UIColor(red: 80/255, green: 105/255, blue: 185/255, alpha: 1).cgColor
+        view.layer.borderColor = UIColor(red: 80/255,
+                                         green: 105/255,
+                                         blue: 185/255,
+                                         alpha: 1).cgColor
     }
     
     private func unselectView(view: UIView) {

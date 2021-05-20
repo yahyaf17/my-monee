@@ -8,19 +8,19 @@
 import Foundation
 
 extension Date {
-    func string(format: String) -> String {
+    func id_format() -> String {
         let formatter = DateFormatter()
         formatter.locale = NSLocale(localeIdentifier: "id_ID") as Locale
-        formatter.dateFormat = format
-        return formatter.string(from: self)
+        formatter.dateFormat = "dd MMMM yyyy - HH:mm"
+        return formatter.string(from: Date())
     }
     func today(format : String = "dd MMMM yyyy - HH:mm") -> String {
-        let date = Date()
         let formatter = DateFormatter()
+        formatter.timeZone = .current
         formatter.dateFormat = format
-        return formatter.string(from: date)
+        return formatter.string(from: Date())
     }
 }
 
-let currentDate: String = Date().string(format: "dd MMMM yyyy - HH:mm")
+let currentDate: String = Date().id_format()
 //let currentDate: String = Date().today()
