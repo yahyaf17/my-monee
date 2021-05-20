@@ -7,7 +7,10 @@
 
 import UIKit
 
-class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, NotFoundDelegate {
+class HomeViewController: UIViewController, UITableViewDelegate, NotFoundDelegate {
+    
+    var service: NetworkService = NetworkService()
+    var dataSource: HistoryDataSource = HistoryDataSource()
     
     @IBOutlet weak var recentIncome: RecentView!
     @IBOutlet weak var recentOutcome: RecentView!
@@ -45,30 +48,43 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         // TableView
         tableView.delegate = self
-        tableView.dataSource = self
+//        tableView.dataSource = self
         
         let uiNib = UINib(nibName: String(describing: HistoryTableViewCell.self), bundle: nil)
         tableView.register(uiNib, forCellReuseIdentifier: String(describing: HistoryTableViewCell.self))
         
         notFoundView.delegate = self
         tableView.reloadData()
+        self.tableView.dataSource = self.dataSource
+        self.loadData()
+    }
+    
+    func loadData() {
+        self.service.getTransactionHistroy { (transaction) in
+            DispatchQueue.main.async {
+                self.dataSource.transaction = transaction
+                self.tableView.reloadData()
+            }
+        }
     }
     
     override func viewDidAppear(_ animated: Bool) {
         tableView.reloadData()
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return histories.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: HistoryTableViewCell.self), for: indexPath) as! HistoryTableViewCell
-        cell.labelName.text = histories[indexPath.row].title
-        cell.labelDate.text = histories[indexPath.row].date
-        imageViewColor(cell: cell, indexPath: indexPath)
-        return cell
-    }
+//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        return histories.count
+//    }
+//
+//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//        let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: HistoryTableViewCell.self), for: indexPath) as! HistoryTableViewCell
+//        cell.labelName.text = histories[indexPath.row].title
+//        cell.labelDate.text = histories[indexPath.row].date
+//        imageViewColor(cell: cell, indexPath: indexPath)
+//        cell.showData(history: histories[indexPath.row])
+////        History.showHistory(History.self)
+//        return cell
+//    }
     
     private func imageViewColor(cell: HistoryTableViewCell, indexPath: IndexPath) {
         if histories[indexPath.row].image {
@@ -95,7 +111,6 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         dvc.historyTitle = histories[indexPath.row].title
         dvc.amount = histories[indexPath.row].price
         dvc.date = histories[indexPath.row].date
-        dvc.type = histories[indexPath.row].type
         dvc.selectedRow = indexPath.row
         dvc.type = histories[indexPath.row].type
         self.navigationController?.pushViewController(dvc, animated: true)
@@ -121,7 +136,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func empyDataHandling() {
-        if histories.isEmpty {
+        if dataSource.transaction.isEmpty {
             notFoundView.isHidden = false
             recentOutcome.labelAmount.text = "Rp 0"
             recentIncome.labelAmount.text = "Rp 0"

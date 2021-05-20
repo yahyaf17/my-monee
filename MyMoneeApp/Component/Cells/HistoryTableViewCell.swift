@@ -27,4 +27,16 @@ class HistoryTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    func showData(history: Transaction) {
+        labelName.text = history.title
+        labelDate.text = history.date
+        labelAmount.text = String(history.price)
+//        labelAmount.text = history.price.currencyFormatISO()
+        if history.image == true {
+            iconImage.image = UIImage(named: "arrow_upward")
+        } else {
+            iconImage.image = UIImage(named: "arrow_downward")
+        }
+    }
+    
 }
