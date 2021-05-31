@@ -22,6 +22,7 @@
                 <outlet property="greetingLabel" destination="4K4-uR-3OT" id="kOM-cA-ItY"/>
                 <outlet property="labelBalance" destination="hYJ-kl-K9z" id="dQZ-Lc-Tel"/>
                 <outlet property="labelName" destination="zVf-dB-a0q" id="xXJ-j3-UV8"/>
+                <outlet property="loadingIndicator" destination="rjq-g5-Vf4" id="GsZ-8n-xP1"/>
                 <outlet property="notFoundView" destination="ZVP-hy-llo" id="CyW-mY-a5D"/>
                 <outlet property="recentIncome" destination="gBU-sj-Wai" id="UOQ-m0-O9m"/>
                 <outlet property="recentOutcome" destination="AGJ-k9-qae" id="Bd1-Nr-ewP"/>
@@ -51,7 +52,7 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zVf-dB-a0q">
-                                    <rect key="frame" x="0.0" y="40" width="59.5" height="18"/>
+                                    <rect key="frame" x="0.0" y="40" width="66.5" height="18"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="18" id="tYE-I1-ZQ0"/>
                                     </constraints>
@@ -200,24 +201,29 @@
                             <rect key="frame" x="0.0" y="311" width="414" height="507"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Riwayat Penggunaan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HXk-sT-VSZ">
-                                    <rect key="frame" x="17" y="23" width="380" height="19"/>
+                                    <rect key="frame" x="17" y="23" width="380" height="22.5"/>
                                     <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="16"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5nH-Gh-saL">
-                                    <rect key="frame" x="0.0" y="58" width="414" height="449"/>
+                                    <rect key="frame" x="0.0" y="61.5" width="414" height="445.5"/>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     <gestureRecognizers/>
                                 </tableView>
                                 <view contentMode="scaleToFill" restorationIdentifier="HistoryTableViewCell" translatesAutoresizingMaskIntoConstraints="NO" id="ZVP-hy-llo" customClass="NotFoundView" customModule="My_Monee___Money_Saver" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="42" width="414" height="465"/>
+                                    <rect key="frame" x="0.0" y="45.5" width="414" height="461.5"/>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 </view>
+                                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="rjq-g5-Vf4">
+                                    <rect key="frame" x="188.5" y="235" width="37" height="37"/>
+                                    <color key="color" systemColor="labelColor"/>
+                                </activityIndicatorView>
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <gestureRecognizers/>
                             <constraints>
+                                <constraint firstItem="rjq-g5-Vf4" firstAttribute="centerX" secondItem="2fR-dJ-5qZ" secondAttribute="centerX" id="090-dR-ypb"/>
                                 <constraint firstItem="5nH-Gh-saL" firstAttribute="leading" secondItem="2fR-dJ-5qZ" secondAttribute="leading" id="1xK-0r-XYf"/>
                                 <constraint firstAttribute="bottom" secondItem="5nH-Gh-saL" secondAttribute="bottom" id="5bm-L0-Uv4"/>
                                 <constraint firstItem="ZVP-hy-llo" firstAttribute="top" secondItem="HXk-sT-VSZ" secondAttribute="bottom" id="9gV-8s-IE2"/>
@@ -226,6 +232,7 @@
                                 <constraint firstAttribute="bottom" secondItem="ZVP-hy-llo" secondAttribute="bottom" id="Z0e-3f-SCg"/>
                                 <constraint firstItem="5nH-Gh-saL" firstAttribute="top" secondItem="HXk-sT-VSZ" secondAttribute="bottom" constant="16" id="c56-Sh-Kil"/>
                                 <constraint firstAttribute="trailing" secondItem="HXk-sT-VSZ" secondAttribute="trailing" constant="17" id="elQ-7G-CYM"/>
+                                <constraint firstItem="rjq-g5-Vf4" firstAttribute="centerY" secondItem="2fR-dJ-5qZ" secondAttribute="centerY" id="iBx-8w-LIR"/>
                                 <constraint firstItem="HXk-sT-VSZ" firstAttribute="top" secondItem="2fR-dJ-5qZ" secondAttribute="top" constant="23" id="kUu-Zs-gHN"/>
                                 <constraint firstItem="ZVP-hy-llo" firstAttribute="leading" secondItem="2fR-dJ-5qZ" secondAttribute="leading" id="kup-Wb-Cto"/>
                                 <constraint firstAttribute="trailing" secondItem="5nH-Gh-saL" secondAttribute="trailing" id="o12-uF-9Ux"/>
@@ -273,6 +280,9 @@
     </objects>
     <resources>
         <image name="add-button" width="36" height="36"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

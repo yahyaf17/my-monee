@@ -15,9 +15,10 @@ class DetailsViewController: UIViewController {
     var iconView: UIColor = .black
     var amount: Float = 0.0
     var date:String = ""
-    var type: HistoryType = .income
+    var type: Bool!
     var selectedRow: Int = 0
-    
+    var transactionText: String = ""
+        
     @IBOutlet weak var detailsView: DetailsView!
     @IBOutlet weak var roundView: UIView!
     @IBOutlet weak var parentView: UIView!
@@ -25,6 +26,7 @@ class DetailsViewController: UIViewController {
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var backButton: UIButton!
     @IBOutlet weak var buttonView: UIView!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,24 +38,34 @@ class DetailsViewController: UIViewController {
         
         // Passing Value From Table
         imageColorData(type: type)
-        detailsView.labelAmount.text = amount.currencyFormat()
-        detailsView.labelTabSection.text = type.rawValue
+        detailsView.labelAmount.text = "Rp \(amount.currencyFormat())"
+//        detailsView.labelTabSection.text = 
         detailsView.labelTitle.text = historyTitle
         idLabel.text = idHistory
         dateLabel.text = date
+        detailsView.labelTabSection.text = transactionText
     
         parentView.bringSubviewToFront(detailsView)
         parentView.bringSubviewToFront(buttonView)
         
         backButtonAppearance(button: backButton)
+//        activityIndicator.isHidden = false
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        imageColorData(type: type)
+        detailsView.labelAmount.text = "Rp \(amount.currencyFormat())"
+//        detailsView.labelTabSection.text =
+        detailsView.labelTitle.text = historyTitle
+        idLabel.text = idHistory
+        dateLabel.text = date
+        detailsView.labelTabSection.text = transactionText
+        activityIndicator.isHidden = true
     }
     
     @IBAction func doBackButton(_ sender: Any) {
-        self.dismiss(animated:true) {
-            let TabViewController = MainTabBarController(nibName: "MainTabBarController", bundle: nil)
-             TabViewController.selectedIndex = 0
-             UIApplication.shared.keyWindow?.rootViewController = TabViewController
-        }
+        self.navigationController?.popToRootViewController(animated: true)
     }
     
     @IBAction func editAction(_ sender: Any) {
@@ -61,7 +73,9 @@ class DetailsViewController: UIViewController {
         editUsage.usageTitle = historyTitle
         editUsage.amount = amount
         editUsage.selectedRow = selectedRow
-        if type == .income {
+        editUsage.idTransaction = idHistory
+        editUsage.indexTransaction = selectedRow
+        if type == true {
             editUsage.incomeSelected = true
             editUsage.outcomeSelected = false
         } else {
@@ -72,17 +86,17 @@ class DetailsViewController: UIViewController {
         self.navigationController?.pushViewController(editUsage, animated: true)
     }
     
-    private func imageColorData(type: HistoryType!) {
+    private func imageColorData(type: Bool!) {
         switch type {
-        case .income:
+        case true:
             detailsView.iconImage.image = UIImage(named: "arrow_upward")
             detailsView.iconView.backgroundColor = UIColor(red: 33/255, green: 105/255, blue: 83/255, alpha: 0.2)
             detailsView.labelAmount.textColor = UIColor(red: 33/255, green: 105/255, blue: 83/255, alpha: 1)
-        case .outcome:
+        case false:
             detailsView.iconImage.image = UIImage(named: "arrow_downward")
             detailsView.iconView.backgroundColor = UIColor(red: 235/255, green: 87/255, blue: 87/255, alpha: 0.2)
             detailsView.labelAmount.textColor = UIColor(red: 235/255, green: 87/255, blue: 87/255, alpha: 1)
-        case .none:
+        default:
             detailsView.iconImage.image = UIImage(named: "not_found")
         }
     }

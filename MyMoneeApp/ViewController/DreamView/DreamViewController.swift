@@ -114,18 +114,19 @@ extension DreamViewController: DreamButtonDelegate {
     func deleteDream(button: UIButton) {
         dreams.remove(at: button.tag)
         tableView.reloadData()
+        refreshTab()
     }
     
     func achieveDream(button: UIButton) {
         let currentDream = dreams[button.tag]
-        let newRecord = History(id: String(currentDream.id),
+        let newRecord = Transaction(id: String(currentDream.id),
                                 title: currentDream.title,
                                 price: currentDream.totalAmount,
                                 date: currentDate,
                                 image: false,
-                                type: .outcome)
-        histories.insert(newRecord, at: 0)
-        profile.balance -= currentDream.totalAmount
+                                type: false)
+        transactionList.insert(newRecord, at: 0)
+//        profile.balance -= currentDream.totalAmount
         dreams.remove(at: button.tag)
         tableView.reloadData()
         refreshTab()

@@ -78,8 +78,8 @@ class DreamDetailsViewController: UIViewController {
     
     
     @IBAction func doConfirm(_ sender: Any) {
-        let newRecord = History(id: String(selectedDream.id), title: selectedDream.title, price: selectedDream.totalAmount, date: currentDate, image: false, type: .outcome)
-        histories.insert(newRecord, at: 0)
+        let newRecord = Transaction(id: String(selectedDream.id), title: selectedDream.title, price: selectedDream.totalAmount, date: currentDate, image: false, type: false)
+        transactionList.insert(newRecord, at: 0)
         let amountInt = selectedDream.totalAmount
         let balanceInt = profile.balance
         let updateBalance = balanceInt - amountInt

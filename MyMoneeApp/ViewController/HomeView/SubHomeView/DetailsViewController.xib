@@ -20,8 +20,9 @@
         </array>
     </customFonts>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailsViewController" customModule="MyMoneeApp" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailsViewController" customModule="My_Monee___Money_Saver" customModuleProvider="target">
             <connections>
+                <outlet property="activityIndicator" destination="dKh-30-bjL" id="cFe-YM-K5t"/>
                 <outlet property="backButton" destination="uxh-zo-fL6" id="wXL-Yq-c4b"/>
                 <outlet property="buttonView" destination="e6P-oi-Fz1" id="rTt-uW-a80"/>
                 <outlet property="dateLabel" destination="sx8-Xl-wYw" id="yK6-YB-9Qz"/>
@@ -61,7 +62,7 @@
                                 <constraint firstAttribute="height" constant="36" id="xu2-1T-Lpp"/>
                             </constraints>
                         </view>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lrn-Qj-Ig2" customClass="DetailsView" customModule="MyMoneeApp" customModuleProvider="target">
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lrn-Qj-Ig2" customClass="DetailsView" customModule="My_Monee___Money_Saver" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="0.0" width="414" height="230"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
@@ -75,13 +76,13 @@
                                     <rect key="frame" x="0.0" y="213" width="414" height="21"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ID Pembuatan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sUf-24-l1d">
-                                            <rect key="frame" x="17" y="0.0" width="101" height="20"/>
+                                            <rect key="frame" x="17" y="0.0" width="89.5" height="16.5"/>
                                             <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="14"/>
                                             <color key="textColor" red="0.30980392156862746" green="0.30980392156862746" blue="0.30980392156862746" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label ID" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ev0-x0-t7y">
-                                            <rect key="frame" x="342.5" y="0.0" width="54.5" height="20"/>
+                                            <rect key="frame" x="345" y="0.0" width="52" height="16.5"/>
                                             <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="14"/>
                                             <color key="textColor" red="0.30980392156862746" green="0.30980392156862746" blue="0.30980392156862746" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
@@ -100,13 +101,13 @@
                                     <rect key="frame" x="0.0" y="246" width="414" height="21"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tanggal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fp8-iX-5UU">
-                                            <rect key="frame" x="17" y="0.0" width="59" height="20"/>
+                                            <rect key="frame" x="17" y="0.0" width="48.5" height="16.5"/>
                                             <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="14"/>
                                             <color key="textColor" red="0.30980392159999998" green="0.30980392159999998" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sx8-Xl-wYw">
-                                            <rect key="frame" x="323" y="0.0" width="74" height="20"/>
+                                            <rect key="frame" x="329.5" y="0.0" width="67.5" height="16.5"/>
                                             <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="14"/>
                                             <color key="textColor" red="0.30980392159999998" green="0.30980392159999998" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
@@ -154,6 +155,10 @@
                                 <constraint firstAttribute="trailing" secondItem="7Wo-LR-zZW" secondAttribute="trailing" id="zgI-VZ-P3K"/>
                             </constraints>
                         </view>
+                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="dKh-30-bjL">
+                            <rect key="frame" x="188.5" y="390.5" width="37" height="37"/>
+                            <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </activityIndicatorView>
                     </subviews>
                     <color key="backgroundColor" red="0.94117647058823528" green="0.94901960784313721" blue="0.97254901960784312" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
@@ -162,10 +167,12 @@
                         <constraint firstItem="Lrn-Qj-Ig2" firstAttribute="leading" secondItem="fnO-fN-1a3" secondAttribute="leading" id="PgW-dA-Z5p"/>
                         <constraint firstItem="Lrn-Qj-Ig2" firstAttribute="top" secondItem="fnO-fN-1a3" secondAttribute="top" id="bGG-Ic-9mE"/>
                         <constraint firstAttribute="trailing" secondItem="Gfm-Qe-zaQ" secondAttribute="trailing" id="c2X-ns-W1K"/>
+                        <constraint firstItem="dKh-30-bjL" firstAttribute="centerY" secondItem="fnO-fN-1a3" secondAttribute="centerY" id="c94-fY-Uko"/>
                         <constraint firstItem="Gfm-Qe-zaQ" firstAttribute="top" secondItem="fnO-fN-1a3" secondAttribute="top" constant="75" id="lO5-8D-ZNz"/>
                         <constraint firstItem="e6P-oi-Fz1" firstAttribute="top" secondItem="fnO-fN-1a3" secondAttribute="top" constant="17" id="lRr-eA-AFk"/>
                         <constraint firstAttribute="trailing" secondItem="e6P-oi-Fz1" secondAttribute="trailing" constant="17" id="pra-pe-S8w"/>
                         <constraint firstItem="Gfm-Qe-zaQ" firstAttribute="leading" secondItem="fnO-fN-1a3" secondAttribute="leading" id="quT-lA-OQo"/>
+                        <constraint firstItem="dKh-30-bjL" firstAttribute="centerX" secondItem="fnO-fN-1a3" secondAttribute="centerX" id="wgx-mg-Bjg"/>
                     </constraints>
                 </view>
             </subviews>

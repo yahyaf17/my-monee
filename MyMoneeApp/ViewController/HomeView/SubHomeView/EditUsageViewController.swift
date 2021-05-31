@@ -9,12 +9,16 @@ import UIKit
 
 class EditUsageViewController: UIViewController {
 
+    var idTransaction: String = ""
+    var indexTransaction: Int = 0
     var usageTitle: String = ""
     var amount: Float = 0.0
     var incomeSelected: Bool!
     var outcomeSelected: Bool!
     var selectedRow: Int = 0
-    var transactionType: HistoryType!
+    var transactionType: Bool!
+    var service: NetworkService = NetworkService()
+    var dataSource: HistoryDataSource = HistoryDataSource()
     
     @IBOutlet weak var titleView: TitleView!
     @IBOutlet weak var amountView: TitleView!
@@ -63,41 +67,58 @@ class EditUsageViewController: UIViewController {
     }
 
     @IBAction func doBack(_ sender: Any) {
-        self.navigationController?.popViewController(animated: true)
+        self.navigationController?.popToRootViewController(animated: true)
     }
     
     
     @IBAction func doUpdate(_ sender: Any) {
         let floatAmount = Float(amountView.textFieldDetails.text!)
-//        var transactionType: HistoryType = self.transactionType
-        let selectedHistory = histories[selectedRow]
+        
         if incomeSelected {
-            transactionType = .income
-            profile.balance -= amount
-            profile.balance += floatAmount!
-            recentIncomeTrx = floatAmount!
+            let newTransaction = Transaction(id: idTransaction, title: titleView.textFieldDetails.text!, price: floatAmount!, date: currentDate, image: true, type: true)
+            self.service.updateTransaction(id: idTransaction, newTransaction) {
+                print("Success Update Post Income Transaction")
+            }
+            transactionBalanceUpdate()
+            alertUpdate()
         } else {
-            transactionType = .outcome
-            profile.balance += amount
-            profile.balance -= floatAmount!
-            recentOutcomeTrx = floatAmount!
+            let newTransaction = Transaction(id: idTransaction, title: titleView.textFieldDetails.text!, price: floatAmount!, date: currentDate, image: false, type: false)
+            self.service.updateTransaction(id: idTransaction, newTransaction) {
+                print("Success Update Post Outcome Transaction")
+            }
+            transactionBalanceUpdate()
+            alertUpdate()
         }
-        histories[selectedRow] = History(id: selectedHistory.id, title: titleView.textFieldDetails.text!, price: floatAmount!, date: selectedHistory.date, image: selectedHistory.image, type: transactionType)
-        backToHome()
     }
     
+    func alertUpdate() {
+        let alert = UIAlertController(title: "Berhasil Melakukan Perubahan Transaksi", message: "Anda Berhasil Perubahan Pada Transaksi: \(transactionList[selectedRow].title)", preferredStyle: .alert)
+        alert.addAction(.init(title: "OK", style: .destructive, handler: { action in
+            self.backToHome()
+        }))
+        present(alert, animated: true, completion: nil)
+    }
     
     @IBAction func doDelete(_ sender: Any) {
         if outcomeSelected {
-            profile.balance += histories[selectedRow].price
+            profile.balance += amount
             recentOutcomeTrx = Float(amountView.textFieldDetails.text ?? "0")!
+            self.service.deleteTransaction(id: idTransaction) { (err) in
+                print("delete success")
+            }
+            
         } else {
-            profile.balance -= histories[selectedRow].price
+            profile.balance -= amount
             recentIncomeTrx = Float(amountView.textFieldDetails.text ?? "0")!
+            self.service.deleteTransaction(id: idTransaction) { (err) in
+                print("delete success")
+            }
         }
-        histories.remove(at: selectedRow)
-        backToHome()
-//        self.navigationController?.popViewController(animated: true)
+        let alert = UIAlertController(title: "Berhasil Menghapus", message: "Transaksi anda Berhasil terhapus", preferredStyle: .alert)
+        alert.addAction(.init(title: "OK", style: .destructive, handler: { action in
+            self.backToHome()
+        }))
+        present(alert, animated: true, completion: nil)
     }
     
     @IBAction func selectIncome(_ gesture: UITapGestureRecognizer) {

@@ -20,6 +20,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, NotFoundDelegat
     @IBOutlet weak var labelBalance: UILabel!
     @IBOutlet weak var greetingLabel: UILabel!
     @IBOutlet weak var notFoundView: NotFoundView!
+    @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,8 +44,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, NotFoundDelegat
         recentOutcome.imageStatus.image = UIImage(named: "arrow_downward")
         recentOutcome.labelStatus.text = "Uang Keluar"
         
-        // Empty data handling
-        empyDataHandling()
+        notFoundView.isHidden = true
         
         // TableView
         tableView.delegate = self
@@ -53,8 +53,8 @@ class HomeViewController: UIViewController, UITableViewDelegate, NotFoundDelegat
         let uiNib = UINib(nibName: String(describing: HistoryTableViewCell.self), bundle: nil)
         tableView.register(uiNib, forCellReuseIdentifier: String(describing: HistoryTableViewCell.self))
         
+        loadingIndicator.isHidden = false
         notFoundView.delegate = self
-        tableView.reloadData()
         self.tableView.dataSource = self.dataSource
         self.loadData()
     }
@@ -62,15 +62,20 @@ class HomeViewController: UIViewController, UITableViewDelegate, NotFoundDelegat
     func loadData() {
         self.service.getTransactionHistroy { (transaction) in
             DispatchQueue.main.async {
-                self.dataSource.transaction = transaction
+                self.loadingIndicator.isHidden = true
+                transactionList = transaction
                 self.tableView.reloadData()
+                self.empyDataHandling()
+                transactionBalanceUpdate()
             }
         }
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        tableView.reloadData()
+        super.viewDidAppear(true)
+        self.loadData()
     }
+    
     
 //    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 //        return histories.count
@@ -80,25 +85,13 @@ class HomeViewController: UIViewController, UITableViewDelegate, NotFoundDelegat
 //        let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: HistoryTableViewCell.self), for: indexPath) as! HistoryTableViewCell
 //        cell.labelName.text = histories[indexPath.row].title
 //        cell.labelDate.text = histories[indexPath.row].date
-//        imageViewColor(cell: cell, indexPath: indexPath)
-//        cell.showData(history: histories[indexPath.row])
+////        imageViewColor(cell: cell, indexPath: indexPath)
+////        cell.showData(history: histories[indexPath.row])
 ////        History.showHistory(History.self)
 //        return cell
 //    }
+//
     
-    private func imageViewColor(cell: HistoryTableViewCell, indexPath: IndexPath) {
-        if histories[indexPath.row].image {
-            cell.iconImage.image = UIImage(named: "arrow_upward")
-            cell.iconView.backgroundColor = UIColor(red: 33/255, green: 150/255, blue: 83/255, alpha: 0.2)
-            cell.labelAmount.textColor = UIColor(red: 33/255, green: 150/255, blue: 83/255, alpha: 1)
-            cell.labelAmount.text = "+Rp \(histories[indexPath.row].price.currencyFormat())"
-        } else {
-            cell.iconImage.image = UIImage(named: "arrow_downward")
-            cell.iconView.backgroundColor = UIColor(red: 235/255, green: 87/255, blue: 87/255, alpha: 0.2)
-            cell.labelAmount.textColor = UIColor(red: 235/255, green: 87/255, blue: 87/255, alpha: 1)
-            cell.labelAmount.text = "-Rp \(histories[indexPath.row].price.currencyFormat())"
-        }
-    }
     
     @IBAction func toAddView(_ sender: Any) {
         let addView = UsageViewController(nibName: "UsageViewController", bundle: nil)
@@ -107,12 +100,35 @@ class HomeViewController: UIViewController, UITableViewDelegate, NotFoundDelegat
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let dvc = DetailsViewController(nibName: "DetailsViewController", bundle: nil)
-        dvc.idHistory = histories[indexPath.row].id
-        dvc.historyTitle = histories[indexPath.row].title
-        dvc.amount = histories[indexPath.row].price
-        dvc.date = histories[indexPath.row].date
-        dvc.selectedRow = indexPath.row
-        dvc.type = histories[indexPath.row].type
+        // From API
+        self.service.getTransactionById(id: transactionList[indexPath.row].id) { (transaction) in
+            DispatchQueue.main.async {
+//                dvc.activityIndicator.isHidden = true
+                dvc.idHistory = transaction.id
+                dvc.historyTitle = transaction.title
+                dvc.amount = transaction.price
+                dvc.date = transaction.date
+                dvc.selectedRow = indexPath.row
+                dvc.type = transaction.type
+                if transaction.type {
+                    dvc.transactionText = "Pemasukan"
+                } else {
+                    dvc.transactionText = "Pengeluaran"
+                }
+            }
+            print("Success get transaction by ID")
+        }
+//        dvc.idHistory = transactionList[indexPath.row].id
+//        dvc.historyTitle = transactionList[indexPath.row].title
+//        dvc.amount = transactionList[indexPath.row].price
+//        dvc.date = transactionList[indexPath.row].date
+//        dvc.selectedRow = indexPath.row
+//        dvc.type = transactionList[indexPath.row].type
+//        if transactionList[indexPath.row].type {
+//            dvc.transactionText = "Pemasukan"
+//        } else {
+//            dvc.transactionText = "Pengeluaran"
+//        }
         self.navigationController?.pushViewController(dvc, animated: true)
     }
     
@@ -136,16 +152,18 @@ class HomeViewController: UIViewController, UITableViewDelegate, NotFoundDelegat
     }
     
     func empyDataHandling() {
-        if dataSource.transaction.isEmpty {
+        if transactionList.isEmpty {
             notFoundView.isHidden = false
             recentOutcome.labelAmount.text = "Rp 0"
             recentIncome.labelAmount.text = "Rp 0"
             notFoundView.addButton.setTitle("Tambah Penggunaan", for: .normal)
-            profile.balance = 0
+            labelBalance.text = "Rp 0"
         } else {
             notFoundView.isHidden = true
-            recentOutcome.labelAmount.text = "Rp  \(searchRecentOutcome().currencyFormat())"
-            recentIncome.labelAmount.text = "Rp  \(searchRecentIncome().currencyFormat())"
+//            profile.balance += dataSource.transaction[in
+            recentOutcome.labelAmount.text = "Rp  \(self.dataSource.searchRecentOutcome().currencyFormat())"
+            recentIncome.labelAmount.text = "Rp  \(self.dataSource.searchRecentIncome().currencyFormat())"
+            labelBalance.text = "Rp \(profile.balance.currencyFormat())"
         }
     }
     

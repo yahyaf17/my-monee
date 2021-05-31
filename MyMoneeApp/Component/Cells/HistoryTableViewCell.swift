@@ -30,13 +30,37 @@ class HistoryTableViewCell: UITableViewCell {
     func showData(history: Transaction) {
         labelName.text = history.title
         labelDate.text = history.date
-        labelAmount.text = String(history.price)
+//        labelAmount.text = String(history.price)
 //        labelAmount.text = history.price.currencyFormatISO()
-        if history.image == true {
+        if history.type == true {
             iconImage.image = UIImage(named: "arrow_upward")
+//            profile.balance = profile.balance + history.price
+//            recentIncomeTrx = history.price
+            iconView.backgroundColor = UIColor(red: 33/255, green: 150/255, blue: 83/255, alpha: 0.2)
+            labelAmount.textColor = UIColor(red: 33/255, green: 150/255, blue: 83/255, alpha: 1)
+            labelAmount.text = "+Rp \(history.price.currencyFormat())"
         } else {
             iconImage.image = UIImage(named: "arrow_downward")
+//            profile.balance -= history.price
+//            recentOutcomeTrx = history.price
+            iconView.backgroundColor = UIColor(red: 235/255, green: 87/255, blue: 87/255, alpha: 0.2)
+            labelAmount.textColor = UIColor(red: 235/255, green: 87/255, blue: 87/255, alpha: 1)
+            labelAmount.text = "-Rp \(history.price.currencyFormat())"
         }
     }
+    
+//    func postTransaction(transaction: Transaction) {
+//        let newTransaction = Transaction(id: transaction.id, title: transaction.title, price: transaction.price, date: transaction.date, image: transaction.image, type: transaction.type)
+//    }
+//
+//    func updateBalance(history: Transaction) {
+//        if history.type == true {
+//            profile.balance = profile.balance + history.price
+//            recentIncomeTrx = history.price
+//        } else {
+//            profile.balance -= history.price
+//            recentOutcomeTrx = history.price
+//        }
+//    }
     
 }

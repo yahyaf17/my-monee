@@ -11,6 +11,8 @@ class UsageViewController: UIViewController {
 
     var incomeSelected: Bool = false
     var outcomeSelected: Bool = false
+//    var performTransaction: Transaction = Transaction(from: Decoder)
+    var service: NetworkService = NetworkService()
     
     @IBOutlet weak var titleView: TitleView!
     @IBOutlet weak var amountView: TitleView!
@@ -40,7 +42,7 @@ class UsageViewController: UIViewController {
     }
     
     @IBAction func backToHome(_ sender: Any) {
-        goBackHome()
+        self.navigationController?.popToRootViewController(animated: true)
     }
     
     @IBAction func selectIncome(_ gesture: UITapGestureRecognizer) {
@@ -61,34 +63,69 @@ class UsageViewController: UIViewController {
         outcomeSelected = true
     }
     
+    fileprivate func validateOutcomeTransaction(_ floatPrice: Float?) {
+        let alertValidate = UIAlertController(title: "Saldo Tidak Cukup", message: "Oops! Saldo Anda tidak cukup, apakah anda yakin untuk melanjutkan transaksi?", preferredStyle: .alert)
+        alertValidate.addAction(.init(title: "Yakin, Ngutang Dulu", style: .default, handler: { action in
+            let newTransaction = Transaction(id: randonId(), title: self.titleView.textFieldDetails.text!, price: floatPrice!, date: currentDate, image: false, type: false)
+            self.service.postTransaction(newTransaction) {
+                print("Success Post Outcome Transaction")
+            }
+            profile.balance -= floatPrice ?? 0
+            recentOutcomeTrx = floatPrice ?? 0
+            let alert = UIAlertController(title: "Berhasil Menambah Transaksi", message: "Anda Berhasil Menambahkan Transaksi Pengeluaran", preferredStyle: .alert)
+            alert.addAction(.init(title: "OK", style: .cancel, handler: { action in
+                print("Yay! You brought your towel!")
+                self.goBackHome()
+            }))
+            self.present(alert, animated: true, completion: nil)
+            //                    self.goBackHome()
+        }))
+        alertValidate.addAction(.init(title: "Tidak", style: .cancel, handler: { action in
+            self.goBackHome()
+        }))
+        //                self.present(alert, animated: true, completion: nil)
+        present(alertValidate, animated: true, completion: nil)
+    }
+    
     @IBAction func saveButton(_ sender: Any) {
         let floatPrice = Float((amountView.textFieldDetails.text?.ignoreDotNumber())!)
         if incomeSelected {
-            let incomeHistory = History(id: randonId(),
-                        title: titleView.textFieldDetails.text!,
-                        price: floatPrice!, date: currentDate,
-                        image: true,
-                        type: .income)
-            histories.insert(incomeHistory, at: 0)
+            let newTransaction = Transaction(id: randonId(), title: titleView.textFieldDetails.text!, price: floatPrice!, date: currentDate, image: true, type: true)
+            self.service.postTransaction(newTransaction) {
+                print("Success Post Income Transaction")
+            }
             profile.balance += floatPrice ?? 0
             recentIncomeTrx = floatPrice ?? 0
-            goBackHome()
+//            goBackHome()
+            let alert = UIAlertController(title: "Berhasil Menambah Transaksi", message: "Anda Berhasil Menambahkan Transaksi Pemasukan", preferredStyle: .alert)
+            alert.addAction(.init(title: "OK", style: .destructive, handler: { action in
+                self.goBackHome()
+            }))
+            present(alert, animated: true, completion: nil)
         }
         else if outcomeSelected {
-            let outcomeHistory = History(id: randonId(),
-                        title: titleView.textFieldDetails.text!,
-                        price: floatPrice!,
-                        date: currentDate,
-                        image: false,
-                        type: .outcome)
-            histories.insert(outcomeHistory, at: 0)
-            profile.balance -= floatPrice ?? 0
-            recentOutcomeTrx = floatPrice ?? 0
-            goBackHome()
+            if profile.balance - floatPrice! < 0 {
+                validateOutcomeTransaction(floatPrice)
+            } else {
+                let newTransaction = Transaction(id: randonId(), title: self.titleView.textFieldDetails.text!, price: floatPrice!, date: currentDate, image: false, type: false)
+                self.service.postTransaction(newTransaction) {
+                    print("Success Post Outcome Transaction")
+                }
+                profile.balance -= floatPrice ?? 0
+                recentOutcomeTrx = floatPrice ?? 0
+                let alert = UIAlertController(title: "Berhasil Menambah Transaksi", message: "Anda Berhasil Menambahkan Transaksi Pengeluaran", preferredStyle: .alert)
+                alert.addAction(.init(title: "OK", style: .cancel, handler: { action in
+                    self.goBackHome()
+                }))
+                self.present(alert, animated: true, completion: nil)
+            }
         }
         else {
             disableSaveButton()
         }
+        
+        
+        
     }
     
     func disableSaveButton() {

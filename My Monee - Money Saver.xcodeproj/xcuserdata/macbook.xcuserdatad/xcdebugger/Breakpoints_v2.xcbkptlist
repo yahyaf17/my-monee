@@ -23,79 +23,123 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "FF1DFC81-174E-4286-A0F4-B591E4F9E762"
-            shouldBeEnabled = "Yes"
+            uuid = "C73BF78B-8580-48F6-A711-1FBF24C2761B"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MyMoneeApp/Service/NetworkService.swift"
+            filePath = "MyMoneeApp/ViewController/HomeView/SubHomeView/UsageViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "32"
-            endingLineNumber = "32"
-            landmarkName = "getTransactionHistroy(completion:)"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
+            landmarkName = "validateOutcomeTransaction(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "541E7345-A7D0-4FC7-9E93-8D253C274D36"
-            shouldBeEnabled = "Yes"
+            uuid = "6DF053A1-56C0-4692-B74F-D69BEC88B98D"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MyMoneeApp/Service/NetworkService.swift"
+            filePath = "MyMoneeApp/ViewController/HomeView/SubHomeView/EditUsageViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "35"
-            endingLineNumber = "35"
-            landmarkName = "getTransactionHistroy(completion:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "410BEBAD-055A-4C91-8D69-1E93C436B144"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MyMoneeApp/Service/NetworkService.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "26"
-            endingLineNumber = "26"
-            landmarkName = "getTransactionHistroy(completion:)"
-            landmarkType = "7">
+            startingLineNumber = "15"
+            endingLineNumber = "15"
+            landmarkName = "EditUsageViewController"
+            landmarkType = "3">
             <Locations>
                <Location
-                  uuid = "410BEBAD-055A-4C91-8D69-1E93C436B144 - ca0068973d5bae24"
+                  uuid = "6DF053A1-56C0-4692-B74F-D69BEC88B98D - 722c3e23552d69c2"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "My_Monee___Money_Saver.NetworkService.getTransactionHistroy(completion: (Swift.Array&lt;My_Monee___Money_Saver.Transaction&gt;) -&gt; ()) -&gt; ()"
+                  symbolName = "My_Monee___Money_Saver.EditUsageViewController.amount.getter : Swift.Float"
                   moduleName = "My Monee - Money Saver"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/macbook/Mandiri-Academy/Swift%20iOS/Submission/Final%20Project%201/MyMoneeApp/MyMoneeApp/Service/NetworkService.swift"
+                  urlString = "file:///Users/macbook/Mandiri-Academy/Swift%20iOS/Submission/Final%20Project%201/MyMoneeApp/MyMoneeApp/ViewController/HomeView/SubHomeView/EditUsageViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "26"
-                  endingLineNumber = "26"
-                  offsetFromSymbolStart = "988">
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "113">
                </Location>
                <Location
-                  uuid = "410BEBAD-055A-4C91-8D69-1E93C436B144 - 74b32c0c1c21fb38"
+                  uuid = "6DF053A1-56C0-4692-B74F-D69BEC88B98D - f41251a1cd464536"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in My_Monee___Money_Saver.NetworkService.getTransactionHistroy(completion: (Swift.Array&lt;My_Monee___Money_Saver.Transaction&gt;) -&gt; ()) -&gt; ()"
+                  symbolName = "My_Monee___Money_Saver.EditUsageViewController.amount.setter : Swift.Float"
                   moduleName = "My Monee - Money Saver"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/macbook/Mandiri-Academy/Swift%20iOS/Submission/Final%20Project%201/MyMoneeApp/MyMoneeApp/Service/NetworkService.swift"
+                  urlString = "file:///Users/macbook/Mandiri-Academy/Swift%20iOS/Submission/Final%20Project%201/MyMoneeApp/MyMoneeApp/ViewController/HomeView/SubHomeView/EditUsageViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "27"
-                  endingLineNumber = "27"
-                  offsetFromSymbolStart = "212">
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "125">
+               </Location>
+               <Location
+                  uuid = "6DF053A1-56C0-4692-B74F-D69BEC88B98D - 6b66db052d471cb6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "My_Monee___Money_Saver.EditUsageViewController.amount.modify : Swift.Float"
+                  moduleName = "My Monee - Money Saver"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/macbook/Mandiri-Academy/Swift%20iOS/Submission/Final%20Project%201/MyMoneeApp/MyMoneeApp/ViewController/HomeView/SubHomeView/EditUsageViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "18">
+               </Location>
+               <Location
+                  uuid = "6DF053A1-56C0-4692-B74F-D69BEC88B98D - 75fb73b686e2365a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "My_Monee___Money_Saver.EditUsageViewController.amount.modify : Swift.Float with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "My Monee - Money Saver"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/macbook/Mandiri-Academy/Swift%20iOS/Submission/Final%20Project%201/MyMoneeApp/MyMoneeApp/ViewController/HomeView/SubHomeView/EditUsageViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  uuid = "6DF053A1-56C0-4692-B74F-D69BEC88B98D - ef82e282b1a0f347"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "My_Monee___Money_Saver.EditUsageViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; My_Monee___Money_Saver.EditUsageViewController"
+                  moduleName = "My Monee - Money Saver"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/macbook/Mandiri-Academy/Swift%20iOS/Submission/Final%20Project%201/MyMoneeApp/MyMoneeApp/ViewController/HomeView/SubHomeView/EditUsageViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "911">
+               </Location>
+               <Location
+                  uuid = "6DF053A1-56C0-4692-B74F-D69BEC88B98D - 25e4145003c73e01"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "My_Monee___Money_Saver.EditUsageViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;My_Monee___Money_Saver.EditUsageViewController&gt;"
+                  moduleName = "My Monee - Money Saver"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/macbook/Mandiri-Academy/Swift%20iOS/Submission/Final%20Project%201/MyMoneeApp/MyMoneeApp/ViewController/HomeView/SubHomeView/EditUsageViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "852">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -103,16 +147,48 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "CE9CC07F-D3E2-41C3-A7F1-F48005AA0E7D"
-            shouldBeEnabled = "Yes"
+            uuid = "766AE1AC-1C28-4941-A960-9F3A49C98BB1"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MyMoneeApp/Service/NetworkService.swift"
+            filePath = "MyMoneeApp/ViewController/HomeView/SubHomeView/EditUsageViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "24"
-            endingLineNumber = "24"
-            landmarkName = "getTransactionHistroy(completion:)"
+            startingLineNumber = "78"
+            endingLineNumber = "78"
+            landmarkName = "doUpdate(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "93E06259-37F6-423B-B085-6E75540D2BD4"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MyMoneeApp/ViewController/HomeView/SubHomeView/EditUsageViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "82"
+            endingLineNumber = "82"
+            landmarkName = "doUpdate(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "AE03FFEF-6134-464D-A659-59FBEE615E03"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MyMoneeApp/ViewController/HomeView/HomeViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "76"
+            endingLineNumber = "76"
+            landmarkName = "viewDidAppear(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
