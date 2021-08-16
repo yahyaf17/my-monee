@@ -31,7 +31,7 @@ My monee is a financial management application that is ready to accompany your d
 1. Make sure you have Mac or Other Apple Device that can run Xcode
 2. Clone this repository to your local hard drive
 ```sh
-git@gitlab.com:yahyafaikar17/mymonee.git
+https://github.com/yahyaf17/my-monee.git
 ``` 
 3. In git, there are two version, with and without api. If you want to use api to persist your data, change the branch to final-project-api. Meanwhile the master branch didn't have the persistant feature 
 4. Open the workspace file. 
